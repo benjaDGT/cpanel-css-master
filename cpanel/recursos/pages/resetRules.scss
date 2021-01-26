@@ -1,0 +1,109 @@
+.resetRules{
+    @media screen and (min-width: 768px){
+    //@media screen and (min-width: 991px){  
+      background-color: transparent;
+      .ms-basic-table{
+        thead{
+          tr{
+            display: flex;
+            th{
+              flex-grow: 1;
+              &.item1{
+                width: 44%;
+              }
+              &.item2{
+                width: 25%;
+              }
+              &.item3,
+              &.item4{
+                width: 15%;
+              }
+              &.item5{
+                width: 6%;
+                text-align: center;
+              }
+            }
+          }
+        }
+  
+        tbody{
+          tr {
+            border: 0;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+            display: flex;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #d6d5da;
+            background-color: #FFF;
+            min-height: 80px;
+  
+            td{
+              border-right: 1px solid #d6d5da;
+              flex-grow: 1;
+              align-items: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              max-width: 100% !important;
+  
+              &.item1{
+                width: 44%;
+              }
+  
+              &:last-child{
+                border-right: 0;
+              }
+
+              &.item2{
+                width: 25%;
+              }
+    
+              &.item3,
+              &.item4{
+                width: 15%;
+              }
+  
+              &.item5{
+                width: 6%;
+              }
+            }
+          }
+        }
+      }
+  
+      .ms-icon-bucket{
+        padding-left: 40px;
+        position: relative;
+        &:before{
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    
+    @media screen and (min-width: 768px){
+    //@media screen and (min-width: 991px){
+      .ms-wrap-srcoll{
+        overflow: auto;
+        max-height: calc(100vh - 240px);
+        max-width: 900px;
+        table{
+          width: 150%;
+        }
+      }
+    }
+  
+    @media screen and (min-width: 1024px){
+      .ms-wrap-srcoll{
+        table{
+          width: 100%;
+        }
+      }
+    }
+  
+    .ms-wrap-btn{
+      margin-top: 15px;
+    }
+  }

@@ -1,0 +1,720 @@
+//$crm-icons :'crm-icons';
+
+.ms-inbox-header{
+  background-color: #FFF;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  margin: 0 -10px;
+
+  .ms-wrap-inbox{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 10px 15px;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+
+    .ms-button{
+      text-indent: -999999px;
+      overflow: hidden;
+      width: 37px;
+      height: 37px;
+      padding: 0;
+      color: #999999;
+      margin-right: 10px;
+      &.ms-icon-file,
+      &.ms-icon-delete,
+      &.ms-icon-search{
+        &:before{
+          display: flex;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-indent: 0;
+          font-weight: normal !important;
+          font-size: 18px;
+        }
+      }
+
+      &.ms-icon-file{
+        &:before{
+          content: "\e93c";
+          font-family: 'crm-icons';
+        }
+      }
+
+      &.ms-icon-delete{
+        &:before{
+          content: "\e922";
+          font-family: 'crm-icons';
+          font-size: 16px;
+        }
+      }
+
+      &.ms-icon-search{
+        &:before{
+          content: "\e93b";
+          font-family: 'crm-icons';
+          font-size: 16px;
+        }
+      }
+    }
+
+    .ms-dropdown{
+      .ms-icon-more,
+      .ms-icon-folder{
+        width: auto;
+        min-width: 47px;
+        //line-height: 37px;
+        span{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          &:before{
+            content: "\e939";
+            font-family: 'crm-icons';
+            display: block;
+            text-indent: 0;
+            font-size: 18px;
+            font-weight: 100 !important;
+          }
+          &:after{
+            content: "\e901";
+            font-family: 'crm-icons';
+            display: block;
+            text-indent: 0;
+            font-size: 9px;
+            font-weight: 100!important;
+            transform: rotate(90deg);
+            margin-left: 4px;
+            transition: all .4s;
+          }
+        }
+      }
+
+      .ms-icon-more{
+        text-indent: 0;
+        font-weight: 600;
+        line-height: 37px;
+        padding: 0 7px;
+        &:after{
+          content: "\e901";
+          font-family: 'crm-icons';
+          display: inline-block;
+          text-indent: 0;
+          font-size: 9px;
+          font-weight: 100!important;
+          transform: rotate(90deg);
+          margin-left: 4px;
+          transition: all .4s;
+        }
+      }
+
+      &.open{
+        .ms-icon-folder{
+          span{
+            &:after{
+              transform: rotate(270deg);
+            }
+          }
+        }
+
+        .ms-icon-more{
+          &:after{
+            transform: rotate(270deg);
+          }
+        }
+      }
+    }
+  }
+
+  .ms-inbox-search{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    transition: all .6s;
+
+    .ms-wrap-inbox-search{
+      display: flex;
+      height: 100%;
+      form{
+        position: relative;
+        .ms-btn{
+          height: 100%;
+          width: 35px;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        input{
+          height: 100%;
+          border: 0 !important;
+          border-radius: 0;
+          padding: 0 15px;
+        }
+
+        .ms-button{
+          display: none;
+          @media screen and (min-width: 768px){
+            display: block;
+          }
+        }
+      }
+    }
+
+    .ms-button{
+      margin: 0;
+      height: 100%;
+      background-image: none;
+      width: 40px;
+      border: 0 !important;
+      &:before{
+        content: "\e905";
+        font-family: 'crm-icons';
+        display: flex;
+        text-indent: 0;
+        font-size: 12px;
+        font-weight: 100!important;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @media screen and (min-width: 768px){
+      position: relative;
+      left: auto;
+      max-width: 350px;
+      #ms-close-bar{
+        display: none;
+      }
+
+      .ms-wrap-inbox-search{
+        form{
+          input{
+            height: 37px;
+            border: 1px solid #e8e8e8!important;
+            border-radius: 4px;
+          }
+          .ms-icon-search{
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.active-bar{
+    .ms-inbox-search{
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    top: 87px;
+    #ms-show-bar{
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    margin: 0 -15px;
+  }
+}
+
+.ms-inbox-list{
+  margin: 15px -10px;
+  padding-bottom: 50px;
+  .ms-lead-body{
+    .ms-lead-item{
+      height: auto !important;
+      border: 0;
+      box-shadow: none;
+      border-radius: 0;
+      margin-bottom: 0;
+      
+      .ms-wrap{
+        padding: 10px !important;
+        flex-wrap: wrap;
+        justify-content: flex-start !important;
+        border-bottom: 1px solid #dfe0e0 !important;
+        .ms-intro-inbox,
+        .ms-inbox-actions{
+          width: 100%;
+        }
+
+        .ms-intro-inbox{
+          padding-right: 35px;
+          p{
+            margin-top: 5px;
+            font-size: 14px;
+            display: block;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #989898;
+          }
+        }
+      }
+
+      .ms-item{
+        padding: 0;
+        &.ms-chk{
+          width: 38px!important;
+          margin-left: 0;
+          margin-left: -5px;
+          position: relative;
+          z-index: 2;
+        }
+
+        &.ms-user-info{
+          width: calc(100% - 38px) !important;
+          max-width: 100% !important;
+
+          .ms-title{
+            .ms-name{
+              font-weight: 600;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .ms-link-inbox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-indent: -999999px;
+        overflow: hidden;
+        display: block;
+        z-index: 1;
+      }
+
+      &:last-child{
+        .ms-wrap{
+          border-bottom: 0 !important;
+        }
+      }
+
+      @media screen and (min-width: 1024px){
+        .ms-wrap{
+          padding: 15px !important;
+          flex-wrap: nowrap;
+          align-items: center;
+
+          .ms-intro-inbox{
+            width: calc(60% - 88px);
+          }
+        }
+
+        .ms-item{
+          &.ms-chk{
+            margin-top: 5px;
+          }
+          &.ms-user-info{
+            margin-right: 20px;
+            width: calc(40% - 38px)!important;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      @media screen and (min-width: 1600px){
+        .ms-wrap{
+          .ms-intro-inbox{
+            width: calc(73% - 88px);
+            flex-shrink: 0;
+          }
+        }
+
+        .ms-item{
+          &.ms-user-info{
+            width: calc(27% - 38px)!important;
+          }
+        }
+      }
+    }
+  }
+
+  .ms-count-st{
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8e8e8;
+    font-weight: 600;
+    color: #989898;
+  }
+
+  .ms-inbox-info{
+    width: 90%;
+    display: block;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    span{
+      font-size: 13px;
+      font-family: "Open Sans", sans-serif !important;
+      &:before{
+        vertical-align: middle;
+        margin-top: -2px;
+        margin-right: 5px;
+        font-family: "crm-icons";
+        color: #007fe0;
+      }
+
+      &.crm-ico-ms-phone-msg{
+        &:before{
+          font-size: 19px;
+        }
+      }
+
+      &.crm-ico-ms-phone{
+        &:before{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .ms-inbox-ft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //margin-top: 5px;
+    width: 100%;
+    .ms-time{
+      font-weight: 600;
+      font-size: 12px;
+      flex-shrink: 0;
+      /******************/
+      position: absolute;
+      top: 15px;
+      right: 50px;
+      z-index: 1;
+      color: #495057;
+      @media screen and (min-width: 1024px){
+        right: 15px;
+      }
+    }
+
+    .crm-ico-reply{
+      width: 30px;
+      height: 30px;
+      text-indent: -999999px;
+      overflow: hidden;
+      display: block;
+      //margin-left: 5px;
+
+      /********************/
+      position: absolute;
+      bottom: 10px;
+      right: 13px;
+
+      &:before{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-indent: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: 1024px){
+    margin: 15px -15px;
+  }
+}
+
+.ms-footer-inbox{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  .ms-wrap-pag{
+    position: relative;
+    background-color: #FFF;
+    padding: 15px;
+    box-shadow: 0 -6px 6px -6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .ms-count-pag{
+      font-size: 12px;
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .ms-wrap-btn{
+      width: auto;
+      .ms-button{
+        text-indent: -999999px;
+        overflow: hidden;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        color: #999999;
+        margin-left: 5px;
+        border: 1px solid #e8e8e8!important;
+        &:before{
+          content: "\e901";
+          font-family: 'crm-icons';
+          display: flex;
+          text-indent: 0;
+          font-size: 12px;
+          font-weight: 100!important;
+          //transform: rotate(90deg);
+          transition: all .4s;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          left: 0;
+        }
+
+        &.ms-btn-prev{
+          &:before{
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    position: relative;
+    z-index: 1;
+    .ms-wrap-pag{
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.ms-inbox-page{
+  position: relative;
+}
+
+.ms-page-message{
+  background-color: #FFF;
+  width: 100%;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 3;
+  transition: all .4s;
+  opacity: 0;
+  transform: translateX(100%);
+  height: 100vh;
+  overflow-y: auto;
+
+  @media screen and (min-width: 768px){
+    top: auto;
+    bottom: 0;
+    height: calc(100vh - 87px);
+  }
+
+  @media screen and (min-width: 1320px){
+    max-width: calc(100% - 250px);
+  }
+  
+  .ms-username{
+    padding: 15px;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed #e8e8e8;
+
+    flex-wrap: wrap;
+  }
+
+  .ms-user-info{
+    width: auto;
+    .ms-user-avatar{
+      margin-right: 10px;
+    }
+
+    .ms-title{
+      .ms-name{
+        font-weight: 600;
+        font-size: 15px;        
+      }
+    }
+
+    .ms-inbox-info{
+      span{
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        &:before{
+          margin-right: 5px;
+          color: #007fe0;
+        }
+      }
+    }
+  }
+  
+  .ms-pgm-detail{
+    padding: 20px;
+    overflow: hidden;
+    padding-left: 50px;
+    h2, h3, h4, h5, h5, h6{
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    strong{
+      font-weight: 600;
+    }
+
+    p{
+      font-size: 15px;
+      margin: 15px 0;
+      line-height: 1.6;
+    }
+
+    ul{
+      margin: 15px 0;
+      li{
+        position: relative;
+        padding-left: 15px;
+        font-size: 15px;
+        margin: 3px 0;
+        &:before{
+          content: "";
+          background-color: #3e3a3c;
+          border-radius: 100%;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+
+    ol{
+      margin: 15px 0;
+      list-style-type: decimal!important;
+      padding-left: 15px;
+      li{
+        position: relative;
+        font-size: 15px;
+        margin: 3px 0;
+        list-style-type: decimal !important;
+      }
+    }
+  }
+
+  .ms-action-item{
+    margin-top: 5px;
+    .ms-button{
+      font-family: "Open Sans", sans-serif !important;
+      font-weight: 600 !important;
+      padding: 0 15px;
+      &:before{
+        margin-right: 5px;
+        font-family: "crm-icons";
+        //color: #007fe0;
+        color: #999999;
+        font-weight: 100 !important;
+      }
+    }
+  }
+
+  .ms-page-message-item{
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .ms-page-message-footer{
+    padding: 15px;
+    padding-left: 50px;
+    z-index: 2;
+    background-color: #FFF;
+    margin-top: -1px;
+    padding-bottom: 130px;
+  }
+}
+
+#ms-close-msg{
+  text-indent: -999999px;
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 21px;
+  font-size: 22px;
+  left: 10px;
+  transform: rotate(-180deg);
+  z-index: 2;
+  &:before{
+    text-indent: 0;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+body{
+  &.ms-open-page{
+    overflow: hidden;
+    .ms-page-message{
+      display: block;
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

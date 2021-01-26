@@ -1,0 +1,220 @@
+.resetInquieres{
+  .rs-content{
+    background-color: transparent;
+  }
+
+  .show_more{
+    display: none !important;
+  }
+
+  .list_content{
+    padding-top: 5px;
+
+    #list_inquiries{
+      .sub_items{
+        border: 1px solid #d6d5da;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+        border-radius: 4px;
+        background-color: #FFF;
+        padding: 0;
+
+        .lead_inquiry_comment{
+          margin: 0;
+          padding: 10px 15px 10px 35px;
+          border-top: 1px solid #ccc;
+          &:before{
+            left: 10px;
+          }
+        }
+
+        .info_sub_items{
+          width: 30% !important;
+          padding: 10px 10px 10px 30px;
+          margin-top: 0;
+          ul{
+            li {
+              font-size: 13px;
+              margin-bottom: 0px;
+            }
+          }
+        }
+
+        .sub_items_result{
+          transition: none !important;
+          width: 70% !important;
+          li{
+            margin: 0;
+            padding: 10px;
+            width: 20% !important;
+            border-left: 1px solid #d6d5da;
+            height: 100%;
+            label{
+              display: none;
+            }
+
+            span{
+              text-align: center;
+              font-size: 13px;
+              word-break: normal;
+            }
+          }
+        }
+      }
+
+      .item_chk{
+        top: 37px;
+        left: 6px;
+        .chk {
+          width: 16px;
+          height: 16px;
+          margin-bottom: 0;
+          span {
+            border-radius: 2px;
+            border: 2px solid #cccccc;
+            &:before{
+              font-size: 12px;
+              color: #000;
+            }
+          }
+
+          input:checked+span{
+            background: none;
+          }
+        }
+      }
+
+      .lead_inquiry_comment{
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .list-items{
+      >li {
+        align-items: stretch;
+      }
+    }
+
+    .ms-header-list{
+      font-weight: 700;
+      text-align: center;
+      font-size: 10px;
+      display: flex;
+      text-transform: uppercase;
+      li{
+        margin-bottom: 5px;
+        &.ms-item{
+          width: 14%;
+          &.ms-iq{
+            width: 30%;
+          }    
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px){
+      border-top: 0;
+      #list_inquiries{
+        width: 200%;
+        .sub_items_result{
+          max-height: 100%;
+          opacity: 1;
+          display: flex;
+          border-top: none;
+          li{
+            height: 100%;
+            align-items: center;
+          }
+        }
+      }
+
+      .ms-header-list{
+        width: 200%;
+      }
+    }
+
+    @media screen and (min-width: 1330px){
+      #list_inquiries,
+      .ms-header-list{
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 767px){
+
+    .list_content{
+      border: 0;
+      margin-top: 0;
+      padding-top: 0;
+      #list_inquiries{
+        .sub_items{
+          .info_sub_items,
+          .sub_items_result{
+            width: 100% !important;
+          }
+          .info_sub_items{
+            align-items: flex-start;
+          }
+
+          .sub_items_result{
+            max-height: 100%;
+            opacity: 1;
+            li{
+              height: auto;
+              border: 0;
+              width: 100% !important;
+              padding: 7px 15px;
+              label{
+                display: block;
+                margin-bottom: 0;
+                font-size: 13px;
+              }
+
+              span{
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      .ms-header-list{
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    .ms-wrap-scroll{
+      height: calc(100vh - 290px);
+      overflow: auto;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .ms-wrap-scroll{
+      height: calc(100vh - 245px);
+      overflow: auto;
+    }
+
+    .ms-filter-actions{
+      .ms-wrap-filter{
+        .ms-wrap-input.ms-inp-search {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1440px){
+    .ms-filter-actions{
+      .ms-wrap-filter{
+        .ms-wrap-input.ms-inp-search {
+          width: 320px;
+        }
+      }
+    }
+  }
+}

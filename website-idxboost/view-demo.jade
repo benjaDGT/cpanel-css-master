@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+	head
+		title FlexIdx | Welcome
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#203965")
+		meta(name="theme-color", content="#203965")
+		meta(name="msapplication-navbutton-color", content="#203965")
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/animate.min.css")
+
+	body
+		main.idx-wrap-content
+			header.idx-header-internal
+				.idx-wrap-header
+					.idx-wrap-logo
+						a(href="/", title="idxBoost").logo
+							img(src="images/logo.png", title="idxBoost", alt="idxBoost")
+					.idx-wrap-actions
+						span.idx-slogan Start now and launch today!
+						a(href="#").idx-btn-site.icon-min-rocket
+							span Select Theme
+						a(href="#")#idx-close-header: span x
+			iframe.idx-iframe(src="http://dgtsrv5.dgtalliance.com/dev/2017/myidx/edge/")
+		script(type="text/javascript", src="js/jquery-3.1.1.min.js")
+		script(type="text/javascript", src="js/jquery-ui.min.js")
+		script(type="text/javascript", src="js/dgt-project-master.js")

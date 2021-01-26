@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>FlexIdx | Exclusive Listing</title>
+    <meta name="keywords" content="FlexIdx, listing, Filters, Analytics">
+    <meta name="description" content="FlexIdx, the best dashboard admin listing, Filters, Analytics">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+    <style>
+      .rs-wrapper{
+        background-color: #f5f5f5 !important; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rs-wrapper">
+      <header class="rs-navbar">
+        <h1>IDX Boost! Cutting-Edge MLS/IDX Search for Wordpress</h1>
+        <nav>
+          <div class="logo">
+            <a href="/" title="IDX Boost™">
+            <img src="https://cpanel.staging.idxboost.com/bundles/cpanel/images/logo.png" title="IDX Boost!" alt="Cutting-Edge MLS/IDX Search for Wordpress">
+            </a>
+            <button class="ms-hidden-menu-btn">Hidden Menu <span></span></button>
+          </div>
+          <div class="header-nav">
+            <ul id="list_nav" style="visibility: hidden !important;">
+              <li><a href="/" title="Leads" class="ico-leads">Leads</a></li>
+              <li><a href="/filters" title="Filters" class="ico-filters">Filters</a></li>
+              <li><a href="/my-exclusive-listings" title="Listings" class="ico-listings">Listings</a></li>
+              <li><a href="/settings/account" title="Account" class="ico-account">Account</a></li>
+            </ul>
+            
+            <!--<div class="ms-warning-message">
+              <i class="crm-ico-alert-triangle"></i> 
+              <span>
+              <span class="ms-hdx">Warning: You must set up your <strong>email sender</strong> to set up your account </span> <a href="#">Click Here to set up your email sender</a>
+              </span> 
+            </div>-->
+
+            <div class="user_nav">
+              <a href="javascript:void(0)" title="Related ISG" id="userAvatar">
+                <span class="gb">33</span>
+                <div class="user_avatar idxboost-photo-preview" style="overflow: hidden;width:50px;height:50px;left:12px;margin-top:-25px;">
+                  <img style="vertical-align: top;max-width: 100%;height: auto;" src="https://idxboost.s3.amazonaws.com/agent_profiles/47a02785e2ea.11f31544683d.png">
+                </div>
+                <h2>Related ISG</h2>
+              </a>
+              <ul id="userList">
+                <li><a href="/my/submissions/all" title="Contact Form Inquiries">Form Inquiries</a></li>
+                <li><a href="/my/submissions/agents" title="Contact Form Inquiries">Form Agents</a></li>
+                <li><a href="/" title="Leads">Leads <span class="gb gblets">33</span></a></li>
+                <li><a href="/logout" title="Log out">Log out</a></li>
+              </ul>
+            </div>
+            <div class="search_nav">
+              <button id="help" class="btn-help">Support</button>
+            </div>
+          </div>
+          <button class="main_menu" id="mainMene">Main Menu <span></span></button>
+          <button class="sub_menu" id="subMenu">Sub Menu <span></span></button>
+        </nav>
+      </header>
+      <aside class="rs-sidebar">
+        <div class="title-rs-sidebar">Main menu</div>
+        <button id="closeMenu">Close</button>
+        <ul>
+          <li><a href="#" title="My Leads" class="item_nav ico-leads active">My Leads <span class="gb">19</span></a></li>
+          <li>
+            <a href="javascript:void(0)" title="Account" class="item_nav ico-account sub-items">My Account</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="Registration Key">Registration Key</a></li>
+              <li><a href="#" title="My Account">My Account</a></li>
+              <li><a href="#" title="Change Password">Change Password</a></li>
+              <li><a href="#" title="Billing Information">Billing Information</a></li>
+              <li><a href="#" title="MLS Setup">MLS Setup</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="IDX Settings" class="item_nav ico-setting sub-items">IDX Settings</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="Advanced Settings">Advanced Settings</a></li>
+              <li><a href="#" title="Quick Search Settings">Quick Search Settings</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:void(0)" title="My Listings" class="item_nav ico-listing">My Listings</a></li>
+          <li><a href="javascript:void(0)" title="Filters" class="item_nav ico-marketing">Filters</a></li>
+          <li>
+            <a href="#" title="Buildings" class="item_nav ico-buildings sub-items">Buildings</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="My Buildings">My Buildings</a></li>
+              <li><a href="#" title="My Buildings Groups">My Buildings Groups</a></li>
+            </ul>
+          </li>
+          <li><a href="#" title="IDX Analytics" class="item_nav ico-my-buildings">IDX Analytics</a></li>
+          <li><a href="#" title="IDX Analytics" class="item_nav ico-display-filters">IDX Analytics</a></li>
+          <li><a href="#" title="IDX Analytics" class="item_nav ico-my-building">IDX Analytics</a></li>
+          <li><a href="#" title="IDX Analytics" class="item_nav ico-my-master-plan">IDX Analytics</a></li>
+          <li><a href="#" title="IDX Analytics" class="item_nav ico-map-search-filter">IDX Analytics</a></li>
+
+        </ul>
+      </aside>
+
+      <section class="rs-content-wrapper">
+        <div class="main-content">
+          <div class="container basicPage ms-new-basic-form mpx">
+            <div class="ms-header msh">
+              <h2 class="ms-title">IDX Settings</h2>
+              <div class="ms-wrap-btn ms-listing-sct">
+                <a href="/my-exclusive-listings" class="btn btn-dgt-grs"><span>Cancel</span></a>
+                <button type="button" class="btn btn-dgt-def tg-save-form"><span>Save</span></button>
+              </div>
+            </div>
+            <div class="ms-wrap-tab-ex">
+              <div class="ms-tabs">
+                <div class="ms-wrap-tabs">
+                  <ul class="ms-header-tabs">
+                    <li class="active" data-active="1"><a data-toggle="tab" href="#cities_settings">Cities</a></li>
+                    <li data-active="2"><a data-toggle="tab" href="#display_settings">Display Settings</a></li>
+                    <li data-active="3"><a data-toggle="tab" href="#registrations_settings">Registrations Settings</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-content" id="ms-idx-settings-tabs">
+                <div id="cities_settings" class="tab-pane fade in active">
+                  <div class="widget ms-shadown-none ms-border">
+                    <div class="ms-wrap-widget">
+                      <div class="ms-widget">
+                        <div id="tabsFilters">
+                          <form name="account_settings" method="post" id="idxboost_idx_settings_cities">
+                            <div class="tab-content">
+                              <div role="tabpanel" class="tab-pane active" id="mlsTab">
+                                <h2 class="title_content_tab bigtext">
+                                  <label style="display: inline-block;margin-right: -3px;vertical-align: text-top;margin-top: 2px;" for="chk_acities" class="chk_content"><input type="checkbox" id="chk_acities"><span></span></label>
+                                  Miami
+                                </h2>
+                                <div class="content_tab">
+                                  <div class="content mwx">
+                                    <div id="account_settings_cities">
+                                      <input type="checkbox" id="account_settings_cities_1" name="account_settings[cities][]" value="1" class="flex-miami-city">
+                                      <label for="account_settings_cities_1" class="flex-miami-city">Atlantis</label>
+                                      
+                                      <input type="checkbox" id="account_settings_cities_2" name="account_settings[cities][]" value="2" checked="checked" class="flex-miami-city">
+                                      <label for="account_settings_cities_2" class="flex-miami-city">Aventura</label>
+                                      
+                                      <input type="checkbox" id="account_settings_cities_1" name="account_settings[cities][]" value="1" class="flex-miami-city">
+                                      <label for="account_settings_cities_1" class="flex-miami-city">Atlantis</label>
+
+                                      <input type="checkbox" id="account_settings_cities_1" name="account_settings[cities][]" value="1" class="flex-miami-city">
+                                      <label for="account_settings_cities_1" class="flex-miami-city">Atlantis</label>
+                                      
+                                      <input type="checkbox" id="account_settings_cities_2" name="account_settings[cities][]" value="2" checked="checked" class="flex-miami-city">
+                                      <label for="account_settings_cities_2" class="flex-miami-city">Aventura</label>
+                                      
+                                      <input type="checkbox" id="account_settings_cities_1" name="account_settings[cities][]" value="1" class="flex-miami-city">
+                                      <label for="account_settings_cities_1" class="flex-miami-city">Atlantis</label>
+
+                                      <input type="checkbox" id="account_settings_cities_1" name="account_settings[cities][]" value="1" class="flex-miami-city">
+                                      <label for="account_settings_cities_1" class="flex-miami-city">Atlantis</label>
+                                      
+                                      <input type="checkbox" id="account_settings_cities_2" name="account_settings[cities][]" value="2" checked="checked" class="flex-miami-city">
+                                      <label for="account_settings_cities_2" class="flex-miami-city">Aventura</label>
+                                      
+                                      <input type="checkbox" id="account_settings_cities_1" name="account_settings[cities][]" value="1" class="flex-miami-city">
+                                      <label for="account_settings_cities_1" class="flex-miami-city">Atlantis</label>
+
+                                      <input type="checkbox" id="account_settings_cities_1" name="account_settings[cities][]" value="1" class="flex-miami-city">
+                                      <label for="account_settings_cities_1" class="flex-miami-city">Atlantis</label>
+                                      
+                                      <input type="checkbox" id="account_settings_cities_2" name="account_settings[cities][]" value="2" checked="checked" class="flex-miami-city">
+                                      <label for="account_settings_cities_2" class="flex-miami-city">Aventura</label>
+                                      
+                                      <input type="checkbox" id="account_settings_cities_1" name="account_settings[cities][]" value="1" class="flex-miami-city">
+                                      <label for="account_settings_cities_1" class="flex-miami-city">Atlantis</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ms-wrap-btn">
+                              <a href="/settings/cities" class="btn btn-dgt-grs">
+                                <span>Cancel</span>
+                              </a>
+                              <button class="btn btn-dgt-def" type="submit">
+                                <span>Save</span>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="display_settings" class="tab-pane fade">
+                  <form name="account_settings" method="post" id="idxboost_idx_display_preferences">
+                    <div id="displayPreferencesPage">
+                      <div class="widget ms-shadown-none ms-border">
+                        <div class="ms-wrap-widget">
+                          <div class="ms-widget">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div>
+                                    <label class="required">Listing Type</label>
+                                    <div id="account_settings_rentalType"><input type="radio" id="account_settings_rentalType_0" name="account_settings[rentalType]" required="required" value="0" checked="checked" /><label for="account_settings_rentalType_0" class="required">For Sale</label><input type="radio" id="account_settings_rentalType_1" name="account_settings[rentalType]" required="required" value="1" /><label for="account_settings_rentalType_1" class="required">For Rent</label></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div>
+                                    <label class="required">Property Type</label>
+                                    <div id="account_settings_propertyType"><input type="checkbox" id="account_settings_propertyType_0" name="account_settings[propertyType][]" value="2" checked="checked" /><label for="account_settings_propertyType_0">Single Family Homes</label><input type="checkbox" id="account_settings_propertyType_1" name="account_settings[propertyType][]" value="1" checked="checked" /><label for="account_settings_propertyType_1">Condominiums</label><input type="checkbox" id="account_settings_propertyType_2" name="account_settings[propertyType][]" value="tw" checked="checked" /><label for="account_settings_propertyType_2">Townhouses</label><input type="checkbox" id="account_settings_propertyType_3" name="account_settings[propertyType][]" value="mf" checked="checked" /><label for="account_settings_propertyType_3">Multi-Family</label><input type="checkbox" id="account_settings_propertyType_4" name="account_settings[propertyType][]" value="valand" checked="checked" /><label for="account_settings_propertyType_4">Vacant Land</label></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div>
+                                    <label class="required">Results View</label>
+                                    <div class="ms-list-checks ms-rd">
+                                      <div id="account_settings_defaultResultView"><input type="radio" id="account_settings_defaultResultView_0" name="account_settings[defaultResultView]" required="required" value="grid" checked="checked" /><label for="account_settings_defaultResultView_0" class="required">Gallery View</label><input type="radio" id="account_settings_defaultResultView_1" name="account_settings[defaultResultView]" required="required" value="list" /><label for="account_settings_defaultResultView_1" class="required">List View</label><input type="radio" id="account_settings_defaultResultView_2" name="account_settings[defaultResultView]" required="required" value="map" /><label for="account_settings_defaultResultView_2" class="required">Map View</label><input type="radio" id="account_settings_defaultResultView_3" name="account_settings[defaultResultView]" required="required" value="nmap" /><label for="account_settings_defaultResultView_3" class="required">Full Map</label></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div>
+                                    <label class="required">Display Results</label>
+                                    <div class="form-group">
+                                      <div class="ms-wrap-radio">
+                                        <input type="radio" name="search_filter[]" class="js-property-type-alert" id="list_newest-desc" value="list_newest-desc">
+                                        <label for="list_newest-desc">Newest Listings</label>
+                                      </div>
+                                      <div class="ms-wrap-radio">
+                                        <input type="radio" name="search_filter[]" class="js-property-type-alert" id="price-desc" value="price-desc">
+                                        <label for="price-desc">Highest Price</label>
+                                      </div>
+                                      <div class="ms-wrap-radio">
+                                        <input type="radio" name="search_filter[]" class="js-property-type-alert" id="price-asc" value="price-asc">
+                                        <label for="price-asc">Lowest Price</label>
+                                      </div>
+                                      <div class="ms-wrap-radio">
+                                        <input type="radio" name="search_filter[]" class="js-property-type-alert" id="sqft-desc" value="sqft-desc">
+                                        <label for="sqft-desc">Highest Sqft</label>
+                                      </div>
+                                      <div class="ms-wrap-radio">
+                                        <input type="radio" name="search_filter[]" class="js-property-type-alert" id="sqft-asc" value="sqft-asc">
+                                        <label for="sqft-asc">Lowest Sqft</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div>
+                                    <label class="required">Default Language</label>
+                                    <div class="ms-list-checks ms-rd">
+                                      <div id="account_settings_defaultLanguage"><input type="radio" id="account_settings_defaultLanguage_0" name="account_settings[defaultLanguage]" required="required" value="en" checked="checked" /><label for="account_settings_defaultLanguage_0" class="required">English</label><input type="radio" id="account_settings_defaultLanguage_1" name="account_settings[defaultLanguage]" required="required" value="es" /><label for="account_settings_defaultLanguage_1" class="required">Spanish</label><input type="radio" id="account_settings_defaultLanguage_2" name="account_settings[defaultLanguage]" required="required" value="pt" /><label for="account_settings_defaultLanguage_2" class="required">Portuguese</label><input type="radio" id="account_settings_defaultLanguage_3" name="account_settings[defaultLanguage]" required="required" value="fr" /><label for="account_settings_defaultLanguage_3" class="required">French</label></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group idx-preference-settings">
+                                  <div class="idx-ps-b">
+                                    <label class="required">Favorite Icon</label>
+                                    <div class="form-group" id="account_settings_defaultIcon">
+                                      <div class="ms-wrap-radio">
+                                        <input type="radio" id="account_settings_favoriteIconType_0" name="account_settings[favoriteIconType]" value="0" checked="checked">
+                                        <label for="account_settings_favoriteIconType_0" class="idx-icon-heart"><span>Heart</span></label>
+                                      </div>
+                                      <div class="ms-wrap-radio">
+                                        <input type="radio" id="account_settings_favoriteIconType_1" name="account_settings[favoriteIconType]" value="1">
+                                        <label for="account_settings_favoriteIconType_1" class="idx-icon-star"><span>Star</span></label>
+                                      </div>
+                                      <div class="ms-wrap-radio">
+                                        <input type="radio" id="account_settings_favoriteIconType_2" name="account_settings[favoriteIconType]" value="2">
+                                        <label for="account_settings_favoriteIconType_2" class="idx-icon-square"><span>Square</span></label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <label for="featured_listings_agentId">Price Ranges</label>
+                                  <div class="select-content-idx" id="for_sale_prices_ct">
+                                    <select id="account_settings_minPriceSaleRange" name="account_settings[minPriceSaleRange]">
+                                      <option value="">Min Price</option>
+                                      <option value="0">$0</option>
+                                      <option value="50000">$50,000</option>
+                                      <option value="100000">$100,000</option>
+                                      <option value="150000">$150,000</option>
+                                      <option value="200000">$200,000</option>
+                                      <option value="250000">$250,000</option>
+                                      <option value="300000">$300,000</option>
+                                      <option value="350000">$350,000</option>
+                                      <option value="400000">$400,000</option>
+                                      <option value="450000">$450,000</option>
+                                      <option value="500000">$500,000</option>
+                                      <option value="550000">$550,000</option>
+                                      <option value="600000">$600,000</option>
+                                      <option value="650000">$650,000</option>
+                                      <option value="700000">$700,000</option>
+                                      <option value="750000">$750,000</option>
+                                      <option value="800000">$800,000</option>
+                                      <option value="850000">$850,000</option>
+                                      <option value="900000">$900,000</option>
+                                      <option value="1000000">$1,000,000</option>
+                                      <option value="1250000">$1,250,000</option>
+                                      <option value="1500000">$1,500,000</option>
+                                      <option value="1750000">$1,750,000</option>
+                                      <option value="2000000">$2,000,000</option>
+                                      <option value="2500000">$2,500,000</option>
+                                      <option value="3000000">$3,000,000</option>
+                                      <option value="3500000">$3,500,000</option>
+                                      <option value="4000000">$4,000,000</option>
+                                      <option value="4500000">$4,500,000</option>
+                                      <option value="5000000">$5,000,000</option>
+                                      <option value="7500000">$7,500,000</option>
+                                      <option value="10000000">$10,000,000</option>
+                                      <option value="12500000">$12,500,000</option>
+                                      <option value="15000000">$15,000,000</option>
+                                      <option value="17500000">$17,500,000</option>
+                                      <option value="20000000">$20,000,000</option>
+                                      <option value="22500000">$22,500,000</option>
+                                      <option value="25000000">$25,000,000</option>
+                                      <option value="30000000">$30,000,000</option>
+                                      <option value="35000000">$35,000,000</option>
+                                      <option value="40000000">$40,000,000</option>
+                                      <option value="45000000">$45,000,000</option>
+                                      <option value="50000000">$50,000,000</option>
+                                      <option value="60000000">$60,000,000</option>
+                                      <option value="70000000">$70,000,000</option>
+                                      <option value="80000000">$80,000,000</option>
+                                      <option value="90000000">$90,000,000</option>
+                                      <option value="100000000">$100,000,000</option>
+                                    </select>
+                                    <select id="account_settings_maxPriceSaleRange" name="account_settings[maxPriceSaleRange]">
+                                      <option value="">Max Price</option>
+                                      <option value="0">$0</option>
+                                      <option value="50000">$50,000</option>
+                                      <option value="100000">$100,000</option>
+                                      <option value="150000">$150,000</option>
+                                      <option value="200000">$200,000</option>
+                                      <option value="250000">$250,000</option>
+                                      <option value="300000">$300,000</option>
+                                      <option value="350000">$350,000</option>
+                                      <option value="400000">$400,000</option>
+                                      <option value="450000">$450,000</option>
+                                      <option value="500000">$500,000</option>
+                                      <option value="550000">$550,000</option>
+                                      <option value="600000">$600,000</option>
+                                      <option value="650000">$650,000</option>
+                                      <option value="700000">$700,000</option>
+                                      <option value="750000">$750,000</option>
+                                      <option value="800000">$800,000</option>
+                                      <option value="850000">$850,000</option>
+                                      <option value="900000">$900,000</option>
+                                      <option value="1000000">$1,000,000</option>
+                                      <option value="1250000">$1,250,000</option>
+                                      <option value="1500000">$1,500,000</option>
+                                      <option value="1750000">$1,750,000</option>
+                                      <option value="2000000">$2,000,000</option>
+                                      <option value="2500000">$2,500,000</option>
+                                      <option value="3000000">$3,000,000</option>
+                                      <option value="3500000">$3,500,000</option>
+                                      <option value="4000000">$4,000,000</option>
+                                      <option value="4500000">$4,500,000</option>
+                                      <option value="5000000">$5,000,000</option>
+                                      <option value="7500000">$7,500,000</option>
+                                      <option value="10000000">$10,000,000</option>
+                                      <option value="12500000">$12,500,000</option>
+                                      <option value="15000000">$15,000,000</option>
+                                      <option value="17500000">$17,500,000</option>
+                                      <option value="20000000">$20,000,000</option>
+                                      <option value="22500000">$22,500,000</option>
+                                      <option value="25000000">$25,000,000</option>
+                                      <option value="30000000">$30,000,000</option>
+                                      <option value="35000000">$35,000,000</option>
+                                      <option value="40000000">$40,000,000</option>
+                                      <option value="45000000">$45,000,000</option>
+                                      <option value="50000000">$50,000,000</option>
+                                      <option value="60000000">$60,000,000</option>
+                                      <option value="70000000">$70,000,000</option>
+                                      <option value="80000000">$80,000,000</option>
+                                      <option value="90000000">$90,000,000</option>
+                                      <option value="100000000">$100,000,000</option>
+                                    </select>
+                                  </div>
+                                  <div class="select-content-idx" id="for_rent_prices_ct" style="display:none; max-width: 100%">
+                                    <select id="account_settings_minPriceRentRange" name="account_settings[minPriceRentRange]">
+                                      <option value="">Min Price</option>
+                                      <option value="0">$0</option>
+                                      <option value="500">$500</option>
+                                      <option value="1000">$1,000</option>
+                                      <option value="1500">$1,500</option>
+                                      <option value="2000">$2,000</option>
+                                      <option value="2500">$2,500</option>
+                                      <option value="3000">$3,000</option>
+                                      <option value="3500">$3,500</option>
+                                      <option value="4000">$4,000</option>
+                                      <option value="4500">$4,500</option>
+                                      <option value="5000">$5,000</option>
+                                      <option value="6000">$6,000</option>
+                                      <option value="7000">$7,000</option>
+                                      <option value="8000">$8,000</option>
+                                      <option value="9000">$9,000</option>
+                                      <option value="10000">$10,000</option>
+                                      <option value="12500">$12,500</option>
+                                      <option value="15000">$15,000</option>
+                                      <option value="17500">$17,500</option>
+                                      <option value="20000">$20,000</option>
+                                      <option value="25000">$25,000</option>
+                                      <option value="30000">$30,000</option>
+                                      <option value="35000">$35,000</option>
+                                      <option value="40000">$40,000</option>
+                                      <option value="45000">$45,000</option>
+                                      <option value="50000">$50,000</option>
+                                      <option value="60000">$60,000</option>
+                                      <option value="70000">$70,000</option>
+                                      <option value="80000">$80,000</option>
+                                      <option value="90000">$90,000</option>
+                                      <option value="100000">$100,000</option>
+                                    </select>
+                                    <select id="account_settings_maxPriceRentRange" name="account_settings[maxPriceRentRange]">
+                                      <option value="">Max Price</option>
+                                      <option value="0">$0</option>
+                                      <option value="500">$500</option>
+                                      <option value="1000">$1,000</option>
+                                      <option value="1500">$1,500</option>
+                                      <option value="2000">$2,000</option>
+                                      <option value="2500">$2,500</option>
+                                      <option value="3000">$3,000</option>
+                                      <option value="3500">$3,500</option>
+                                      <option value="4000">$4,000</option>
+                                      <option value="4500">$4,500</option>
+                                      <option value="5000">$5,000</option>
+                                      <option value="6000">$6,000</option>
+                                      <option value="7000">$7,000</option>
+                                      <option value="8000">$8,000</option>
+                                      <option value="9000">$9,000</option>
+                                      <option value="10000">$10,000</option>
+                                      <option value="12500">$12,500</option>
+                                      <option value="15000">$15,000</option>
+                                      <option value="17500">$17,500</option>
+                                      <option value="20000">$20,000</option>
+                                      <option value="25000">$25,000</option>
+                                      <option value="30000">$30,000</option>
+                                      <option value="35000">$35,000</option>
+                                      <option value="40000">$40,000</option>
+                                      <option value="45000">$45,000</option>
+                                      <option value="50000">$50,000</option>
+                                      <option value="60000">$60,000</option>
+                                      <option value="70000">$70,000</option>
+                                      <option value="80000">$80,000</option>
+                                      <option value="90000">$90,000</option>
+                                      <option value="100000">$100,000</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="title_content_tab bigtext">Building Detail</div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div>
+                                    <label class="required">History Inventory</label>
+                                    <select id="account_settings_HistoryInventBuilding" name="account_settings[HistoryInventBuilding]">
+                                      <option value="12">12 Months</option>
+                                      <option value="24">24 Months</option>
+                                      <option value="36" selected="selected">36 Months</option>
+                                      <option value="48">48 Months</option>
+                                      <option value="60">60 Months</option>
+                                      <option value="72">72 Months</option>
+                                      <option value="84">84 Months</option>
+                                      <option value="96">96 Months</option>
+                                      <option value="108">108 Months</option>
+                                      <option value="120">120 Months</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div>
+                                    <label class="required">Schools Info Ratio (miles)</label>
+                                    <div><input type="number" id="account_settings_schoolRatio" name="account_settings[schoolRatio]" class="classAddress" value="15" /></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="title_content_tab bigtext">Property Detail</div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div>
+                                    <div class="form-item-idx cp-flex-ct">
+                                      <label class="required" style="display:flex">
+                                        Collapsed Information
+                                        <span class="info-bubble" style="margin-left: 5px">
+                                          ?
+                                          <span class="bubble-info">
+                                            <span>Property Display Information</span>
+                                            <img src="/bundles/cpanel/images/collapse-img.png">
+                                            <p>Select what information you would like to display on your property detail pages.</p>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+                                    <div class="ms-list-checks ms-rd">
+                                      <div id="account_settings_collapsedPreference"><input type="radio" id="account_settings_collapsedPreference_0" name="account_settings[collapsedPreference]" required="required" value="0" checked="checked" /><label for="account_settings_collapsedPreference_0" class="required">Default</label><input type="radio" id="account_settings_collapsedPreference_1" name="account_settings[collapsedPreference]" required="required" value="1" /><label for="account_settings_collapsedPreference_1" class="required">Custom</label></div>
+                                    </div>
+                                    <div class="itemWiew itemCollapseDetailt ms-list-checks">
+                                      <div id="account_settings_collapsedPreferenceDetail"><input type="checkbox" id="account_settings_collapsedPreferenceDetail_0" name="account_settings[collapsedPreferenceDetail][]" value="property_detail" /><label for="account_settings_collapsedPreferenceDetail_0">Property Detail</label><input type="checkbox" id="account_settings_collapsedPreferenceDetail_1" name="account_settings[collapsedPreferenceDetail][]" value="amenities" /><label for="account_settings_collapsedPreferenceDetail_1">Amenities</label><input type="checkbox" id="account_settings_collapsedPreferenceDetail_2" name="account_settings[collapsedPreferenceDetail][]" value="interior_features" /><label for="account_settings_collapsedPreferenceDetail_2">Interior Features</label><input type="checkbox" id="account_settings_collapsedPreferenceDetail_3" name="account_settings[collapsedPreferenceDetail][]" value="exterior_features" /><label for="account_settings_collapsedPreferenceDetail_3">Exterior Features</label><input type="checkbox" id="account_settings_collapsedPreferenceDetail_4" name="account_settings[collapsedPreferenceDetail][]" value="school_information" /><label for="account_settings_collapsedPreferenceDetail_4">School Information</label></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <ul id="account_settings_grid">
+                                  <li>
+                                    <input type="radio" id="account_settings_viewGridType_0" name="account_settings[viewGridType]" required="required" value="0">
+                                    <label for="account_settings_viewGridType_0" class="required">Property Details Overlay Photo</label>
+                                    <p>Information will show <strong>on top</strong> of the photo</p>
+                                    <div class="idx-ng-grid idx-float-ng-grid">
+                                      <div class="idx-ng-grid-img">
+                                        <span class="idx-ng-grid-label">Pending</span>
+                                        <span class="idx-ng-grid-prev"></span>
+                                        <span class="idx-ng-grid-next"></span>
+                                      </div>
+                                      <div class="idx-ng-grid-info">
+                                        <span class="idx-ng-grid-price">$500,000</span>
+                                        <ul>
+                                          <li>3 Beds</li>
+                                          <li>2 Baths</li>
+                                          <li>1.543 Sq.Ft.</li>
+                                        </ul>
+                                        <span class="idx-ng-grid-address">123 Main Avenue Suite 123</span>
+                                        <span class="idx-ng-grid-address idx-ct">City Name, ST 123456</span>
+                                        <span class="idx-icon-heart"></span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <input type="radio" id="account_settings_viewGridType_1" name="account_settings[viewGridType]" required="required" value="1" checked="checked">
+                                    <label for="account_settings_viewGridType_1" class="required">Property Details Below Photo</label>
+                                    <p>Information will show <strong>below</strong> the photo</p>
+                                    <div class="idx-ng-grid">
+                                      <div class="idx-ng-grid-img">
+                                        <span class="idx-ng-grid-label">Pending</span>
+                                        <span class="idx-ng-grid-prev"></span>
+                                        <span class="idx-ng-grid-next"></span>
+                                      </div>
+                                      <div class="idx-ng-grid-info">
+                                        <span class="idx-ng-grid-price">$500,000</span>
+                                        <ul>
+                                          <li>3 Beds</li>
+                                          <li>2 Baths</li>
+                                          <li>1.543 Sq.Ft.</li>
+                                        </ul>
+                                        <span class="idx-ng-grid-address">123 Main Avenue Suite 123</span>
+                                        <span class="idx-ng-grid-address idx-ct">City Name, ST 123456</span>
+                                        <span class="idx-icon-heart"></span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="ms-wrap-btn" style="padding: 0 0 10px 0">
+                              <a href="/settings/preferences" class="btn btn-dgt-grs">
+                              <span>Cancel</span>
+                              </a>
+                              <button type="submit" class="btn btn-dgt-def" style="margin-right: 0">
+                              <span>Save</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div id="registrations_settings" class="tab-pane fade">
+                  <div class="widget ms-shadown-none ms-border" id="saveRegistrationSettingsWrap">
+                    <div class="ms-wrap-widget">
+                      <div class="ms-widget">
+                        <div class="title_content_tab bigtext">Configure when the registration widget will be prompted on your website.</div>
+                        <form name="force_registration" method="post" id="idxboost_registration_settings_form">
+                          <div class="ms-item">
+                            <div id="force_registration_forceRegistration"><input type="radio" id="force_registration_forceRegistration_0" name="force_registration[forceRegistration]" required="required" value="1" checked="checked"><label for="force_registration_forceRegistration_0" class="required">Enabled</label><input type="radio" id="force_registration_forceRegistration_1" name="force_registration[forceRegistration]" required="required" value="0"><label for="force_registration_forceRegistration_1" class="required">Disabled</label></div>
+                            <span class="ms-label-text">*Settings apply only to IDX Pages</span>
+                          </div>
+                          <div class="ms-item-flex">
+                            <div class="ms-hand ms-mx-title">Open registration after</div>
+                            <div class="ms-item" style="justify-content: flex-start;">
+                              <select id="force_registration_signupLeftClicks" name="force_registration[signupLeftClicks]" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                                <option value="">--</option>
+                                <option value="1" selected="selected">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                              <div class="ms-mx-title" style="margin-left:15px">properties</div>
+                            </div>
+                          </div>
+                          <div id="force_registration_forceRegistrationForced"><input type="radio" id="force_registration_forceRegistrationForced_0" name="force_registration[forceRegistrationForced]" required="required" value="0"><label for="force_registration_forceRegistrationForced_0" class="required">Soft<span class="ms-label-text">Visitors can close it and continue browsing</span></label><input type="radio" id="force_registration_forceRegistrationForced_1" name="force_registration[forceRegistrationForced]" required="required" value="1" checked="checked"><label for="force_registration_forceRegistrationForced_1" class="required">Forced<span class="ms-label-text">Visitors must register to continue browsing</span></label></div>
+                          <div class="ms-chk-items" style="display:none !important;">
+                            <input type="checkbox" id="force_registration_fbSocialLoginEnabled" name="force_registration[fbSocialLoginEnabled]" value="1" checked="checked">
+                            <label for="force_registration_fbSocialLoginEnabled">Activate Facebook login</label>
+                            <input type="text" id="force_registration_fbSocialLoginApi" name="force_registration[fbSocialLoginApi]" placeholder="Enter your facebook App ID" value="429577281238127">
+                          </div>
+                          <div class="ms-chk-items" style="display:none !important;">
+                            <input type="checkbox" id="force_registration_gplusSocialLoginEnabled" name="force_registration[gplusSocialLoginEnabled]" value="1" checked="checked">
+                            <label for="force_registration_gplusSocialLoginEnabled">Activate Google+ login</label>
+                            <input type="text" id="force_registration_gplusSocialLoginApi" name="force_registration[gplusSocialLoginApi]" placeholder="Enter your google App ID" value="371402764842-980aa3k4kpjeibkjgdimdkmp6ula8q46.apps.googleusercontent.com">
+                          </div>
+                          <div class="form-item actions">
+                            <button type="submit" class="btn btn-dgt-def" id="generalSave"><span>Save</span></button>
+                          </div>
+                          <input type="hidden" id="force_registration__token" name="force_registration[_token]" value="UPLXGMvrYwgzQRUt4nsuiy6GaRvxMHiodoAaNAlMK7o">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('googleMap'), {
+          center: {lat: 43.5293, lng: -5.6773},
+          zoom: 13,
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 43.542194, lng: -5.676875},
+          map: map,
+          title: 'Acuario de Gijón'
+        });
+      }
+
+      jQuery("#accordion").sortable({handle: '.ms-collapse-title'});
+
+
+      $(".tg-save-form").on("click", function() {
+				var itemAcive = $(".ms-header-tabs li.active").attr("data-active");
+
+				if(itemAcive == 1){
+					$("#idxboost_idx_settings_cities").trigger("submit");
+				}else if(itemAcive == 2){
+					$("#idxboost_idx_display_preferences").trigger("submit");
+				}else{
+          $("#idxboost_registration_settings_form").trigger("submit");
+        }
+      });
+      
+    </script>
+  </body>
+</html>

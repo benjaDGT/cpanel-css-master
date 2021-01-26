@@ -1,0 +1,158 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M511.999 1024c-136.761 0-265.334-53.257-362.039-149.96-96.703-96.707-149.96-225.28-149.96-362.041 0-136.759 53.257-265.334 149.962-362.039 96.703-96.703 225.278-149.96 362.037-149.96s265.334 53.257 362.039 149.96c96.705 96.705 149.962 225.28 149.962 362.039s-53.257 265.334-149.962 362.039c-96.705 96.705-225.278 149.962-362.039 149.962zM511.999 65.136c-246.4 0-446.863 200.462-446.863 446.863s200.464 446.863 446.863 446.863 446.863-200.462 446.863-446.863-200.462-446.863-446.863-446.863z",
+          "M715.624 301.997l-275.613 275.615-131.637-131.637-92.556 92.556 224.193 224.195 368.169-368.171z"
+        ],
+        "attrs": [
+          {},
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "saved"
+        ],
+        "grid": 0
+      },
+      "attrs": [
+        {},
+        {}
+      ],
+      "properties": {
+        "order": 2,
+        "id": 2,
+        "name": "saved",
+        "prevSize": 32,
+        "code": 59659
+      },
+      "setIdx": 0,
+      "setId": 9,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M96.017 0l-96.017 96.007 417.234 417.203-417.234 414.773 96.017 96.017 511.974-512.005z",
+          "M923.987 1024l96.017-96.007-417.234-417.203 417.234-414.773-96.017-96.017-511.974 512.005z"
+        ],
+        "width": 1020,
+        "attrs": [
+          {},
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "close"
+        ],
+        "grid": 0
+      },
+      "attrs": [
+        {},
+        {}
+      ],
+      "properties": {
+        "order": 9,
+        "id": 3,
+        "name": "close",
+        "prevSize": 32,
+        "code": 59653
+      },
+      "setIdx": 0,
+      "setId": 9,
+      "iconIdx": 1
+    },
+    {
+      "icon": {
+        "paths": [
+          "M325.8 457.4v111.8h184.8c-7.4 48-55.8 140.6-184.8 140.6-111.2 0-202-92.2-202-205.8s90.8-205.8 202-205.8c63.4 0 105.6 27 129.8 50.2l88.4-85.2c-56.8-53-130.4-85.2-218.2-85.2-180.2 0.2-325.8 145.8-325.8 326s145.6 325.8 325.8 325.8c188 0 312.8-132.2 312.8-318.4 0-21.4-2.4-37.8-5.2-54h-307.6z",
+          "M1024 448h-96v-96h-96v96h-96v96h96v96h96v-96h96z"
+        ],
+        "tags": [
+          "google-plus",
+          "brand",
+          "social"
+        ],
+        "defaultCode": 60043,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "google-plus, brand5",
+        "name": "google-plus",
+        "order": 3,
+        "id": 396,
+        "prevSize": 32,
+        "code": 60043
+      },
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 395
+    },
+    {
+      "icon": {
+        "paths": [
+          "M608 192h160v-192h-160c-123.514 0-224 100.486-224 224v96h-128v192h128v512h192v-512h160l32-192h-192v-96c0-17.346 14.654-32 32-32z"
+        ],
+        "tags": [
+          "facebook",
+          "brand",
+          "social"
+        ],
+        "defaultCode": 60048,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "facebook, brand10",
+        "name": "facebook",
+        "order": 2,
+        "id": 401,
+        "prevSize": 32,
+        "code": 60048
+      },
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 400
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "icomoon"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 100,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

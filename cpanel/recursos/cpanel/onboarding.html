@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>IDXBOOST | Billing Wizard</title>
+    <meta name="keywords" content="FlexIdx, listing, Filters, Analytics">
+    <meta name="description" content="FlexIdx, the best dashboard admin listing, Filters, Analytics">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+    <style>body{padding-top: 0;}</style>
+  </head>
+  <body>
+    <div class="rs-wrapper">
+      <section class="rs-content-wrapper onboarding-form">
+        <div class="ms-wrap-billing-form">
+          <div class="ms-wrap-header">
+            <img src="images/logo.png" title="IDX Boost!" alt="Cutting-Edge MLS/IDX Search for Wordpress" class="ms-lg-img">
+            <h2 class="ms-bl-title">Let’s Get Started!</h2>
+            <p>Creating an IDXBoost account</p>
+          </div>
+          <form action="" class="ms-card-form">
+            <div class="ms-card-info">
+              <p>Your membership includes:</p>
+              <ul>
+                <li class="ms-act">Unlimited texting, calling, emails</li>
+                <li class="ms-act">Integrated crm, notes and follow-ups</li>
+                <li class="ms-act">Single Property Website Creator</li>
+                <li class="ms-act">One Single Property Website</li>
+                <li class="ms-act">Homepage with editor</li>
+                <li class="ms-act">Website activity tracking</li>
+                <li class="ms-act">User notifications and alerts</li>
+                <li class="ms-act">Hyper-niche filter creation</li>
+                <li class="ms-act">Buiding page creator with mls inventory</li>
+                <li class="ms-act">Advanced and responsive map search</li>
+              </ul>
+            </div>
+            <div class="ms-card-list">
+
+              <div class="ms-card">
+                <div class="ms-card-body">
+                  <h3 class="ms-subtitle">Your new account information</h3>
+                  <div class="ms-form-input">
+                    <input type="text" placeholder="First Name">
+                  </div>
+                  <div class="ms-form-input">
+                    <input type="text" placeholder="Last Name">
+                  </div>
+                  <div class="ms-form-input">
+                    <input type="text" placeholder="Phone">
+                  </div>
+                  <div class="ms-form-input">
+                    <input type="email" placeholder="Email">
+                  </div>
+                  <div class="ms-form-input">
+                    <input type="password" placeholder="Password" id="psw-input">
+                  </div>
+
+                  <div class="ms-password-info">
+                    <div id="pswmeter" class="mt-3"></div>
+                    <div class="mt-2">
+                      <strong>Password strenght:</strong> <div id="pswmeter-message" class="mt-3"></div>
+                    </div>
+                    <a href="#">Help</a>
+                  </div>
+
+                  <h3 class="ms-subtitle ms-top">Membership Billing Information</h3>
+                  <p><strong>Your $25 monthly membership</strong> includes platform access, one CRM seat and one single property website.</p>
+
+                  <ul class="ms-opt-list">
+                    <li>
+                      <input type="radio" name="opt" value="1" id="opt1">
+                      <label for="opt1">CRM + Single Property ($25/mo)</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="opt" value="2" id="opt2">
+                      <label for="opt2">CRM + Single Property + IDX Integration ($124/mo)</label>
+                    </li>
+                  </ul>
+
+                  <div class="ms-form-input">
+                    <span>Name on card</span>
+                    <input type="text" placeholder="Cardholder Name" class="ms-name-card">
+                  </div>
+
+                  <div class="ms-form-cd">
+                    <span>Credit Card Information</span>
+                    <div class="ms-wrap-credit" id="credit">
+                      <input class="cc-number unknown" maxlength="19" name="credit-number" pattern="\d*" placeholder="Card Number" type="text">
+                      <input class="cc-expires" maxlength="7" name="credit-expires" pattern="\d*" placeholder="MM / YY" type="text">
+                      <input class="cc-cvc" maxlength="4" name="credit-cvc" pattern="\d*" placeholder="CVC" type="text">
+                    </div>
+                  </div>
+
+                  <div class="ms-wrap-btn">
+                    <button class="ms-btn-lg" aria-label="Save and continue">
+                      <span>Save and continue</span>
+                    </button>
+                  </div>
+
+                  <div class="ms-footer">
+                    <p>By enterign your information you agree to the <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    
+    </div>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../js/jquery.payment.min.js"></script>
+
+    <script type="text/javascript" src="../../js/pswmeter.min.js"></script>
+    <script>
+      //Password validate
+      const myPassMeter = passwordStrengthMeter({
+        containerElement: '#pswmeter',
+        passwordInput: '#psw-input',
+        showMessage: true,
+        messageContainer: '#pswmeter-message',
+        messagesList: [
+          'Write your password...',
+          'Easy peasy!',
+          'That is a simple one',
+          'That is better',
+          'Strong'
+        ],
+        height: 6,
+        borderRadius: 0,
+        pswMinLength: 8
+      });
+
+      //Credit card validate
+      jQuery('#credit .cc-number').formatCardNumber();
+      jQuery('#credit .cc-expires').formatCardExpiry();
+      jQuery('#credit .cc-cvc').formatCardCVC();
+    </script>
+  </body>
+</html>

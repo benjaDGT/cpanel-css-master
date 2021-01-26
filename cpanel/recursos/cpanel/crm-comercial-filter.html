@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>FlexIdx | Map Search Filter</title>
+    <meta name="keywords" content="FlexIdx, listing, Filters, Analytics">
+    <meta name="description" content="FlexIdx, the best dashboard admin listing, Filters, Analytics">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+  </head>
+  <body>
+    <div class="rs-wrapper">
+      <header class="rs-navbar">
+        <h1>IDX Boost! Cutting-Edge MLS/IDX Search for Wordpress</h1>
+        <nav>
+          <div class="logo">
+            <a href="/" title="IDX Boost™">
+            <img src="https://cpanel.staging.idxboost.com/bundles/cpanel/images/logo.png" title="IDX Boost!" alt="Cutting-Edge MLS/IDX Search for Wordpress">
+            </a>
+            <button class="ms-hidden-menu-btn">Hidden Menu <span></span></button>
+          </div>
+          <div class="header-nav">
+            <ul id="list_nav" style="visibility: hidden !important;">
+              <li><a href="/" title="Leads" class="ico-leads">Leads</a></li>
+              <li><a href="/filters" title="Filters" class="ico-filters">Filters</a></li>
+              <li><a href="/my-exclusive-listings" title="Listings" class="ico-listings">Listings</a></li>
+              <li><a href="/settings/account" title="Account" class="ico-account">Account</a></li>
+            </ul>
+            <!--<div class="ms-warning-message">
+              <i class="crm-ico-alert-triangle"></i> 
+              <span>
+              <span class="ms-hdx">Warning: You must set up your <strong>email sender</strong> to set up your account </span> <a href="#">Click Here to set up your email sender</a>
+              </span> 
+            </div>-->
+            <div class="user_nav">
+              <a href="javascript:void(0)" title="Related ISG" id="userAvatar">
+                <span class="gb">33</span>
+                <div class="user_avatar idxboost-photo-preview" style="overflow: hidden;width:50px;height:50px;left:12px;margin-top:-25px;">
+                  <img style="vertical-align: top;max-width: 100%;height: auto;" src="https://idxboost.s3.amazonaws.com/agent_profiles/47a02785e2ea.11f31544683d.png">
+                </div>
+                <h2>Related ISG</h2>
+              </a>
+              <ul id="userList">
+                <li><a href="/my/submissions/all" title="Contact Form Inquiries">Form Inquiries</a></li>
+                <li><a href="/my/submissions/agents" title="Contact Form Inquiries">Form Agents</a></li>
+                <li><a href="/" title="Leads">Leads <span class="gb gblets">33</span></a></li>
+                <li><a href="/logout" title="Log out">Log out</a></li>
+              </ul>
+            </div>
+            <div class="search_nav">
+              <button id="help" class="btn-help">Support</button>
+            </div>
+          </div>
+          <button class="main_menu" id="mainMene">Main Menu <span></span></button>
+          <button class="sub_menu" id="subMenu">Sub Menu <span></span></button>
+        </nav>
+      </header>
+
+      <aside class="rs-sidebar">
+        <div class="title-rs-sidebar">Main menu</div>
+        <button id="closeMenu">Close</button>
+        <ul>
+          <li><a href="#" title="My Leads" class="item_nav ico-leads active">My Leads <span class="gb">19</span></a></li>
+          <li>
+            <a href="javascript:void(0)" title="Account" class="item_nav ico-account sub-items">My Account</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="Registration Key">Registration Key</a></li>
+              <li><a href="#" title="My Account">My Account</a></li>
+              <li><a href="#" title="Change Password">Change Password</a></li>
+              <li><a href="#" title="Billing Information">Billing Information</a></li>
+              <li><a href="#" title="MLS Setup">MLS Setup</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="IDX Settings" class="item_nav ico-setting sub-items">IDX Settings</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="Advanced Settings">Advanced Settings</a></li>
+              <li><a href="#" title="Quick Search Settings">Quick Search Settings</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:void(0)" title="My Listings" class="item_nav ico-listing">My Listings</a></li>
+          <li><a href="javascript:void(0)" title="Filters" class="item_nav ico-marketing">Filters</a></li>
+          <li>
+            <a href="#" title="Buildings" class="item_nav ico-buildings sub-items">Buildings</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="My Buildings">My Buildings</a></li>
+              <li><a href="#" title="My Buildings Groups">My Buildings Groups</a></li>
+            </ul>
+          </li>
+          <li><a href="#" title="IDX Analytics" class="item_nav ico-analytics">IDX Analytics</a></li>
+        </ul>
+      </aside>
+
+      <section class="rs-content-wrapper">
+        <div class="ms-new-basic-form ms-basic-pd">
+          <div class="rs-content-body rs-content-body container basicPage ms-new-basic-form">
+            <div class="ms-header">
+              <h2 class="ms-title">Commercial Filter</h2>
+              <div class="ms-wrap-btn">
+                <a href="/" class="btn btn-dgt-grs">
+                  <span>Cancel</span>
+                </a>
+                <button type="submit" class="btn btn-dgt-def">
+                  <span>Save</span>
+                </button>
+              </div>
+            </div>
+            <div class="widget ms-shadown-none ms-border" id="filerPageStyle">
+              <div class="ms-wrap-widget">
+                <div class="ms-widget">
+
+                  <div class="container ms-new-basic-form" id="createMapSearchFilter">
+                    <form class="ms-row" id="flex_idx_search_filter_form">
+                      <input type="hidden" name="search_filter[polygon_search]" >
+                      <input type="hidden" name="search_filter[rect]" >
+                      <input type="hidden" name="search_filter[zm]" >
+                      <input type="hidden" name="search_filter[filterSearchKeywordLabel]" >
+                      <input type="hidden" name="search_filter[filterSearchKeywordType]" >
+                      <input type="hidden" name="search_filter[url_parameters]" >
+                      <input type="hidden" name="search_filter[query]" >
+
+                      <div class="ms-md-2">
+                        <div class="ms-sticky">
+                          <div class="widget ms-shadown-none">
+                            <div class="ms-widget padding-none">
+                              <div class="ms-body-widget ms-alert-mode">
+                                <span class="ms-filter-count js-search-filter-count">0</span> <strong>Properties</strong> Generated by this filter, Maximum Filter size: 1,500 Listings
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="ms-md-7">
+                        <div class="widget ms-shadown-none">
+                          <div class="ms-wrap-widget">
+                            <div class="ms-widget">
+                              <div class="ms-sp-row">
+                                <div class="form-group">
+                                  <label for="filterName">Filter Name</label>
+                                  <input type="text" class="form-control js-edit-filterName" id="filterName" name="filterName" required autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                  <label for="select-filter-location">Filter Location</label>
+                                  <select id="select-filter-location" name="select-filter-location" class="select2">
+                                    <option value="1">By Draw Map</option>
+                                    <option value="2">By City/Zipcode</option>
+                                  </select>
+                                </div>
+                                <div class="form-group ms-mb-cell ms-hidden">
+                                  <label for="filterGeolocation">City / Zipcode</label>
+                                  <div id="ib-autocomplete-add">
+                                    <input type="text" class="form-control" id="filterGeolocation" placeholder="Enter city, zip">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="ms-map-ct">
+                                <div id="googleMap" class="ms-map mapFilterAdd"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="ms-wrap-widget border-bottom" id="section-1">
+                            <div class="ms-widget">
+                              <div class="row">
+                                <div class="form-group col-xs-12 col-sm-3">
+                                  <label class="margin-bottom">Sale Type</label>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" name="search_filter[sale_type]" id="item-13" class="js-sale-type-sale" value="0">
+                                    <label for="item-13">For Sale</label>
+                                  </div>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" name="search_filter[sale_type]" id="item-14" class="js-sale-type-rent" value="1">
+                                    <label for="item-14">For Rent</label>
+                                  </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-3">
+                                  <label class="margin-bottom">Show Results on</label>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" id="search_filter_commercial_defaultView_0" name="search_filter_commercial[defaultView]" required="required" value="grid">
+                                    <label for="search_filter_commercial_defaultView_0" class="required">Gallery View</label>
+                                  </div>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" id="search_filter_commercial_defaultView_1" name="search_filter_commercial[defaultView]" required="required" value="list">
+                                    <label for="search_filter_commercial_defaultView_1" class="required">List View</label>
+                                  </div>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" id="search_filter_commercial_defaultView_2" name="search_filter_commercial[defaultView]" required="required" value="map" checked="checked">
+                                    <label for="search_filter_commercial_defaultView_2" class="required">Map View</label>
+                                  </div>
+                                </div>
+
+                                <div class="form-group col-xs-12 col-sm-3">
+                                  <label class="margin-bottom">Display Results</label>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" name="search_filter[]" class="js-property-type-alert" id="list_newest-desc" value="list_newest-desc">
+                                    <label for="list_newest-desc">Newest Listings</label>
+                                  </div>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" name="search_filter[]" class="js-property-type-alert" id="price-desc" value="price-desc">
+                                    <label for="price-desc">Highest Price</label>
+                                  </div>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" name="search_filter[]" class="js-property-type-alert" id="price-asc" value="price-asc">
+                                    <label for="price-asc">Lowest Price</label>
+                                  </div>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" name="search_filter[]" class="js-property-type-alert" id="sqft-desc" value="sqft-desc">
+                                    <label for="sqft-desc">Highest Sqft</label>
+                                  </div>
+                                  <div class="ms-wrap-radio">
+                                    <input type="radio" name="search_filter[]" class="js-property-type-alert" id="sqft-asc" value="sqft-asc">
+                                    <label for="sqft-asc">Lowest Sqft</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="ms-wrap-widget border-bottom" id="section-3">
+                            <div class="ms-widget">
+                              <div class="form-group">
+                                <label class="margin-bottom">Features</label>
+                                <div class="ms-flex row ms-features-list">
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_0" name="search_filter_commercial[propertyType][]" value="3">
+                                    <label for="search_filter_commercial_propertyType_0">Adult Congregate</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_1" name="search_filter_commercial[propertyType][]" value="34">
+                                    <label for="search_filter_commercial_propertyType_1">Agricultural</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_2" name="search_filter_commercial[propertyType][]" value="4">
+                                    <label for="search_filter_commercial_propertyType_2">Apartments</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_3" name="search_filter_commercial[propertyType][]" value="5">
+                                    <label for="search_filter_commercial_propertyType_3">Automotive</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_4" name="search_filter_commercial[propertyType][]" value="6">
+                                    <label for="search_filter_commercial_propertyType_4">Building</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_5" name="search_filter_commercial[propertyType][]" value="29">
+                                    <label for="search_filter_commercial_propertyType_5">Business</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_6" name="search_filter_commercial[propertyType][]" value="8">
+                                    <label for="search_filter_commercial_propertyType_6">Church</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_7" name="search_filter_commercial[propertyType][]" value="19">
+                                    <label for="search_filter_commercial_propertyType_7">Commercial</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_8" name="search_filter_commercial[propertyType][]" value="28">
+                                    <label for="search_filter_commercial_propertyType_8">Commercial / Business / Agricultural / Industrial Land</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_9" name="search_filter_commercial[propertyType][]" value="7">
+                                    <label for="search_filter_commercial_propertyType_9">Condominium</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_10" name="search_filter_commercial[propertyType][]" value="35">
+                                    <label for="search_filter_commercial_propertyType_10">Dock</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_11" name="search_filter_commercial[propertyType][]" value="9">
+                                    <label for="search_filter_commercial_propertyType_11">Dock Height</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_12" name="search_filter_commercial[propertyType][]" value="33">
+                                    <label for="search_filter_commercial_propertyType_12">Duplex / Quad Plex / Triplex</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_13" name="search_filter_commercial[propertyType][]" value="32">
+                                    <label for="search_filter_commercial_propertyType_13">Franchise</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_14" name="search_filter_commercial[propertyType][]" value="16">
+                                    <label for="search_filter_commercial_propertyType_14">Free Standing</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_15" name="search_filter_commercial[propertyType][]" value="20">
+                                    <label for="search_filter_commercial_propertyType_15">Hotel</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_16" name="search_filter_commercial[propertyType][]" value="30">
+                                    <label for="search_filter_commercial_propertyType_16">Income</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_17" name="search_filter_commercial[propertyType][]" value="10">
+                                    <label for="search_filter_commercial_propertyType_17">Industrial</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_18" name="search_filter_commercial[propertyType][]" value="11">
+                                    <label for="search_filter_commercial_propertyType_18">Manufacturing</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_19" name="search_filter_commercial[propertyType][]" value="12">
+                                    <label for="search_filter_commercial_propertyType_19">Medical</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_20" name="search_filter_commercial[propertyType][]" value="36">
+                                    <label for="search_filter_commercial_propertyType_20">Multifamily</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_21" name="search_filter_commercial[propertyType][]" value="22">
+                                    <label for="search_filter_commercial_propertyType_21">Office</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_22" name="search_filter_commercial[propertyType][]" value="23">
+                                    <label for="search_filter_commercial_propertyType_22">Professional</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_23" name="search_filter_commercial[propertyType][]" value="27">
+                                    <label for="search_filter_commercial_propertyType_23">Residential Income</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_24" name="search_filter_commercial[propertyType][]" value="26">
+                                    <label for="search_filter_commercial_propertyType_24">Residential Land/Boat Docks</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_25" name="search_filter_commercial[propertyType][]" value="14">
+                                    <label for="search_filter_commercial_propertyType_25">Restaurant</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_26" name="search_filter_commercial[propertyType][]" value="15">
+                                    <label for="search_filter_commercial_propertyType_26">Retail</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_27" name="search_filter_commercial[propertyType][]" value="24">
+                                    <label for="search_filter_commercial_propertyType_27">School</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_28" name="search_filter_commercial[propertyType][]" value="21">
+                                    <label for="search_filter_commercial_propertyType_28">Service</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_29" name="search_filter_commercial[propertyType][]" value="17">
+                                    <label for="search_filter_commercial_propertyType_29">Shopping Center</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_30" name="search_filter_commercial[propertyType][]" value="25">
+                                    <label for="search_filter_commercial_propertyType_30">Showroom</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_31" name="search_filter_commercial[propertyType][]" value="31">
+                                    <label for="search_filter_commercial_propertyType_31">Special</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_32" name="search_filter_commercial[propertyType][]" value="18">
+                                    <label for="search_filter_commercial_propertyType_32">Store</label>
+                                  </div>
+                                  <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                    <input type="checkbox" id="search_filter_commercial_propertyType_33" name="search_filter_commercial[propertyType][]" value="13">
+                                    <label for="search_filter_commercial_propertyType_33">Warehouse</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="ms-wrap-widget border-bottom" id="section-2">
+                            <div class="ms-widget">
+                              <div class="row select-list">
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-flex input-480 js-sales-price-ranges">
+                                    <label class="margin-bottom">Sales Price Ranges</label>
+                                    <select id="featured_listings_minSalePriceFeatured" name="search_filter[minSalePrice]" class="select2">
+                                      <option value="">Min Price</option>
+                                      <option value="0">$0</option>
+                                      <option value="50000">$50,000</option>
+                                      <option value="100000">$100,000</option>
+                                      <option value="150000">$150,000</option>
+                                      <option value="200000">$200,000</option>
+                                      <option value="250000">$250,000</option>
+                                      <option value="300000">$300,000</option>
+                                      <option value="350000">$350,000</option>
+                                      <option value="400000">$400,000</option>
+                                      <option value="450000">$450,000</option>
+                                    </select>
+                                    <select id="featured_listings_maxSalePriceFeatured" name="search_filter[maxSalePrice]" class="select2">
+                                      <option value="">Max Price</option>
+                                      <option value="0">$0</option>
+                                      <option value="50000">$50,000</option>
+                                      <option value="100000">$100,000</option>
+                                      <option value="150000">$150,000</option>
+                                      <option value="200000">$200,000</option>
+                                      <option value="250000">$250,000</option>
+                                      <option value="300000">$300,000</option>
+                                      <option value="350000">$350,000</option>
+                                      <option value="400000">$400,000</option>
+                                      <option value="450000">$450,000</option>
+                                      <option value="500000">$500,000</option>
+                                      <option value="550000">$550,000</option>
+                                    </select>
+                                  </div>
+                                  <div class="ms-flex input-480 js-rental-price-ranges" style="display:none;">
+                                    <label class="margin-bottom">Rental Price Ranges</label>
+                                    <select id="featured_listings_minRentPriceFeatured" name="search_filter[minRentPrice]" class="select2">
+                                      <option value="">Min Price</option>
+                                      <option value="0">$0</option>
+                                      <option value="500">$500</option>
+                                      <option value="1000">$1,000</option>
+                                      <option value="1500">$1,500</option>
+                                      <option value="2000">$2,000</option>
+                                      <option value="2500">$2,500</option>
+                                      <option value="3000">$3,000</option>
+                                      <option value="3500">$3,500</option>
+                                      <option value="4000">$4,000</option>
+                                      <option value="4500">$4,500</option>
+                                    </select>
+                                    <select id="featured_listings_maxRentPriceFeatured" name="search_filter[maxRentPrice]" class="select2">
+                                      <option value="">Max Price</option>
+                                      <option value="0">$0</option>
+                                      <option value="500">$500</option>
+                                      <option value="1000">$1,000</option>
+                                      <option value="1500">$1,500</option>
+                                      <option value="2000">$2,000</option>
+                                      <option value="2500">$2,500</option>
+                                      <option value="3000">$3,000</option>
+                                      <option value="3500">$3,500</option>
+                                      <option value="4000">$4,000</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-flex input-480">
+                                    <label class="margin-bottom">Bedrooms</label>
+                                    <select id="search_filter_minBeds" name="search_filter[minBeds]" class="select2">
+                                      <option value="">Min Beds</option>
+                                      <option value="0">Studio</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">5+</option>
+                                    </select>
+                                    <select id="search_filter_maxBeds" name="search_filter[maxBeds]" class="select2">
+                                      <option value="">Max Beds</option>
+                                      <option value="0">Studio</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">5+</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-input-group">
+                                    <label class="margin-bottom">Cap Rate</label>
+                                    <input type="text" id="search_filter_commercial_minCaprate" name="search_filter_commercial[minCaprate]" placeholder="Min Cap Rate">
+                                    <input type="text" id="search_filter_commercial_maxCapRate" name="search_filter_commercial[maxCapRate]" placeholder="Max Cap Rate">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="ms-wrap-widget border-bottom section-2">
+                            <div class="ms-widget">
+                              <div class="row select-list">
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-flex input-480">
+                                    <label class="margin-bottom">Living Size</label>
+                                    <select id="search_filter_minLivingSize" name="search_filter[minLivingSize]" class="select2">
+                                      <option value="">Min Living Size</option>
+                                      <option value="0">0</option>
+                                      <option value="500">500</option>
+                                      <option value="600">600</option>
+                                      <option value="700">700</option>
+                                      <option value="800">800</option>
+                                      <option value="900">900</option>
+                                      <option value="1000">1000</option>
+                                    </select>
+                                    <select id="search_filter_maxLivingSize" name="search_filter[maxLivingSize]" class="select2">
+                                      <option value="">Max Living Size</option>
+                                      <option value="0">0</option>
+                                      <option value="500">500</option>
+                                      <option value="600">600</option>
+                                      <option value="700">700</option>
+                                      <option value="800">800</option>
+                                      <option value="900">900</option>
+                                      <option value="1000">1000</option>
+                                      <option value="1250">1250</option>
+                                      <option value="1500">1500</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-flex input-480">
+                                    <label class="margin-bottom">Lot Size</label>
+                                    <select id="search_filter_minLotSize" name="search_filter[minLotSize]" class="select2">
+                                      <option value="">Min Lot size</option>
+                                      <option value="0">0</option>
+                                      <option value="500">500</option>
+                                      <option value="600">600</option>
+                                      <option value="700">700</option>
+                                      <option value="800">800</option>
+                                      <option value="900">900</option>
+                                      <option value="1000">1000</option>
+                                      <option value="1250">1250</option>
+                                      <option value="1500">1500</option>
+                                      <option value="1750">1750</option>
+                                    </select>
+                                    <select id="search_filter_maxLotSize" name="search_filter[maxLotSize]" class="select2">
+                                      <option value="">Max Lot Size</option>
+                                      <option value="0">0</option>
+                                      <option value="500">500</option>
+                                      <option value="600">600</option>
+                                      <option value="700">700</option>
+                                      <option value="800">800</option>
+                                      <option value="900">900</option>
+                                      <option value="1000">1000</option>
+                                      <option value="1250">1250</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-input-group">
+                                    <label class="margin-bottom">Building Size</label>
+                                    <input type="text" id="search_filter_commercial_minBuildingsize" name="search_filter_commercial[minBuildingsize]" placeholder="Min Building Size" />
+                                    <input type="text" id="search_filter_commercial_maxBuildingsize" name="search_filter_commercial[maxBuildingsize]" placeholder="Max Building Size" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="ms-wrap-widget border-bottom section-2">
+                            <div class="ms-widget">
+                              <div class="row select-list">
+                                
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-flex input-480">
+                                    <label class="margin-bottom">Year Built</label>
+                                    <select id="search_filter_minYear" name="search_filter[minYear]" class="select2">
+                                      <option value="">Min Year</option>
+                                      <option value="2020">2020</option>
+                                      <option value="2019">2019</option>
+                                      <option value="2018">2018</option>
+                                      <option value="2017">2017</option>
+                                      <option value="2016">2016</option>
+                                    </select>
+                                    <select id="search_filter_maxYear" name="search_filter[maxYear]" class="select2">
+                                      <option value="">Max Year</option>
+                                      <option value="2020">2020</option>
+                                      <option value="2019">2019</option>
+                                      <option value="2018">2018</option>
+                                      <option value="2017">2017</option>
+                                      <option value="2016">2016</option>
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-input-group">
+                                    <label class="margin-bottom">Boost Box</label>
+                                    <select id="search_filter_commercial_idHackbox" name="search_filter_commercial[idHackbox]" required="required">
+                                      <option value="0" selected="selected">None</option>
+                                      <option value="1">test 1</option>
+                                      <option value="2">test 2</option>
+                                      <option value="3">test 3</option>
+                                    </select>
+                                  </div>
+                                  <div class="ms-input-group">
+                                    <div class="ms-wrap-checkbox">
+                                      <input type="checkbox" id="" name="" value="3">
+                                      <label for="">Force Registration</label>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-6 col-md-6 form-group">
+                                  <div class="ms-flex input-480">
+                                    <label class="margin-bottom">Features</label>
+                                    <div id="search_filter_commercial_features">
+                                      <input type="checkbox" id="search_filter_commercial_features_0" name="search_filter_commercial[features][]" value="is_vacant" />
+                                      <label for="search_filter_commercial_features_0">Vacant</label>
+                                      <input type="checkbox" id="search_filter_commercial_features_1" name="search_filter_commercial[features][]" value="is_occupied" />
+                                      <label for="search_filter_commercial_features_1">Occupied</label>
+                                      <input type="checkbox" id="search_filter_commercial_features_2" name="search_filter_commercial[features][]" value="foreclosure" />
+                                      <label for="search_filter_commercial_features_2">Foreclosure</label>
+                                      <input type="checkbox" id="search_filter_commercial_features_3" name="search_filter_commercial[features][]" value="short_sale" />
+                                      <label for="search_filter_commercial_features_3">Short Sale</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="ms-wrap-btn ms-full">
+                        <a class="btn btn-dgt-grs" data-dismiss="modal">
+                        <span>Cancel</span>
+                        </a>
+                        <button class="btn btn-dgt-def js-save-alert" type="submit"> 
+                        <span>Save</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </div>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('googleMap'), {
+          center: {lat: 43.5293, lng: -5.6773},
+          zoom: 13,
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 43.542194, lng: -5.676875},
+          map: map,
+          title: 'Acuario de Gijón'
+        });
+      }
+
+      jQuery(document).on('change', '#select-filter-location', function () {
+        var valueSelect = (jQuery(this).val()) * 1;
+
+        if (valueSelect == 1) {
+          jQuery(".ms-mb-cell").addClass("ms-hidden");
+          jQuery(".ms-map-ct").removeClass("ms-hidden");
+          jQuery("#filterGeolocation").focus();
+        } else {
+          jQuery(".ms-mb-cell").removeClass("ms-hidden");
+          jQuery(".ms-map-ct").addClass("ms-hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="css/modals.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <title>Modals</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="javascript:void(0)" class="show-modal" data-modal="modal_add_favorities">Building added to favorites!</a></li>
+            <li><a href="javascript:void(0)" class="show-modal" data-modal="modal_search_saved">Search saved!</a></li>
+            <li><a href="javascript:void(0)" class="show-modal" data-modal="modal_email_to_friend">Email to friend</a></li>
+            <li><a href="javascript:void(0)" class="show-modal" data-modal="modal_schedule">Schedule a showing now</a></li>
+            <li><a href="javascript:void(0)" class="show-modal" data-modal="modal_calculator">Calculator</a></li>
+            <li><a href="javascript:void(0)" class="show-modal" data-modal="modal_login">Login and register</a></li>
+            <li><a href="javascript:void(0)" class="show-modal" data-modal="modal_login_2">Login and register versión 2</a></li>
+        </ul>
+
+        <!-- ADD FAVORITIES -->
+        <div id="modal_add_favorities" class="overlay_modal">
+            <div class="modal_cm message_pop">
+                <button class="close">Close</button>
+                <div class="content_md">
+                    <div class="body_md">
+                        <h2 class="ico_ok">Building added to favorites!</h2>
+                        <p>You can see your saved buildings<br>under your account</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ADD SAVED -->
+        <div id="modal_search_saved" class="overlay_modal">
+            <div class="modal_cm message_pop">
+                <button class="close">Close</button>
+                <div class="content_md">
+                    <div class="body_md">
+                        <h2 class="ico_ok">Search saved!</h2>
+                        <p>Your search was saved succesfully</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- EMAIL TO FRIEND -->
+        <div id="modal_email_to_friend" class="overlay_modal">
+            <div class="modal_cm">
+                <button class="close">Close</button>
+                <div class="content_md">
+                    <div class="heder_md">
+                        <h2>Email to a friend</h2>
+                    </div>
+                    <div class="body_md">
+                        <p>Recomend this to a friend, just enter their email below...</p>
+                        <div class="form_content">
+                            <form action="" method="POST" id="form-email-friend">
+                                <div class="gform_body">
+                                    <ul class="gform_fields">
+                                        <li class="gfield">
+                                            <label class="gfield_label">Friend email</label>
+                                            <div class="ginput_container ginput_container_email"><input name="input_1" id="" type="email" value="" placeholder="Friend email*" class="medium"></div>
+                                        </li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">Friend name</label>
+                                            <div class="ginput_container ginput_container_email"><input name="input_2" id="" type="text" value="" placeholder="Friend name*" class="medium"></div>
+                                        </li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">My name</label>
+                                            <div class="ginput_container ginput_container_email"><input name="input_3" id="" type="text" value="" placeholder="My name*" class="medium"></div>
+                                        </li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">My email</label>
+                                            <div class="ginput_container ginput_container_email"><input name="input_4" id="" type="email" value="" placeholder="Friend email*" class="medium"></div>
+                                        </li>
+                                        <li class="gfield comments">
+                                            <label class="gfield_label">Comments</label>
+                                            <div class="ginput_container"><textarea name="input_5" id="" type="text" value="" placeholder="Comments" rows="10" cols="50" class="medium textarea"></textarea></div>
+                                        </li>
+                                        <li class="gfield requiredFields">* Required Fields</li>
+                                        <div class="gform_footer"><input type="submit" id="gform_submit_button_6" value="Submit" class="gform_button button"></div>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SCHEDULE -->
+        <div id="modal_schedule" class="overlay_modal">
+            <div class="modal_cm">
+                <button class="close">Close</button>
+                <div class="content_md">
+                    <div class="heder_md">
+                        <h2>Schedule a showing</h2>
+                    </div>
+                    <div class="body_md">
+                        <p>Let’s us know the best time for showing.</p>
+                        <ul class="contact-opt">
+                            <li><a href="tel:3057055000">(305) 705 - 5000</a></li>
+                            <li><a href="mailto:info@tremgroup.com">info@tremgroup.com</a></li>
+                        </ul>
+                        <div class="msg">441 Dilido Island, Miami Beach Fl 33145</div>
+                        <div class="form_content">
+                            <form action="" method="POST" id="form-schedule">
+                                <div class="gform_body">
+                                    <ul class="gform_fields">
+                                        <li class="gfield field_sublabel_below">Prefered Time and Date</li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">Prefered Time and Date</label>
+                                            <div class="ginput_container ginput_container_email">
+                                                <select class="medium">
+                                                    <option>10:00 AM</option>
+                                                    <option>11:00 AM</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">Prefered Time and Date</label>
+                                            <div class="ginput_container ginput_container_email">
+                                                <select class="medium">
+                                                    <option>10:00 AM</option>
+                                                    <option>11:00 AM</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="gfield field_sublabel_below">Alternate Time and Date</li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">Prefered Time and Date</label>
+                                            <div class="ginput_container ginput_container_email">
+                                                <select class="medium">
+                                                    <option>10:00 AM</option>
+                                                    <option>11:00 AM</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">Prefered Time and Date</label>
+                                            <div class="ginput_container ginput_container_email">
+                                                <select class="medium">
+                                                    <option>10:00 AM</option>
+                                                    <option>11:00 AM</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="gfield field_sublabel_below">Comments</li>
+                                        <li class="gfield comments">
+                                            <label class="gfield_label">Comments</label>
+                                            <div class="ginput_container"><textarea name="input_4" id="" type="text" value="" placeholder="Comments" rows="10" cols="50" class="medium textarea"></textarea></div>
+                                        </li>
+                                        <div class="gform_footer"><input type="submit" id="gform_submit_button_5" value="Submit" class="gform_button button"></div>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CALCULATOR -->
+        <div id="modal_calculator" class="overlay_modal">
+            <div class="modal_cm">
+                <button class="close">Close</button>
+                <div class="content_md">
+                    <div class="heder_md">
+                        <h2>Mortgage calculator</h2>
+                    </div>
+                    <div class="body_md">
+                        <p>Contact us for personalized assitance.</p>
+                        <ul class="contact-opt">
+                            <li><a href="tel:3057055000">(305) 705 - 5000</a></li>
+                            <li><a href="mailto:info@tremgroup.com">info@tremgroup.com</a></li>
+                        </ul>
+                        <div class="form_content">
+                            <form action="" method="POST" id="form-calculator">
+                                <div class="gform_body">
+                                    <ul class="gform_fields">
+                                        <li class="gfield">
+                                            <label class="gfield_label">Purchase Price</label>
+                                            <div class="ginput_container ginput_container_email"><input name="input_1" id="" type="text" value="" placeholder="$ 410,000" class="medium"></div>
+                                        </li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">% Down Payment</label>
+                                            <div class="ginput_container ginput_container_email"><input name="input_2" id="" type="text" value="" placeholder="20" class="medium"></div>
+                                        </li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">Term</label>
+                                            <div class="ginput_container ginput_container_email">
+                                                <select class="medium">
+                                                    <option>30 Years</option>
+                                                    <option>20 Years</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="gfield">
+                                            <label class="gfield_label">Interest Rate</label>
+                                            <div class="ginput_container ginput_container_email"><input name="input_3" id="" type="text" value="" placeholder="4.25" class="medium"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="detail-mortgage">
+                            <h3>Mortgage breakdown</h3>
+                            <ul>
+                                <li><span>Mortgage Amount</span><span class="text-bold">$328,000.00</span></li>
+                                <li><span>Down Payment Amount</span><span class="text-bold">$82,000.00</span></li>
+                                <li class="line-top"><span>Mortgage Amount</span><span class="text-bold mtotal">$328,000.00</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- REGISTER LOGIN -->
+        <div id="modal_login" class="overlay_modal">
+            <div class="login-modal">
+                <div class="img_modal"><img data-src="images/loginavatar.jpg" class="lazy-img"></div>
+                <div id="content-info-modal">
+                    <div class="modal_cm social_items">
+                        <button class="close">Close</button>
+                        <div class="content_md">
+                            <div class="heder_md">
+                                <h2>Welcome back</h2>
+                            </div>
+                            <div class="body_md">
+                                <p class="text-slogan">Sign in below</p>
+                                <ul class="contact-opt">
+                                    <li><a href="tel:3057055000">(305) 705 - 5000</a></li>
+                                    <li><a href="mailto:info@tremgroup.com">info@tremgroup.com</a></li>
+                                </ul>
+                                <ul class="header-tab">
+                                    <li><a href="javascript:void(0)" title="Sign in" data-tab="tabLogin" class="active">Sign in</a></li>
+                                    <li><a href="javascript:void(0)" title="Register" data-tab="tabRegister">Register</a></li>
+                                    <li><a href="javascript:void(0)" title="Reset Password" data-tab="tabReset">Reset Password</a></li>
+                                </ul>
+                                <div id="tabLogin" class="item_tab active">
+                                    <div class="form_content">
+                                        <form name="formLogin" id="formLogin" method="POST" action="">
+                                            <ul id="cntLoginForm" class="form_md">
+                                                <li class="form_input"> <input type="email" id="txt_user" name="user_name" placeholder="Enter email"></li>
+                                                <li class="form_input"><input type="password" id="txt_pwd" name="user_pass" placeholder="Enter password"></li>
+                                            </ul>
+                                            <button id="btn-user-login" type="submit" class="btn_form">Sign in</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="tabRegister" class="item_tab">
+                                    <div class="form_content">
+                                        <form name="formRegister" id="formRegister" method="POST" action="">
+                                            <ul id="cntRegisterForm" class="form_md">
+                                                <li class="form_input"><input type="email" name="register_email" id="register_email" placeholder="Enter email"></li>
+                                                <li class="form_input"><input type="text" name="register_name" id="register_name" placeholder="Name"></li>
+                                                <li class="form_input"><input type="text" name="register_phone" id="register_phone" placeholder="Phone number"></li>
+                                                <li class="form_input"><input type="password" name="register_password" id="register_password" placeholder="Create password"><span class="desc">The password must be greater than 8 characters</span></li>
+                                            </ul>
+                                            <button id="btn-user-register" type="submit" class="btn_form">Register</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="tabReset" class="item_tab">
+                                    <div class="form_content">
+                                        <form name="formReset" id="formReset" method="POST" action="">
+                                            <p>Enter you email address and we'll send you a link to your password</p>
+                                            <ul id="cntResetForm" class="form_md">
+                                                <li class="form_input"><input type="email" name="reset_email" id="reset_email" placeholder="Enter E-mail"></li>
+                                            </ul>
+                                            <button id="btn-user-reset" type="submit" class="btn_form">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <ul class="terms-opt">
+                                    <li><span>I accept </span><a href="#" title="Terms of use">Terms of use</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_md">
+                                <ul class="social_login">
+                                    <li>Or sign in with</li>
+                                    <li><a href="#" title="Facebook" class="ico-facebook">Facebook</a></li>
+                                    <li><a href="#" title="Google+" class="ico-google">Google+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- REGISTER LOGIN 2
+        <div id="modal_login_2" class="overlay_modal">
+            <div id="content-info-modal">
+                <div class="modal_cm social_items">
+                    <button class="close">Close</button>
+                    <div class="content_md">
+                        <div class="heder_md">
+                            <h2>Welcome back</h2>
+                        </div>
+                        <div class="body_md">
+                            <p class="text-slogan">Sign in below</p>
+                            <ul class="contact-opt">
+                                <li><a href="tel:3057055000">(305) 705 - 5000</a></li>
+                                <li><a href="mailto:info@tremgroup.com">info@tremgroup.com</a></li>
+                            </ul>
+                            <ul class="header-tab">
+                                <li><a href="javascript:void(0)" title="Sign in" data-tab="tabLogin" class="active">Sign in</a></li>
+                                <li><a href="javascript:void(0)" title="Register" data-tab="tabRegister">Register</a></li>
+                                <li><a href="javascript:void(0)" title="Reset Password" data-tab="tabReset">Reset Password</a></li>
+                            </ul>
+                            <div id="tabLogin" class="item_tab active">
+                                <div class="form_content">
+                                    <form name="formLogin" id="formLogin" method="POST" action="">
+                                        <ul id="cntLoginForm" class="form_md">
+                                            <li class="form_input"> <input type="email" id="txt_user" name="user_name" placeholder="Enter email"></li>
+                                            <li class="form_input"><input type="password" id="txt_pwd" name="user_pass" placeholder="Enter password"></li>
+                                        </ul>
+                                        <button id="btn-user-login" type="submit" class="btn_form">Sign in</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="tabRegister" class="item_tab">
+                                <div class="form_content">
+                                    <form name="formRegister" id="formRegister" method="POST" action="">
+                                        <ul id="cntRegisterForm" class="form_md">
+                                            <li class="form_input"><input type="email" name="register_email" id="register_email" placeholder="Enter email"></li>
+                                            <li class="form_input"><input type="text" name="register_name" id="register_name" placeholder="Name"></li>
+                                            <li class="form_input"><input type="text" name="register_phone" id="register_phone" placeholder="Phone number"></li>
+                                            <li class="form_input"><input type="password" name="register_password" id="register_password" placeholder="Create password"><span class="desc">The password must be greater than 8 characters</span></li>
+                                        </ul>
+                                        <button id="btn-user-register" type="submit" class="btn_form">Register</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="tabReset" class="item_tab">
+                                <div class="form_content">
+                                    <form name="formReset" id="formReset" method="POST" action="">
+                                        <p>Enter you email address and we'll send you a link to your password</p>
+                                        <ul id="cntResetForm" class="form_md">
+                                            <li class="form_input"><input type="email" name="reset_email" id="reset_email" placeholder="Enter E-mail"></li>
+                                        </ul>
+                                        <button id="btn-user-reset" type="submit" class="btn_form">Send</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <ul class="terms-opt">
+                                <li><span>I accept </span><a href="#" title="Terms of use">Terms of use</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_md">
+                            <ul class="social_login">
+                                <li>Or sign in with</li>
+                                <li><a href="#" title="Facebook" class="ico-facebook">Facebook</a></li>
+                                <li><a href="#" title="Google+" class="ico-google">Google+</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                //PARA MOSTRAR LOS MODALES
+                $(".show-modal").click(function() {
+                    var idModal = $(this).attr('data-modal');
+                    active_modal($('#'+idModal));
+                    var modalImg = $('#'+idModal).find('.lazy-img').attr('data-src');
+                    if(typeof(modalImg) != 'undefined'){
+                        $('#'+idModal).find('.lazy-img').attr('src',modalImg).removeAttr('data-src');
+                    }
+                });
+
+                //TABS DEL MODAL DE LOGIN
+                $(".header-tab a").click(function() {
+                    var loginHeight = 0;
+                    $(".header-tab a").removeClass('active');
+                    $(this).addClass('active');
+                    var tabId = $(this).attr('data-tab');
+                    switch(tabId){
+                        case 'tabLogin': $('#modal_login h2').text('Welcome Back'); $(".text-slogan").text('Sign in below'); break;
+                        case 'tabRegister': $('#modal_login h2').text('Register'); $(".text-slogan").text('Join to save listings and receive updates'); break;
+                        case 'tabReset': $('#modal_login h2').text('Welcome Back'); $(".text-slogan").text('Sign in below'); break;
+                    }
+                    $(".item_tab").removeClass('active');
+                    $("#"+tabId).addClass('active');
+                    loginHeight = $("#content-info-modal").height();
+                    $(".img_modal").css({'height':loginHeight+'px'});
+                });
+            });
+
+            $(".show-modal").click(function() {
+                var idModal = $(this).attr('data-modal');
+                active_modal($('#'+idModal));
+                var modalImg = $('#'+idModal).find('.lazy-img').attr('data-src');
+                if(typeof(modalImg) != 'undefined'){
+                    $('#'+idModal).find('.lazy-img').attr('src',modalImg).removeAttr('data-src');
+                }
+            });
+            
+            function active_modal( $modal ){
+                if( $modal.hasClass('active_modal') ){
+                    $('.overlay_modal').removeClass('active_modal');
+                    $("html, body").animate({scrollTop: 0}, 1500);
+                }
+                else{
+                    $modal.addClass('active_modal');
+                    $modal.find('form').find('input').eq(0).focus();
+                    $('html').addClass('modal_mobile');
+                }
+                close_modal($modal);
+            }
+
+            function close_modal($obj){
+                var $this = $obj.find('.close');
+                $this.click(function() {
+                    var $modal = $this.closest('.active_modal');
+                    $modal.removeClass('active_modal');
+                    $('html').removeClass('modal_mobile');
+                });
+            }
+        </script>
+    </body>
+</html>

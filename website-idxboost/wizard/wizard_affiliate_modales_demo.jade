@@ -1,0 +1,205 @@
+doctype html
+html(lang='en')
+  head
+    title FlexIdx | About
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="#203965")
+    meta(name="theme-color", content="#203965")
+    meta(name="msapplication-navbutton-color", content="#203965")
+    link(rel="stylesheet", href="../css/main.css")
+
+  body
+    main.wrap-idx-content.idx-partner-page.idx-about
+      header#header
+        .idx-content-header
+          .idx-wrap-logo
+            a(href="/", title="idxBoost").logo
+              img(src="../images/logo.png", title="idxBoost", alt="idxBoost")
+            button#btn-responsive: span
+          #idx-wrap-responsive
+            nav.idx-main-menu
+              ul
+                li: a(href="#", title="Wordpress IDX Features") Wordpress IDX Features
+                li: a(href="#", title="FREE IDX Websites") FREE IDX Websites
+                li: a(href="#", title="Partners") Partners
+                li: a(href="#", title="Live Demo") Live Demo
+                li.idx-right: a(href="#", title="Login") Login
+                li.idx-btn-content.idx-right
+                  button.idx-btn-site.icon-min-rocket
+                    span Start Now
+      .r-overlay
+
+      .idx-partner-content
+        header.header-main
+          h1 Rocket powered, yes.
+            span People powered? That, too.
+          p We are a team of passionate designers & developers working restessly to bring friendly yet powerful peerless technology to the real estate industry.
+          img(src="../images/about.jpg")
+          button.btn-down Scroll for more
+            span.icon-chevron
+      
+      .idx-basic-content.idx-bg-rocket
+        .idx-basic-information
+          .idx-description-about
+            h2 Over 10 years in the making.
+            p We started working on the idea for this company about 10 years ago. Back then, online real estate marketing was much simpler. Websites were easier to make, Google’s algorithm relied mostly on keywords, and there just wasn’t as much competition. We quickly became a market leader, giving real estate agents and brokers the tools to succeed.
+
+            p Today, that old internet is unrecognizable. Online competition is fierce, and agents’ needs are constantly changing. But our philosophy has always been that if we’re simply responding to changes, then we’re already behind. So we’re constantly pushing the envelope in online marketing innovation. Our team of engineers has developed custom technology and innovative lead capture features, pushing our clients ahead of the curve. That’s why after all these years we’re still a market leader.
+      
+      #idx-testimonials-content
+        #slider-testimonial.slider-standar
+          ul
+            li 
+              .item-testimonial “IDX Boost is a breath of fresh air! Since I got my website it’s been so easy to add pages and it’s even ranking on google now!”
+                span Amanda Smith
+            li 
+              .item-testimonial “IDX Boost is a breath of fresh air! Since I got my website it’s been so easy to add pages and it’s even ranking on google now!”
+                span Amanda Smith
+            li 
+              .item-testimonial “IDX Boost is a breath of fresh air! Since I got my website it’s been so easy to add pages and it’s even ranking on google now!”
+                span Amanda Smith
+          .nav
+            .bullets
+            .next-prev
+              button.prev: span.icon-arrow
+              button.next: span.icon-arrow
+      
+      .idx-basic-section
+        h2 Share the love!
+        p We started working on the idea for this company about 10 years ago. Back then, online real estate marketing was much simpler.
+        button.idx-btn-site.idx-show-modal
+          span Recommend to a friend
+      
+      //-- MODAL FRIEND
+      .idx-overlay-modal
+        .idx-modal-content
+          .idx-modal-content-info
+            .idx-header-modal
+              span.idx-icon-friend
+              h2 Share with a friend
+              p Do you love using IDX Boost? If you enjoy using our technology, we would 
+                span be so thankful if you can share it with all of your real estate friends.
+            .idx-body-modal
+              form(action="", method="POST")
+                ul.idx-form-modal
+                  li
+                    label Your Info
+                    input(type="text", placeholder="Your Name")
+                    input(type="email", placeholder="Your Email")
+                  li
+                    label Friend’s Info
+                    input(type="text", placeholder="Friend’s Name")
+                    input(type="email", placeholder="Friend’s Email")
+                button.idx-form-modal-btn
+                  span Send to friend
+          button.idx-close-modal X
+      
+      //-- MODAL GOOD JOB
+      .idx-overlay-modal
+        .idx-modal-content.idx-two-style
+          .idx-modal-content-info
+            .idx-header-modal
+              span.idx-m-rocket-icon
+              h2 Good Job!
+            .idx-body-modal
+              p The Registration Key has been copied
+                span to your clipboard
+            .idx-footer-modal
+              button.idx-btn-site
+                span OK
+
+      //-- MODAL ARE YOUR SHOUR
+      .idx-overlay-modal
+        .idx-modal-content.idx-two-style
+          .idx-modal-content-info
+            .idx-header-modal
+              span.idx-m-trash-icon
+              h2 Are you sure?
+            .idx-body-modal
+              p Are you sure you want to delete this photo?
+            .idx-footer-modal
+              a(href="#").idx-btn-default
+                span Cancel
+              a(href="#").idx-btn-site
+                span Yes
+
+      //-- MODAL PAYMENT
+      .idx-overlay-modal
+        .idx-modal-content.idx-two-style
+          .idx-modal-content-info
+            .idx-header-modal
+              .sk-circle
+                .sk-circle1.sk-child
+                .sk-circle2.sk-child
+                .sk-circle3.sk-child
+                .sk-circle4.sk-child
+                .sk-circle5.sk-child
+                .sk-circle6.sk-child
+                .sk-circle7.sk-child
+                .sk-circle8.sk-child
+                .sk-circle9.sk-child
+                .sk-circle10.sk-child
+                .sk-circle11.sk-child
+                .sk-circle12.sk-child
+              h2.idx-small Processing Payment
+            .idx-body-modal
+              p 
+                strong We are processing your payment. 
+                |Please do not click 'Back' or close your browser until you receive payment confirmation.
+
+      footer#footer.idx-internal-footer
+        .idx-footer-top
+          .idx-info-company
+            a(href="/", title="idxBoost").logo
+              img(src="../images/logo-footer.png")
+            ul
+              li 
+                span Phone 
+                a(href="tel:18003055000", title="1-800-305-5000") 1-800-305-5000
+              li
+                span Support Available
+                span.idx-text-light from 9am - 5pm EST
+                span.idx-text-light Monday - Friday
+              li
+                span Headquarters
+                span.idx-text-light 2828 Coral Way #435
+                span.idx-text-light Miami, FL 33145
+          .idx-item-menu-footer
+            h2 IDX Products
+            ul
+              li: a(href="#", title="Download IDX Rush") Download IDX Rush
+              li: a(href="#", title="Websites with IDX Rush") Websites with IDX Rush
+              li: a(href="#", title="Live Demos") Live Demos
+              li: a(href="#", title="MLS Coverage") MLS Coverage
+          .idx-item-menu-footer
+            h2 Services
+            ul
+              li: a(href="#", title="About Us") About Us
+              li: a(href="#", title="Partnership Program") Partnership Program
+              li: a(href="#", title="Affiliate Brokers") Affiliate Brokers
+              li: a(href="#", title="Blog") Blog
+              li: a(href="#", title="Contact Us") Contact Us
+              li: a(href="#", title="Support") Support
+          .idx-social-media
+            h2 Follow Us
+            ul
+              li: a(href="#", title="Facebook").icon-facebook: span Facebook 
+              li: a(href="#", title="Twitter").icon-twitter: span Twitter
+              li: a(href="#", title="Google Plus").icon-google: span Google Plus
+              li: a(href="#", title="Youtube").icon-youtube: span Youtube
+              li: a(href="#", title="Instagram").icon-instagram: span Instagram
+              li: a(href="#", title="Linkedin").icon-linkedin: span Linkedin
+              li: a(href="#", title="Pinterest").icon-pinterest: span Pinterest
+        
+        .idx-footer-bottom
+          ul
+            li: a(href="#", title="Terms & Conditions") Terms & Conditions
+            li: a(href="#", title="Privacy Policy") Privacy Policy
+            li: a(href="#", title="Sitemap") Sitemap
+            li.idx-pc-show: a(href="#", title="IDX Terms") IDX Terms
+          p All rights reserved © Copyright 2017 IDX Boost™
+    script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+    script(type="text/javascript", src="../js/jquery-ui.min.js")
+    script(type="text/javascript", src="../js/dgt-project-master.js")

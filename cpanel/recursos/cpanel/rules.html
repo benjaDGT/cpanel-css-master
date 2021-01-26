@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>FlexIdx | Buckets</title>
+    <meta name="keywords" content="FlexIdx, listing, Filters, Analytics">
+    <meta name="description" content="FlexIdx, the best dashboard admin listing, Filters, Analytics">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+    <style>
+      @media screen and (min-width: 768px){
+        body{
+          overflow: hidden;
+        }
+      }
+      .rs-wrapper {
+        background-color: #f5f5f5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rs-wrapper">
+      <header class="rs-navbar">
+        <h1>Flexidx Cutting-Edge MLS/IDX Search for Wordpress</h1>
+        <nav>
+          <div class="logo">
+            <a href="#" title="Flexidx">
+              <img src="images/logo_internas_cpanel.png" title="Flexidx" alt="Cutting-Edge MLS/IDX Search for Wordpress">
+            </a>
+            <button class="ms-hidden-menu-btn">Hidden Menu <span></span></button>
+          </div>
+          <div class="header-nav">
+            <ul id="list_nav">
+              <li><a href="#" title="Leads" class="ico-leads">Leads</a></li>
+              <li><a href="#" title="Filters" class="ico-filters">Filters</a></li>
+              <li><a href="#" title="Listings" class="ico-listings">Listings</a></li>
+              <li><a href="#" title="Account" class="ico-account">Account</a></li>
+              <li><a href="#" title="Analytics" class="ico-analytics">Analytics</a></li>
+            </ul>
+            <div class="user_nav">
+              <a href="javascript:void(0)" title="Josh Stein" id="userAvatar">
+                <span class="gb">4</span>
+                <div class="user_avatar">
+                  <img src="http://www.viewsonyou.com/img/avatar/Avatar4.png">
+                </div>
+                <h2>Josh Stein</h2>
+                <span>GARY HENNES REALTORS</span>
+              </a>
+              <ul id="userList">
+                <li><a href="#" title="Leads">Notificatons <span class="gb">4</span></a></li>
+                <li><a href="#" title="Leads">Leads</a></li>
+                <li><a href="#" title="Filters">Filters</a></li>
+                <li><a href="#" title="Listings">Listings</a></li>
+                <li><a href="#" title="Account Setup">Account Setup</a></li>
+                <li><a href="#" title="Analytics">Analytics</a></li>
+                <li><a href="#" title="Log out">Log out</a></li>
+              </ul>
+            </div>
+            <div class="search_nav">
+              <button id="help" class="btn-help">Help</button>
+              <button id="serch" class="btn-serach">Search</button>
+            </div>
+          </div>
+          <button class="main_menu" id=mainMene>Main Menu <span></span></button>
+          <button class="sub_menu" id="subMenu">Sub Menu <span></span></button>
+        </nav>
+      </header>
+      <aside class="rs-sidebar">
+        <div class="title-rs-sidebar">Main menu</div>
+        <button id="closeMenu">Close</button>
+        <ul class="ms-menu-list">
+          <li class="idx-tutorial-step-leads"><a href="/" title="My Leads" class="item_nav ico-leads">My Leads<span style="width:40px;height:40px;" class="gb">33</span></a></li>
+          <li><a href="hot-sheet.html" title="Hot Sheet" class="item_nav ico-inquires">Hot Sheet<span style="width:40px;height:40px;" class="gb">22</span></a></li>
+          <li>
+            <a href="#" title="Marketing" class="item_nav ico-marketing sub-items active">Marketing</a>
+            <ul class="sub_item_nav" style="display:block;">
+              <li><a href="bucket.html" title="My Bucket">My Buckets</a></li>
+              <li><a href="drip.html" title="Drip Campaigns">Drip Campaigns</a></li>
+              <li><a href="rules.html" title="My Rules" class="active">My Rules</a></li>
+              <li><a href="mailing.html" title="Email Templates">Email Templates</a></li>
+              <li><a href="sms.html" title="SMS Templates">SMS Templates</a></li>
+              <li><a href="add_lead.html" title="Add Lead">Add Lead</a></li>
+              <li><a href="boostbox.html" title="Boostbox">Boostbox</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-listings">
+            <a href="#" title="My Listings" class="item_nav ico-listing sub-items ">My Listings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/my-exclusive-listings" title="Exclusive Listings">Exclusive Listings</a></li>
+              <li><a href="/my-sold-properties" title="Sold Listings">Sold Listings</a></li>
+              <li><a href="/custom/property" title="Add Listing Details">Add Listing Details</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-filters">
+            <a href="#" title="Filters" class="item_nav ico-filters sub-items ">Filters</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/search-filters" title="Map Search Filters">Map Search Filters</a></li>
+              <li><a href="/search-filters/commercial" title="Commercial Filters">Commercial Filters</a></li>
+              <li>
+                <a href="/filters" title="Display Filters">Display Filters</a>
+              </li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-buildings">
+            <a href="#" title="Buildings" class="item_nav ico-buildings sub-items ">Buildings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/buildings" title="My Buildings">My Buildings</a></li>
+              <li><a href="/buildings/groups" title="Building Groups">Building Groups</a></li>
+              <li><a href="/buildings/settings" title="Floorplan Settings">Floorplan Settings</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="Areas" class="item_nav ico-areas sub-items ">Areas</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/sub-area" title="My Areas">My Areas</a></li>
+              <li><a href="/sub-area/settings" title="Floorplan Settings">Floorplan Settings</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-account">
+            <a href="#" title="My Account" class="item_nav ico-account sub-items ">My Account</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/settings/account" title="My Profile">My Profile</a></li>
+              <li><a href="/settings/applications" title="Registration Key">Registration Key</a></li>
+              <li><a href="/settings/password" title="Change Password">Change Password</a></li>
+              <li><a href="/settings/social_networks" title="Social Networks">Social Networks</a></li>
+              <li><a href="/settings/terms_conditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="My Agents" class="sub-items item_nav ico-my-agents ">My Agents</a>
+            <ul class="sub_item_nav">
+              <li><a href="/agents" title="Agents">Agents</a></li>
+              <li><a href="/agents/group" title="Group Agents">Group Agents</a></li>
+              <li><a href="/office" title="Offices">Offices</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-email idx-tutorial-step-settings">
+            <a href="#" title="Settings" class="item_nav ico-setting sub-items ">Settings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/settings/cities" title="Cities">Cities</a></li>
+              <li><a href="/settings/preferences" title="Display Preferences">Display Preferences</a></li>
+              <li><a href="/settings/registration" title="Registration Settings">Registration Settings</a></li>
+              <li><a href="/settings/analytics" title="Analytics Integration">Analytics Integration</a></li>
+              <li><a href="/settings/crm_integrator" title="CRM Integration">CRM Integration</a></li>
+              <li><a href="/settings/email/signature" class="" title="Smtp Signature">Email Signature</a></li>
+              <li><a href="/settings/smtp" class="" title="Smtp Settings">Email Sender</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-access"><a class="item_nav ico-tutorial " href="/getting_started" title="Tutorials">Tutorials</a></li>
+        </ul>
+      </aside>
+
+      <section class="rs-content-wrapper">
+        <div class="rs-content resetRules">
+        <!--<div class="rs-content ms-new-basic-form">-->
+          <div class="rs-content-body">
+            <div class="ms-header">
+              <h2 class="ms-section-title">Drip Campaigns</h2>
+              <!--<div class="ms-wrap-btn">
+                <button class="btn btn-dgt-def" data-toggle="modal" data-target="#modal-create-bucket">
+                <span>Create Bucket</span>
+                </button>
+              </div>-->
+            </div>
+            <div class="ms-body">
+              <div class="ms-wrap-srcoll"> 
+                <table class="ms-basic-table" id="create-list">
+                  <thead>
+                    <tr>
+                      <th class="item1">Name</th>
+                      <th class="item5">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="item1">
+                        <div class="ms-icon-bucket ms-flex ms-big">
+                          <div class="ms-text-name">
+                            <a href="/rules/1/edit">
+                              <h3 class="ms-title">name</h3>
+                            </a>
+                            <p>March 27, 2020 10:28 am</p>
+                          </div>
+                        </div>
+                        <button class="ms-show">View more</button>
+                      </td>
+                      <td data-label="Delete" class="item5">
+                        <a href="#" title="Delete" id_lead_rule="1" class="ib-group-agent-delete">
+                          <button class="ms-close">Delete</button>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="navigation">
+              </div>
+              <div class="ms-wrap-btn">
+                <button class="btn btn-dgt-def" data-toggle="modal" data-target="#modal-create-bucket">
+                <span>Create Bucket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="rs-screen-overlay"></div>
+        <!-- CREATE BUCKET -->
+        <div class="modal fade" id="modal-create-bucket" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header ms-modal-header">
+                <h4 class="ms-title ms-icon-bucket"><span>Create Bucket</span></h4>
+                <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+              </div>
+              <div class="modal-body">
+                <form name="form-new-bucket" method="post" id="form-new-bucket" class="ms-new-form ms-crm-form" enctype="multipart/form-data">
+                  <div class="form-item ms-full">
+                    <label for="bucket-name">Create New Bucket</label>
+                    <input type="text" id="cpanelbundle_bucket_name" name="cpanelbundle_bucket[name]" required="required" maxlength="255">
+                  </div>
+                  <div class="form-item">
+                    <label for="select-campaing">Assign Drip Campaign</label>
+                    <select id="cpanelbundle_bucket_drip" name="cpanelbundle_bucket[drip]" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                      <option value="">Select Email Template</option>
+                      <option value="3">Buyers Welcome Drip</option>
+                      <option value="2">Carlos First Drip for Buyers</option>
+                      <option value="1">demo</option>
+                      <option value="4">Sellers Welcome Drip</option>
+                      <option value="5">test drip email from broker</option>
+                      <option value="8">test drip sms from broker</option>
+                    </select>
+                    <span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cpanelbundle_bucket_drip-container"><span class="select2-selection__rendered" id="select2-cpanelbundle_bucket_drip-container" title="Select Email Template">Select Email Template</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </div>
+                  <div class="form-item">
+                    <label for="select-target" class="required">Bucket Target</label>
+                    <select id="cpanelbundle_bucket_target" name="cpanelbundle_bucket[target]" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                      <option value="">Select Bucket Target</option>
+                      <option value="1">Buyers</option>
+                      <option value="2">Sellers</option>
+                      <option value="3">Renters</option>
+                      <option value="4">Selling &amp; Buying</option>
+                      <option value="5">Investors</option>
+                      <option value="6">Commercial</option>
+                      <option value="7">Other</option>
+                    </select>
+                    <span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cpanelbundle_bucket_target-container"><span class="select2-selection__rendered" id="select2-cpanelbundle_bucket_target-container" title="Select Bucket Target">Select Bucket Target</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </div>
+                  <div class="ms-wrap-btn">
+                    <a href="#" class="btn btn-dgt-grs" data-dismiss="modal" aria-label="Close"><span>Cancel</span></a>
+                    <button class="btn btn-dgt-def"><span>Save Bucket</span></button>
+                  </div>
+                  <input type="hidden" name="action" value="step_1">
+                  <input type="hidden" id="cpanelbundle_bucket__token" name="cpanelbundle_bucket[_token]" value="hcRZKOtGQM-CVMYcjO87WyieJTlyyOaXfggAb6hdpp8">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    <div id="rs-screen-overlay"></div>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+/* RESET */
+* {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+  font-display: block;
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	display:block; // para IE que no lo toma como bloque.
+}
+
+hr, h1, h2, h3, h4, h5, p, img, ul, li {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+}
+
+ul, ol, li {
+	list-style:none;
+	padding:0;
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5{
+	font-weight: normal;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	-webkit-text-decoration-skip: objects;
+}
+
+a, button, input, textarea {
+	border:0;
+	padding:0;
+	font-size: inherit;
+
+	&:focus, &:active, &:hover {
+		outline: none;
+	}
+}
+select, button, input{
+	font-family: inherit;
+	overflow: visible;
+	border:none;
+	/* Para safari , IOS*/
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	border-radius:0;
+	/* */
+	/* Para crome, le quita la fechita*/
+	&::-ms-expand {
+		display: none;
+	}
+	/* */
+	&:hover{
+		cursor: pointer;
+	}
+	&:focus {
+		outline:none;
+	}
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+audio, video, canvas {
+	display: inline-block;
+}
+
+button, input, select{
+	appearance: none;
+}
+
+@import 'bootstrap.min.css';
+@import 'select2.css';
+@import 'datepickerv2.css';
+@import 'iconos.css';
+@import 'crm-icons/style.css';
+@import 'colors.scss';
+@import 'variables.scss';
+@import '../recursos/leads/css/leads.scss';
+@import '../recursos/cpanel/css/cpanel.scss';
+@import '../recursos/cpanel/css/login.scss';
+@import '../recursos/cpanel/css/email-settings.scss';
+@import '../recursos/account/css/account.scss';
+@import '../recursos/filters/css/filters.scss';
+@import '../recursos/cpanel/css/tutorial.scss';
+@import '../recursos/cpanel/css/crm.scss';
+@import '../recursos/cpanel/css/inbox.scss';
+@import 'email-settings.scss';
+@import 'reset-flex.scss';
+
+@import '../recursos/pages/crm-map-search-filter-add.scss';
+@import '../recursos/pages/resetInquiries.scss';
+@import '../recursos/pages/resetBucket.scss';
+@import '../recursos/pages/resetDrips.scss';
+@import '../recursos/pages/resetRules.scss';
+@import '../recursos/pages/resetCpanel.scss';
+@import '../recursos/pages/billingForm.scss';
+//@import '../recursos/pages/modalTodo.scss';
+//@import '../recursos/pages/resetSingleProperty.scss';

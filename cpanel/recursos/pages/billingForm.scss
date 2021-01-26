@@ -1,0 +1,719 @@
+.ms-wrap-billing-form{
+  position: relative;
+  padding: 30px 15px;
+  
+  .ms-bl-title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  >p{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  p{
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .ms-card-info{
+    display: none;
+    ul{
+      li{
+        font-size: 14px;
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 3px;
+        &:before{
+          content: "";
+          display: block;
+          background: url("../images/billing-icons.png") no-repeat -53px -21px;
+          width: 13px;
+          height: 13px;
+          position: absolute;
+          left: 0;
+          top: 5px;
+        }
+
+        &.ms-act{
+          &:before{
+            background-position: -53px -2px;
+            width: 16px;
+            height: 12px;
+          }
+        }
+      }
+    }
+    p{
+      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .ms-card-list{
+    width: 100%;
+    position: relative;
+    margin: 15px auto 0 auto;
+    .ms-card{
+      width: 100%;
+      margin-bottom: 15px;
+      position: relative;
+
+      .ms-card-header{
+        padding: 15px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border: 1px solid #e4e8ea;
+        margin-bottom: -1px;
+        .ms-title{
+          font-weight: normal;
+          font-size: 15px;
+          background-color: #f6f7f8;
+          font-family: 'Montserrat', sans-serif;
+        }
+      }
+
+      .ms-card-body{
+        padding: 15px;
+        border: 1px solid #e4e8ea;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        background-color: #FFF;
+
+        p{
+          font-weight: normal;
+        }
+
+        .ms-btn-google{
+          margin: 15px 0;
+          height: 40px;
+          background-color: #40a2d9;
+          display: inline-block;
+          color: #FFF;
+          font-weight: 600;
+          padding: 0 20px;
+          line-height: 40px;
+          border-radius: 50px;
+          font-size: 14px;
+          padding-left: 50px;
+          position: relative;
+          transition: all .3s;
+          &:hover{
+            background-color: #2ea8ec;
+          }
+          &:before{
+            content: "";
+            width: 38px;
+            height: 38px;
+            border-radius: 100%;
+            background: #FFF;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+          }
+
+          &:after{
+            content: "";
+            background: url("../images/billing-icons.png") no-repeat 0 0;
+            background-size: 25px;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 50%;
+            margin-top: -9px;
+            left: 11px;
+          }
+        }
+
+        .ms-link{
+          color: #40a2d9;
+          padding: 0;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+
+        .ms-wrap-avatar{
+          border: 1px dashed #c0c0c0;
+          width: 217px;
+          height: 236px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          font-size: 15px;
+          font-weight: normal;
+          .ms-info{
+            padding: 0 30px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            .ms-title{
+              display: block;
+            }
+
+            .ms-btn{
+              margin-top: 5px;
+              border-radius: 6px;
+              padding: 5px 15px;
+              display: block;
+              border: 1px solid #c0c0c0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ms-form-input{
+    margin: 10px 0;
+    input{
+      padding: 0 15px;
+      min-height: 45px;
+      border-radius: 6px;
+      transition: all .3s;
+      width: 100%;
+      &:focus{
+        border: 1px solid #c4d3e2 !important;
+      }
+    }
+  }
+
+  .ms-wrap-btn{
+    position: relative;
+    .ms-btn-lg{
+      position: relative;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      color: #FFF;
+      background-color: #333;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all .3s;
+      span{
+        padding: 15px 35px;
+        position: relative;
+        display: block;
+        z-index: 2;
+        &:before{
+          content: "";
+          transition: all .3s;
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          z-index: -1;
+          background: linear-gradient(to right,#ef3d4e,#ae2865);
+        }
+      }
+
+      &:hover{
+        span{
+          &:before{
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 680px){
+    .ms-card-list{
+      margin-left: 0;
+      margin-top: 0;
+      padding-left: 40px;
+      &:before{
+        content: "";
+        width: 1px;
+        height: calc(100% - 35px);
+        background-color: #d7dee2;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+      }
+
+      .ms-wrap-btn,
+      .ms-card{
+        &:before{
+          content: "";
+          display: block;
+          width: 14px;
+          height: 14px;
+          border-radius: 100%;
+          background-color: #d7dee2;
+          position: absolute;
+          top: 15px;
+          left: -31px;
+        }
+      }
+    }
+
+    .ms-card-form{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row-reverse;
+      margin-top: 30px;
+      justify-content: flex-end;
+      .ms-card-info{
+        padding-left: 15px;
+        width: 35%;
+        display: block;
+      }
+
+      .ms-card-list{
+        width: 60%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px){
+    .ms-card-form{
+      .ms-card-info{
+        display: none;
+      }
+      .ms-card-list{
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    padding-top: 50px;
+    .ms-card-form{
+      .ms-card-info{
+        display: block;
+        width: auto;
+      }
+      .ms-card-list{
+        width: 65%;
+      }
+    }
+
+    .ms-bl-title{
+      font-size: 26px;
+    }
+
+    .ms-card-info{
+      ul{
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .ms-form-input{
+      input {
+        min-height: 50px;
+        width: 100%;
+        //max-width: 425px;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1260px){
+    .ms-bl-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p{
+      font-size: 17px;
+    }
+
+    .ms-card-form{
+      margin-top: 35px;
+      .ms-card-list{
+        width: 100%;
+        max-width: 630px;
+        margin-right: 6%;
+
+        &:before{
+          height: calc(100% - 50px);
+          top: 25px;
+        }
+
+        .ms-card{
+          margin-bottom: 23px;
+          .ms-card-header {
+            padding: 21px;
+          }
+          .ms-card-body {
+            padding: 21px;
+          }
+
+          &:before{
+            top: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1400px){
+    padding-left: 80px;
+  }
+}  
+
+.onboarding-form{
+  padding: 0 !important;
+  margin: 0 !important;
+  .ms-wrap-billing-form{
+
+    .ms-wrap-header{
+      text-align: center;
+    }
+
+    .ms-lg-img{
+      margin: 0 auto;
+      display: block;
+    }
+
+    .ms-bl-title{
+      text-align: center;
+      margin-top: 15px;
+      font-size: 25px;
+    }
+
+    >p{
+      text-align: center;
+    }
+
+    .ms-password-info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      a{
+        color: #40a2d9;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+
+      #pswmeter{
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .mt-2{
+        display: flex;
+        strong{
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .ms-card-list{
+      .ms-card{
+        .ms-card-body {
+          border-radius: 6px;
+          .ms-subtitle{
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            &.ms-top{
+              margin-top: 45px;
+            }
+          }
+
+          p{
+            font-size: 14px;
+            line-height: 1.6;
+            strong{
+              font-weight: 600;
+            }
+          }
+
+          .ms-opt-list{
+            margin: 20px 0;
+            li{
+              margin-bottom: 5px;
+              position: relative;
+              label{
+                font-weight: normal;
+                position: relative;
+                padding-left: 25px;
+                display: inline-block;
+                cursor: pointer;
+                &:before{
+                  content: "";
+                  display: block;
+                  width: 15px;
+                  height: 15px;
+                  position: absolute;
+                  top: 2px;
+                  left: 0;
+                  border-radius: 100%;
+                  border: 1px solid #818181;
+                }
+
+                &:after{
+                  content: "";
+                  display: block;
+                  width: 9px;
+                  height: 9px;
+                  background-color: #d03359;
+                  position: absolute;
+                  top: 4.5px;
+                  left: 3px;
+                  border-radius: 100%;
+                  transition: all .3s;
+                  opacity: 0;
+                }
+              }
+
+              input:checked + label {
+                &:after{
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          .ms-form-input{
+            span{
+              display: inline-block;
+              margin-bottom: 5px;
+            }
+
+            input{
+              &.ms-name-card{
+                border: 2px solid #e1e1e1 !important;
+              }
+            }
+          }
+
+          .ms-form-cd{
+            margin: 20px 0;
+            span{
+              display: inline-block;
+              margin-bottom: 5px;
+            }
+
+            .ms-wrap-credit{
+              display: flex;
+              flex-wrap: wrap;
+              overflow: hidden;
+              border: 2px solid #e1e1e1 !important;
+              border-radius: 6px;
+              position: relative;
+
+              &:before{
+                content: "";
+                background: url('../images/billing-icons.png') no-repeat -3px -53px;
+                width: 27px;
+                height: 17px;
+                position: absolute;
+                top: 14px;
+                left: 10px;
+              }
+
+              input{
+                min-height: 45px;
+                padding: 0 15px;
+                &.cc-number{
+                  width: 100%;
+                  padding-left: 50px;
+                }
+
+                &.cc-expires{
+                  width: 70%;
+                  border-top: 2px solid #e1e1e1;
+                  text-align: center;
+                }
+
+                &.cc-cvc{
+                  width: 30%;
+                  border-top: 2px solid #e1e1e1;
+                  text-align: center;
+                }
+              }
+            }
+          }
+
+          .ms-wrap-btn{
+            .ms-btn-lg{
+              margin: 0 auto;
+              margin-bottom: 15px;
+            }
+          }
+
+          .ms-footer{
+            font-size: 13px;
+            text-align: center;
+            padding-bottom: 20px;
+            a{
+              color: #40a2d9;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 680px){
+
+      /*.ms-wrap-header{
+        width: 60%;
+        max-width: 540px;
+      }*/
+
+      .ms-card-form{
+        .ms-card-info{
+          display: none;
+        }
+      }
+
+      .ms-card-list{
+        padding-left: 0;
+        /*max-width: 540px;
+        margin-right: 0;*/
+        max-width: 100%;
+        width: 100%;
+        &:before{
+          display: none;
+        }
+
+        .ms-wrap-btn:before{
+          display: none;
+        }
+
+        .ms-card{
+          &:before{
+            display: none;
+          }
+
+          .ms-card-body{
+            .ms-form-cd{
+              .ms-wrap-credit{
+                input{
+                  &.cc-number{
+                    width: calc(100% - 160px);
+                  }
+
+                  &.cc-expires{
+                    width: 90px;
+                    border-top: 0;
+                  }
+
+                  &.cc-cvc{
+                    width: 70px;
+                    border-top: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 991px){
+
+      margin: 0 auto;
+      max-width: 880px;
+      padding-right: 340px;
+      
+      .ms-wrap-header{
+        width: 100%;
+        max-width: 540px;
+      }
+
+      .ms-card-form{
+        .ms-card-info{
+          display: block;
+          width: 320px;
+          padding: 0;
+          position: absolute;
+          right: 0;
+          top: auto;
+        }
+      }
+
+      .ms-card-list {
+        max-width: 540px;
+        flex-shrink: 0;
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: 1024px){
+      .ms-form-input input {
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 1200px){
+      .ms-card-form{
+        .ms-card-list {
+          margin-right: 0;
+        }
+      }
+
+      .ms-bl-title {
+        font-size: 36px;
+        margin-bottom: 5px;
+      }
+
+      .ms-card-list{
+        .ms-card{
+          .ms-card-body{
+            padding: 20px 50px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1330px){
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 540px;
+      .ms-card-form{
+        .ms-card-info{
+          right: -340px;
+        }
+      }
+    }
+  }
+
+  #pswmeter{
+    .password-strength-meter-score{
+      border-radius: 4px;
+      &.psms-100 {
+        background: #4ad09f;
+      }
+    }
+  }
+}
+
+.ms-wrap-billing-form{
+  .msftx{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 425px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: 0;
+    .ms-form-input{
+      width: 100%;
+      @media screen and (min-width: 374px){
+        &.ms-md{
+          width: 32% !important;
+        }
+      }
+    }
+  }
+}

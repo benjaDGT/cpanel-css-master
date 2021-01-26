@@ -1,0 +1,637 @@
+.ms-inbox-header {
+  background-color: #FFF;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  margin: 0 -10px; }
+  .ms-inbox-header .ms-wrap-inbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    position: relative;
+    padding: 10px 15px;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1); }
+    .ms-inbox-header .ms-wrap-inbox .ms-button {
+      text-indent: -999999px;
+      overflow: hidden;
+      width: 37px;
+      height: 37px;
+      padding: 0;
+      color: #999999;
+      margin-right: 10px; }
+      .ms-inbox-header .ms-wrap-inbox .ms-button.ms-icon-file:before, .ms-inbox-header .ms-wrap-inbox .ms-button.ms-icon-delete:before, .ms-inbox-header .ms-wrap-inbox .ms-button.ms-icon-search:before {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: 0;
+        font-weight: normal !important;
+        font-size: 18px; }
+      .ms-inbox-header .ms-wrap-inbox .ms-button.ms-icon-file:before {
+        content: "\e93c";
+        font-family: 'crm-icons'; }
+      .ms-inbox-header .ms-wrap-inbox .ms-button.ms-icon-delete:before {
+        content: "\e922";
+        font-family: 'crm-icons';
+        font-size: 16px; }
+      .ms-inbox-header .ms-wrap-inbox .ms-button.ms-icon-search:before {
+        content: "\e93b";
+        font-family: 'crm-icons';
+        font-size: 16px; }
+    .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-more,
+    .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-folder {
+      width: auto;
+      min-width: 47px; }
+      .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-more span,
+      .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-folder span {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+        .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-more span:before,
+        .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-folder span:before {
+          content: "\e939";
+          font-family: 'crm-icons';
+          display: block;
+          text-indent: 0;
+          font-size: 18px;
+          font-weight: 100 !important; }
+        .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-more span:after,
+        .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-folder span:after {
+          content: "\e901";
+          font-family: 'crm-icons';
+          display: block;
+          text-indent: 0;
+          font-size: 9px;
+          font-weight: 100 !important;
+          -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+          margin-left: 4px;
+          -webkit-transition: all .4s;
+          -o-transition: all .4s;
+          transition: all .4s; }
+    .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-more {
+      text-indent: 0;
+      font-weight: 600;
+      line-height: 37px;
+      padding: 0 7px; }
+      .ms-inbox-header .ms-wrap-inbox .ms-dropdown .ms-icon-more:after {
+        content: "\e901";
+        font-family: 'crm-icons';
+        display: inline-block;
+        text-indent: 0;
+        font-size: 9px;
+        font-weight: 100 !important;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-left: 4px;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s; }
+    .ms-inbox-header .ms-wrap-inbox .ms-dropdown.open .ms-icon-folder span:after {
+      -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg); }
+    .ms-inbox-header .ms-wrap-inbox .ms-dropdown.open .ms-icon-more:after {
+      -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg); }
+  .ms-inbox-header .ms-inbox-search {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s; }
+    .ms-inbox-header .ms-inbox-search .ms-wrap-inbox-search {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%; }
+      .ms-inbox-header .ms-inbox-search .ms-wrap-inbox-search form {
+        position: relative; }
+        .ms-inbox-header .ms-inbox-search .ms-wrap-inbox-search form .ms-btn {
+          height: 100%;
+          width: 35px;
+          position: absolute;
+          top: 0;
+          right: 0; }
+        .ms-inbox-header .ms-inbox-search .ms-wrap-inbox-search form input {
+          height: 100%;
+          border: 0 !important;
+          border-radius: 0;
+          padding: 0 15px; }
+        .ms-inbox-header .ms-inbox-search .ms-wrap-inbox-search form .ms-button {
+          display: none; }
+          @media screen and (min-width: 768px) {
+            .ms-inbox-header .ms-inbox-search .ms-wrap-inbox-search form .ms-button {
+              display: block; } }
+    .ms-inbox-header .ms-inbox-search .ms-button {
+      margin: 0;
+      height: 100%;
+      background-image: none;
+      width: 40px;
+      border: 0 !important; }
+      .ms-inbox-header .ms-inbox-search .ms-button:before {
+        content: "\e905";
+        font-family: 'crm-icons';
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-indent: 0;
+        font-size: 12px;
+        font-weight: 100 !important;
+        width: 100%;
+        height: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+    @media screen and (min-width: 768px) {
+      .ms-inbox-header .ms-inbox-search {
+        position: relative;
+        left: auto;
+        max-width: 350px; }
+        .ms-inbox-header .ms-inbox-search #ms-close-bar {
+          display: none; }
+        .ms-inbox-header .ms-inbox-search .ms-wrap-inbox-search form input {
+          height: 37px;
+          border: 1px solid #e8e8e8 !important;
+          border-radius: 4px; }
+        .ms-inbox-header .ms-inbox-search .ms-wrap-inbox-search form .ms-icon-search {
+          position: absolute;
+          right: 0;
+          top: 0; } }
+  .ms-inbox-header.active-bar .ms-inbox-search {
+    left: 0; }
+  @media screen and (min-width: 768px) {
+    .ms-inbox-header {
+      top: 87px; }
+      .ms-inbox-header #ms-show-bar {
+        display: none; } }
+  @media screen and (min-width: 1024px) {
+    .ms-inbox-header {
+      margin: 0 -15px; } }
+
+.ms-inbox-list {
+  margin: 15px -10px;
+  padding-bottom: 50px; }
+  .ms-inbox-list .ms-lead-body .ms-lead-item {
+    height: auto !important;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 0; }
+    .ms-inbox-list .ms-lead-body .ms-lead-item .ms-wrap {
+      padding: 10px !important;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+      justify-content: flex-start !important;
+      border-bottom: 1px solid #dfe0e0 !important; }
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-wrap .ms-intro-inbox,
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-wrap .ms-inbox-actions {
+        width: 100%; }
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-wrap .ms-intro-inbox {
+        padding-right: 35px; }
+        .ms-inbox-list .ms-lead-body .ms-lead-item .ms-wrap .ms-intro-inbox p {
+          margin-top: 5px;
+          font-size: 14px;
+          display: block;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: #989898; }
+    .ms-inbox-list .ms-lead-body .ms-lead-item .ms-item {
+      padding: 0; }
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-item.ms-chk {
+        width: 38px !important;
+        margin-left: 0;
+        margin-left: -5px;
+        position: relative;
+        z-index: 2; }
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-item.ms-user-info {
+        width: calc(100% - 38px) !important;
+        max-width: 100% !important; }
+        .ms-inbox-list .ms-lead-body .ms-lead-item .ms-item.ms-user-info .ms-title .ms-name {
+          font-weight: 600;
+          font-size: 15px; }
+    .ms-inbox-list .ms-lead-body .ms-lead-item .ms-link-inbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-indent: -999999px;
+      overflow: hidden;
+      display: block;
+      z-index: 1; }
+    .ms-inbox-list .ms-lead-body .ms-lead-item:last-child .ms-wrap {
+      border-bottom: 0 !important; }
+    @media screen and (min-width: 1024px) {
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-wrap {
+        padding: 15px !important;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .ms-inbox-list .ms-lead-body .ms-lead-item .ms-wrap .ms-intro-inbox {
+          width: calc(60% - 88px); }
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-item.ms-chk {
+        margin-top: 5px; }
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-item.ms-user-info {
+        margin-right: 20px;
+        width: calc(40% - 38px) !important;
+        -ms-flex-negative: 0;
+        flex-shrink: 0; } }
+    @media screen and (min-width: 1600px) {
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-wrap .ms-intro-inbox {
+        width: calc(73% - 88px);
+        -ms-flex-negative: 0;
+        flex-shrink: 0; }
+      .ms-inbox-list .ms-lead-body .ms-lead-item .ms-item.ms-user-info {
+        width: calc(27% - 38px) !important; } }
+  .ms-inbox-list .ms-count-st {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #e8e8e8;
+    font-weight: 600;
+    color: #989898; }
+  .ms-inbox-list .ms-inbox-info {
+    width: 90%;
+    display: block;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    .ms-inbox-list .ms-inbox-info span {
+      font-size: 13px;
+      font-family: "Open Sans", sans-serif !important; }
+      .ms-inbox-list .ms-inbox-info span:before {
+        vertical-align: middle;
+        margin-top: -2px;
+        margin-right: 5px;
+        font-family: "crm-icons";
+        color: #007fe0; }
+      .ms-inbox-list .ms-inbox-info span.crm-ico-ms-phone-msg:before {
+        font-size: 19px; }
+      .ms-inbox-list .ms-inbox-info span.crm-ico-ms-phone:before {
+        font-size: 15px; }
+  .ms-inbox-list .ms-inbox-ft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%; }
+    .ms-inbox-list .ms-inbox-ft .ms-time {
+      font-weight: 600;
+      font-size: 12px;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      /******************/
+      position: absolute;
+      top: 15px;
+      right: 50px;
+      z-index: 1;
+      color: #495057; }
+      @media screen and (min-width: 1024px) {
+        .ms-inbox-list .ms-inbox-ft .ms-time {
+          right: 15px; } }
+    .ms-inbox-list .ms-inbox-ft .crm-ico-reply {
+      width: 30px;
+      height: 30px;
+      text-indent: -999999px;
+      overflow: hidden;
+      display: block;
+      /********************/
+      position: absolute;
+      bottom: 10px;
+      right: 13px; }
+      .ms-inbox-list .ms-inbox-ft .crm-ico-reply:before {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-indent: 0; }
+  @media screen and (min-width: 768px) {
+    .ms-inbox-list {
+      margin-bottom: 20px;
+      padding-bottom: 0; } }
+  @media screen and (min-width: 1024px) {
+    .ms-inbox-list {
+      margin: 15px -15px; } }
+
+.ms-footer-inbox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3; }
+  .ms-footer-inbox .ms-wrap-pag {
+    position: relative;
+    background-color: #FFF;
+    padding: 15px;
+    -webkit-box-shadow: 0 -6px 6px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -6px 6px -6px rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .ms-footer-inbox .ms-wrap-pag .ms-count-pag {
+      font-size: 12px;
+      font-weight: 600;
+      color: #495057; }
+    .ms-footer-inbox .ms-wrap-pag .ms-wrap-btn {
+      width: auto; }
+      .ms-footer-inbox .ms-wrap-pag .ms-wrap-btn .ms-button {
+        text-indent: -999999px;
+        overflow: hidden;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        color: #999999;
+        margin-left: 5px;
+        border: 1px solid #e8e8e8 !important; }
+        .ms-footer-inbox .ms-wrap-pag .ms-wrap-btn .ms-button:before {
+          content: "\e901";
+          font-family: 'crm-icons';
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          text-indent: 0;
+          font-size: 12px;
+          font-weight: 100 !important;
+          -webkit-transition: all .4s;
+          -o-transition: all .4s;
+          transition: all .4s;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          top: 0;
+          left: 0; }
+        .ms-footer-inbox .ms-wrap-pag .ms-wrap-btn .ms-button.ms-btn-prev:before {
+          -webkit-transform: rotate(-180deg);
+          -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg); }
+  @media screen and (min-width: 768px) {
+    .ms-footer-inbox {
+      position: relative;
+      z-index: 1; }
+      .ms-footer-inbox .ms-wrap-pag {
+        padding: 0;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding-bottom: 40px; } }
+
+.ms-inbox-page {
+  position: relative; }
+
+.ms-page-message {
+  background-color: #FFF;
+  width: 100%;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 3;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  height: 100vh;
+  overflow-y: auto; }
+  @media screen and (min-width: 768px) {
+    .ms-page-message {
+      top: auto;
+      bottom: 0;
+      height: calc(100vh - 87px); } }
+  @media screen and (min-width: 1320px) {
+    .ms-page-message {
+      max-width: calc(100% - 250px); } }
+  .ms-page-message .ms-username {
+    padding: 15px;
+    padding-left: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px dashed #e8e8e8;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .ms-page-message .ms-user-info {
+    width: auto; }
+    .ms-page-message .ms-user-info .ms-user-avatar {
+      margin-right: 10px; }
+    .ms-page-message .ms-user-info .ms-title .ms-name {
+      font-weight: 600;
+      font-size: 15px; }
+    .ms-page-message .ms-user-info .ms-inbox-info span {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 13px; }
+      .ms-page-message .ms-user-info .ms-inbox-info span:before {
+        margin-right: 5px;
+        color: #007fe0; }
+  .ms-page-message .ms-pgm-detail {
+    padding: 20px;
+    overflow: hidden;
+    padding-left: 50px; }
+    .ms-page-message .ms-pgm-detail h2, .ms-page-message .ms-pgm-detail h3, .ms-page-message .ms-pgm-detail h4, .ms-page-message .ms-pgm-detail h5, .ms-page-message .ms-pgm-detail h5, .ms-page-message .ms-pgm-detail h6 {
+      font-weight: 600;
+      font-size: 18px; }
+    .ms-page-message .ms-pgm-detail strong {
+      font-weight: 600; }
+    .ms-page-message .ms-pgm-detail p {
+      font-size: 15px;
+      margin: 15px 0;
+      line-height: 1.6; }
+    .ms-page-message .ms-pgm-detail ul {
+      margin: 15px 0; }
+      .ms-page-message .ms-pgm-detail ul li {
+        position: relative;
+        padding-left: 15px;
+        font-size: 15px;
+        margin: 3px 0; }
+        .ms-page-message .ms-pgm-detail ul li:before {
+          content: "";
+          background-color: #3e3a3c;
+          border-radius: 100%;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 6px;
+          height: 6px; }
+    .ms-page-message .ms-pgm-detail ol {
+      margin: 15px 0;
+      list-style-type: decimal !important;
+      padding-left: 15px; }
+      .ms-page-message .ms-pgm-detail ol li {
+        position: relative;
+        font-size: 15px;
+        margin: 3px 0;
+        list-style-type: decimal !important; }
+  .ms-page-message .ms-action-item {
+    margin-top: 5px; }
+    .ms-page-message .ms-action-item .ms-button {
+      font-family: "Open Sans", sans-serif !important;
+      font-weight: 600 !important;
+      padding: 0 15px; }
+      .ms-page-message .ms-action-item .ms-button:before {
+        margin-right: 5px;
+        font-family: "crm-icons";
+        color: #999999;
+        font-weight: 100 !important; }
+  .ms-page-message .ms-page-message-item {
+    border-bottom: 1px solid #e8e8e8; }
+  .ms-page-message .ms-page-message-footer {
+    padding: 15px;
+    padding-left: 50px;
+    z-index: 2;
+    background-color: #FFF;
+    margin-top: -1px;
+    padding-bottom: 130px; }
+
+#ms-close-msg {
+  text-indent: -999999px;
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 21px;
+  font-size: 22px;
+  left: 10px;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  z-index: 2; }
+  #ms-close-msg:before {
+    text-indent: 0;
+    position: absolute;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%; }
+
+@-webkit-keyframes slide-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+body.ms-open-page {
+  overflow: hidden; }
+  body.ms-open-page .ms-page-message {
+    display: block;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }

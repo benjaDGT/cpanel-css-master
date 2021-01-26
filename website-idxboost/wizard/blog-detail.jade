@@ -1,0 +1,155 @@
+doctype html
+html(lang='en')
+	head
+		title Blog | Realted
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#203965")
+		meta(name="theme-color", content="#203965")
+		meta(name="msapplication-navbutton-color", content="#203965")
+		link(rel="stylesheet", href="../css/main.css")
+		link(rel="stylesheet", href="https://file.myfontastic.com/v6vr22zQVKSnTWTxBBpbWC/icons.css")
+	body.blog
+		include header.jade
+
+		main#blog.blog-detail
+			//header
+				h1 A look at construction in Chicago’s hot West Loop
+
+			.lateral-a
+				article
+					header
+						h1 A look at construction in Chicago’s hot West Loop 
+					span.publish-date September 27, 2017 by: 
+						a(href="#", title="Lorem Ipsum") Lorem Ipsum
+					p While the neo-warehouse look is starting to become a cliche, Landmark’s exterior features a rich three-dimensional depth that elevates the whole design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. While the neo-warehouse look is starting to become a cliche, Landmark’s exterior features a rich three-dimensional depth that elevates the whole design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+					p While the neo-warehouse look is starting to become a cliche, Landmark’s exterior features a rich three-dimensional depth that elevates the whole design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. While the neo-warehouse look is starting to become a cliche, Landmark’s exterior features a rich three-dimensional depth that elevates the whole design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+					p While the neo-warehouse look is starting to become a cliche, Landmark’s exterior features a rich three-dimensional depth that elevates the whole design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. While the neo-warehouse look is starting to become a cliche, Landmark’s exterior features a rich three-dimensional depth that elevates the whole design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+					img(src="../images/blog/1.jpg", alt="A look at construction in Chicago’s hot West Loop")
+				
+				.m-bottom
+					h2.block-title Latest News About Miami Beach Real Estate
+					ul.news-list
+						li
+							h2 Miami Beach Top Restaurant Venues
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam architecto nesciunt voluptatem expedita eum reiciendis consequatur ipsa
+							.news-image-content: img(src="../images/propiertie1.jpg", alt="Miami Beach Top Restaurant Venues", title="Top Restaurant Venues")
+							a(href="#", title="Miami Beach Top Restaurant Venues") Top Restaurant Venues
+						li
+							h2 Miami Beach Top Restaurant Venues
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam architecto nesciunt voluptatem expedita eum reiciendis consequatur ipsa
+							.news-image-content: img(src="../images/propiertie1.jpg", alt="Miami Beach Top Restaurant Venues", title="Top Restaurant Venues")
+							a(href="#", title="Miami Beach Top Restaurant Venues") Top Restaurant Venues
+						li
+							h2 Miami Beach Top Restaurant Venues
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam architecto nesciunt voluptatem expedita eum reiciendis consequatur ipsa
+							.news-image-content: img(src="../images/propiertie1.jpg", alt="Miami Beach Top Restaurant Venues", title="Top Restaurant Venues")
+							a(href="#", title="Miami Beach Top Restaurant Venues") Top Restaurant Venues
+
+				#wrap-result.view-grid
+					h2.block-title Miami Beach Properties
+					#wrap-list-result
+						ul#head-list
+							li.address Address
+							li.price Asking Price
+							li.pr % / $
+							li.beds Beds
+							li.baths Baths
+							li.living-size Living Size
+							li.price-sf Price / SF 
+							li.build-year Year built
+							li.development Development / Subdivision
+						ul#result-search.slider-generator
+							- for(b = 0; b < 9; b++)
+									- var price = Math.floor(Math.random() * 101)
+									li.propertie(data-id='343278191', data-mls='A10172834', data-counter='10')
+										h2(title="Nombre completo de la dirección")
+											span 151012 Collins Avenue Suit
+										ul.features
+											li.house-type: h3 Vacant Land For Sale
+											li.address Miami, FL 33145
+											li.price $#{price},000,000
+											li.pr.down 2.05%
+											li.beds 10  
+												span Beds 
+											li.baths 8 
+												span Baths 
+											li.living-size 
+												span 2,534
+												| SF 
+												span (452 m2)
+											li.price-sf
+												span $345 
+												| / SF
+												span ($244 m2)
+											li.type: span Davis citrus Farms
+											li.build-year
+												span Built 
+												| 2015
+											li.development: span Star Island Miami
+										.wrap-slider
+											ul
+												li
+													img(src="#" data-src='../images/propiertie.jpg', title='#', alt='#')
+											button.prev: span.icon-arrow-select
+											button.next: span.icon-arrow-select
+										button.btn-check: span.icon-check
+										a(href="#").view-detail Miami, FL 33145
+					a(href="#", title="View more listings", rel="nofollow").btn-link-blue View more listings  
+
+
+			.aside
+				.widget
+					.header-widget
+						h2 Follow Us
+					.body-widget
+						ul.social-networks
+							li.icon-facebook: a(href="#", title="Facebook", target="_blank", rel="nofollow") Facebook
+							li.icon-twitter: a(href="#", title="Twitter", target="_blank", rel="nofollow") Twitter
+							li.icon-google-plus: a(href="#", title="Google+", target="_blank", rel="nofollow") Google+
+							li.icon-instagram: a(href="#", title="Instagram", target="_blank", rel="nofollow") Instagram
+							li.icon-linkedin: a(href="#", title="Linked In", target="_blank", rel="nofollow") Linked In
+				
+				.widget
+					.header-widget
+						h2 subscribe
+					.body-widget
+						p Subscribe now to get daily updates
+						form(name="", action="", method="post")
+							input(type="email", placeholder="Your mail address")
+							button: span subscribe
+				
+				.widget
+					.header-widget
+						h2 latest news
+					.body-widget
+						ul.last-news
+							li
+								a(href="#", title="A look at construction in Chicago’shot West Loop") A look at construction in Chicago’shot West Loop
+								span.publish-date September 27, 2017
+							li
+								a(href="#", title="A look at construction in Chicago’shot West Loop") A look at construction in Chicago’shot West Loop
+								span.publish-date September 27, 2017
+				
+				.widget
+					.header-widget
+						h2 categories
+					.body-widget
+						ul.categories
+							li: a(href="#", title="Ipsum lorem amet (2)") Ipsum lorem amet (2)
+							li: a(href="#", title="Ipsum lorem amet (2)") Ipsum lorem amet (2)
+							li: a(href="#", title="Ipsum lorem amet (2)") Ipsum lorem amet (2)
+							li: a(href="#", title="Ipsum lorem amet (2)") Ipsum lorem amet (2)
+							li: a(href="#", title="Ipsum lorem amet (2)") Ipsum lorem amet (2)
+
+		include footer.jade
+
+		script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+		script(type="text/javascript", src="../js/plugins/perfect-scrollbar.jquery.min.js")
+		script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+		script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+		script(type="text/javascript", src="../js/dgt-master.min.js")

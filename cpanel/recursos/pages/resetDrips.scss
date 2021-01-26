@@ -1,0 +1,202 @@
+.resetDrips{
+    @media screen and (min-width: 768px){
+      background-color: transparent;
+      .ms-basic-table{
+        thead{
+          tr{
+            display: flex;
+            th{
+              flex-grow: 1;
+              &.item1{
+                width: 44%;
+              }
+              &.item2{
+                width: 25%;
+              }
+              &.item3,
+              &.item4{
+                width: 15%;
+              }
+              &.item5{
+                width: 6%;
+                text-align: center;
+              }
+            }
+          }
+        }
+  
+        tbody{
+          tr {
+            border: 0;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+            display: flex;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #d6d5da;
+            background-color: #FFF;
+            min-height: 80px;
+  
+            td{
+              border-right: 1px solid #d6d5da;
+              flex-grow: 1;
+              align-items: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              max-width: 100% !important;
+  
+              &.item1{
+                width: 44%;
+              }
+  
+              &:last-child{
+                border-right: 0;
+              }
+            }
+
+            td.item2{
+              width: 25%;
+            }
+  
+            td.item3,
+            td.item4{
+              width: 15%;
+            }
+
+            td.item5{
+              width: 6%;
+            }
+          }
+        }
+      }
+  
+      .ms-icon-bucket{
+        padding-left: 40px;
+        position: relative;
+        &:before{
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  
+    @media screen and (min-width: 768px){
+      .ms-wrap-srcoll{
+        overflow: auto;
+        max-height: calc(100vh - 240px);
+        table{
+          width: 150%;
+        }
+      }
+    }
+  
+    @media screen and (min-width: 1024px){
+      .ms-wrap-srcoll{
+        table{
+          width: 100%;
+        }
+      }
+    }
+  
+    .ms-wrap-btn{
+      margin-top: 15px;
+    }
+  }
+
+
+.ms-new-basic-form{
+  #form-new-campaing{
+    .ms-wrap-widget{
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(31,30,47,.03);
+      border: 1px solid $border-color;
+      margin-bottom: 15px;
+      padding: 25px 15px 15px;
+      width: 100%;
+      @media screen and (min-width: 640px){
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .form-item{
+          width: 49% !important;
+          margin: 0;
+          input{
+            height: 44px !important;
+          }
+        }
+      }
+    }
+
+    .ms-timeline-steps{
+      .ms-wrap-email {
+        background-color: #FFF;
+        box-shadow: 0 2px 4px rgba(31,30,47,.03);
+        border: 1px solid $border-color;
+        .ms-email-body {
+          padding: 15px;
+          border-top: 1px solid #efefef;
+        }
+
+        .ms-email-header{
+          padding-bottom: 15px;
+          .ms-icon-sms,
+          .ms-icon-email{
+            width: 72px;
+          }
+        }
+      }
+    }
+
+    .ms-wrap-drip {
+      border: 1px solid $border-color;
+      box-shadow: 0 2px 4px rgba(31,30,47,.03);
+    }
+
+    @media (max-width: 640px){
+      .ms-timeline-steps{
+        margin-top: 15px;
+        &:before{
+          left: 15px;
+        }
+
+        .ms-flex {
+          padding-left: 50px;
+          position: relative;
+          background-color: #f5f8fb;
+          margin-bottom: 0;
+          padding-bottom: 15px;
+          .ms-bubble-idxb {
+            margin: 0;
+            left: -5px;
+            width: 40px;
+            height: 40px;
+            font-size: 9px;
+          }
+        }
+
+        .ms-bubble-idxb{
+          width: 40px;
+          height: 40px;
+          font-size: 9px;
+          left: -5px ;
+        }
+
+        .ms-step {
+          left: 0;
+          top: 0;
+          margin-top: 0;
+          width: 30px;
+          height: 30px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .ms-wrap-btn.ms-mpx {
+      display: none;
+    }
+  }
+}

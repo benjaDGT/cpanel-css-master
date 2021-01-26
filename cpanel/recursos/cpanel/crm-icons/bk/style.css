@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'crm-icons';
+  src:  url('fonts/crm-icons.eot?2jv0ei');
+  src:  url('fonts/crm-icons.eot?2jv0ei#iefix') format('embedded-opentype'),
+    url('fonts/crm-icons.ttf?2jv0ei') format('truetype'),
+    url('fonts/crm-icons.woff?2jv0ei') format('woff'),
+    url('fonts/crm-icons.svg?2jv0ei#crm-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="crm-"], [class*=" crm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'crm-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.crm-ms-youtube-a:before {
+  content: "\e925";
+}
+.crm-ms-twitter-a:before {
+  content: "\e926";
+}
+.crm-ms-pinterest-a:before {
+  content: "\e921";
+}
+.crm-ms-instagram-a:before {
+  content: "\e923";
+}
+.crm-ms-google-a:before {
+  content: "\ea8c";
+}
+.crm-ms-facebook-a:before {
+  content: "\ea91";
+}
+.crm-ms-linkedin-a:before {
+  content: "\eac9";
+}
+.crm-ms-bucket:before {
+  content: "\e924";
+}
+.crm-ms-pinterest:before {
+  content: "\e900";
+}
+.crm-ms-edit-pencil:before {
+  content: "\e902";
+}
+.crm-ms-close:before {
+  content: "\e905";
+}
+.crm-ms-house:before {
+  content: "\e91f";
+}
+.crm-ms-arrow:before {
+  content: "\e901";
+}
+.crm-ms-close-email:before {
+  content: "\e916";
+}
+.crm-ms-google:before {
+  content: "\ea8b";
+}
+.crm-ms-facebook:before {
+  content: "\ea90";
+}
+.crm-ms-twitter:before {
+  content: "\ea96";
+}
+.crm-ms-linkedin:before {
+  content: "\eaca";
+}
+.crm-ms-trash:before {
+  content: "\e922";
+}
+.crm-ms-instagram:before {
+  content: "\e912";
+}
+.crm-ms-youtube:before {
+  content: "\e913";
+}
+.crm-ms-add:before {
+  content: "\e906";
+}
+.crm-ms-lupa:before {
+  content: "\e907";
+}
+.crm-ms-phone:before {
+  content: "\e908";
+}
+.crm-ms-phone-msg:before {
+  content: "\e90a";
+}
+.crm-ms-rocket:before {
+  content: "\e90b";
+}
+.crm-ms-attach:before {
+  content: "\e90c";
+}
+.crm-ms-agent:before {
+  content: "\e90d";
+}
+.crm-ms-view:before {
+  content: "\e90e";
+}
+.crm-ms-update:before {
+  content: "\e90f";
+}
+.crm-ms-save:before {
+  content: "\e910";
+}
+.crm-ms-favorite:before {
+  content: "\e911";
+}
+.crm-ms-fire:before {
+  content: "\e914";
+}
+.crm-ms-email:before {
+  content: "\e915";
+}
+.crm-ms-msg:before {
+  content: "\e917";
+}
+.crm-ms-bell:before {
+  content: "\e918";
+}
+.crm-ms-new:before {
+  content: "\e919";
+}
+.crm-ms-todo:before {
+  content: "\e91a";
+}
+.crm-ms-edit-page:before {
+  content: "\e91b";
+}
+.crm-ms-close-2:before {
+  content: "\e91c";
+}
+.crm-ms-marker:before {
+  content: "\e91d";
+}
+.crm-ms-target:before {
+  content: "\e91e";
+}
+.crm-ms-ok:before {
+  content: "\e920";
+}
+.crm-ms-filter:before {
+  content: "\e903";
+}
+.crm-ms-open-email:before {
+  content: "\e909";
+}
+.crm-ms-hidden:before {
+  content: "\e904";
+}

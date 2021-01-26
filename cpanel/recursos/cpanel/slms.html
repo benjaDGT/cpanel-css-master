@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>FlexIdx | Buckets</title>
+    <meta name="keywords" content="FlexIdx, listing, Filters, Analytics">
+    <meta name="description" content="FlexIdx, the best dashboard admin listing, Filters, Analytics">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+  </head>
+  <style>
+    .social-connectors-container {
+    max-width: 1000px;
+    }
+    .social-connectors-container h2 {
+    margin-bottom: 30px;
+    }
+    .social-connectors-group {
+    margin-bottom: 30px;
+    }
+    #social_connector_fbSocialLoginEnabled + label,
+    #social_connector_gplusSocialLoginEnabled + label
+    {
+    color: transparent;
+    height: 90px;
+    text-indent: -9999px;
+    }
+    #social_connector_fbSocialLoginEnabled + label::after,
+    #social_connector_gplusSocialLoginEnabled + label::after
+    {
+    display: block;
+    width:150px;
+    height:40px;
+    line-height: 40px;
+    content: 'Disabled';
+    color: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3f3c3b), to(#3e3a3c));
+    background: -webkit-linear-gradient(#3f3c3b, #3e3a3c);
+    background: -o-linear-gradient(#3f3c3b, #3e3a3c);
+    background: linear-gradient(#3f3c3b, #3e3a3c);
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 6px;
+    text-indent: 0;
+    }
+    #social_connector_fbSocialLoginEnabled:checked + label::after,
+    #social_connector_gplusSocialLoginEnabled:checked + label::after
+    {
+    background: -webkit-gradient(linear, left top, right top, from(#fa6630), to(#be155e));
+    background: -webkit-linear-gradient(left, #fa6630, #be155e);
+    background: -o-linear-gradient(left, #fa6630, #be155e);
+    background: linear-gradient(to right, #fa6630, #be155e);
+    content: 'Enabled';
+    }
+    @media only screen and (min-width: 1000px) {
+    .social-connectors-group {
+    display: flex;
+    flex-flow: wrap;
+    }
+    .social-connectors-item {
+    flex: 1 0 50%;
+    max-width: 50%;
+    }
+    .social-connectors-item {
+    padding: 15px;
+    padding-left: 0;
+    box-sizing: border-box;
+    }
+    }
+  </style>
+  <style>
+    .sub_item_nav li a.active { background-color: #333 !important; }
+    .lead_logged_in {background: #00af00 !important;color: #fff !important;display: inline-block !important;font-size: 13px;}
+    .lead_logged_out {background: #d60a0a !important;color: #fff !important;display: inline-block !important;font-size: 13px;}
+    .agent-slug-not-available { position: absolute; left: 0; top: 42px; width: 100%; height: 30px; line-height: 30px; color: red; text-indent: 255px; margin-top:0 !important;padding-left:15px; }
+  </style>
+  <style>
+    .modal__container { max-width:80vw; max-height:90vh; padding: 15px; }
+    .modal__content { margin: 0; }
+    .modal__footer { margin-top: 15px; }
+    .modal-crop-info ul { list-style: none; padding-left: 0; margin: 0; height: 32px; line-height: 32px; padding: 0 15px; background: linear-gradient(to right, #fa6630, #be155e); }
+    .modal-crop-info li { font-size: 15px; display: inline-block; color: #fff;}
+    .modal__btn-primary { background: linear-gradient(to right, #fa6630, #be155e); outline: 0;}
+  </style>
+  <body>
+    <div class="rs-wrapper">
+      <header class="rs-navbar">
+        <h1>Flexidx Cutting-Edge MLS/IDX Search for Wordpress</h1>
+        <nav>
+          <div class="logo">
+            <a href="#" title="Flexidx">
+            <img src="images/logo_internas_cpanel.png" title="Flexidx" alt="Cutting-Edge MLS/IDX Search for Wordpress">
+            </a>
+            <button class="ms-hidden-menu-btn">Hidden Menu <span></span></button>
+          </div>
+          <div class="header-nav">
+            <ul id="list_nav">
+              <li><a href="#" title="Leads" class="ico-leads">Leads</a></li>
+              <li><a href="#" title="Filters" class="ico-filters">Filters</a></li>
+              <li><a href="#" title="Listings" class="ico-listings">Listings</a></li>
+              <li><a href="#" title="Account" class="ico-account">Account</a></li>
+              <li><a href="#" title="Analytics" class="ico-analytics">Analytics</a></li>
+            </ul>
+            <div class="user_nav">
+              <a href="javascript:void(0)" title="Josh Stein" id="userAvatar">
+                <span class="gb">4</span>
+                <div class="user_avatar">
+                  <img src="http://www.viewsonyou.com/img/avatar/Avatar4.png">
+                </div>
+                <h2>Josh Stein</h2>
+                <span>GARY HENNES REALTORS</span>
+              </a>
+              <ul id="userList">
+                <li><a href="#" title="Leads">Notificatons <span class="gb">4</span></a></li>
+                <li><a href="#" title="Leads">Leads</a></li>
+                <li><a href="#" title="Filters">Filters</a></li>
+                <li><a href="#" title="Listings">Listings</a></li>
+                <li><a href="#" title="Account Setup">Account Setup</a></li>
+                <li><a href="#" title="Analytics">Analytics</a></li>
+                <li><a href="#" title="Log out">Log out</a></li>
+              </ul>
+            </div>
+            <div class="search_nav">
+              <button id="help" class="btn-help">Help</button>
+              <button id="serch" class="btn-serach">Search</button>
+            </div>
+          </div>
+          <button class="main_menu" id=mainMene>Main Menu <span></span></button>
+          <button class="sub_menu" id="subMenu">Sub Menu <span></span></button>
+        </nav>
+      </header>
+      <aside class="rs-sidebar">
+        <div class="title-rs-sidebar">Main menu</div>
+        <button id="closeMenu">Close</button>
+        <ul class="ms-menu-list">
+          <li class="idx-tutorial-step-leads"><a href="/" title="My Leads" class="item_nav ico-leads">My Leads<span style="width:40px;height:40px;" class="gb">33</span></a></li>
+          <li><a href="hot-sheet.html" title="Hot Sheet" class="item_nav ico-inquires">Hot Sheet<span style="width:40px;height:40px;" class="gb">22</span></a></li>
+          <li>
+            <a href="#" title="Marketing" class="item_nav ico-marketing sub-items active">Marketing</a>
+            <ul class="sub_item_nav" style="display:block;">
+              <li><a href="bucket.html" title="My Bucket">My Buckets</a></li>
+              <li><a href="drip.html" title="Drip Campaigns">Drip Campaigns</a></li>
+              <li><a href="rules.html" title="My Rules" class="active">My Rules</a></li>
+              <li><a href="mailing.html" title="Email Templates">Email Templates</a></li>
+              <li><a href="sms.html" title="SMS Templates">SMS Templates</a></li>
+              <li><a href="add_lead.html" title="Add Lead">Add Lead</a></li>
+              <li><a href="boostbox.html" title="Boostbox">Boostbox</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-listings">
+            <a href="#" title="My Listings" class="item_nav ico-listing sub-items ">My Listings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/my-exclusive-listings" title="Exclusive Listings">Exclusive Listings</a></li>
+              <li><a href="/my-sold-properties" title="Sold Listings">Sold Listings</a></li>
+              <li><a href="/custom/property" title="Add Listing Details">Add Listing Details</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-filters">
+            <a href="#" title="Filters" class="item_nav ico-filters sub-items ">Filters</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/search-filters" title="Map Search Filters">Map Search Filters</a></li>
+              <li><a href="/search-filters/commercial" title="Commercial Filters">Commercial Filters</a></li>
+              <li>
+                <a href="/filters" title="Display Filters">Display Filters</a>
+              </li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-buildings">
+            <a href="#" title="Buildings" class="item_nav ico-buildings sub-items ">Buildings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/buildings" title="My Buildings">My Buildings</a></li>
+              <li><a href="/buildings/groups" title="Building Groups">Building Groups</a></li>
+              <li><a href="/buildings/settings" title="Floorplan Settings">Floorplan Settings</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="Areas" class="item_nav ico-areas sub-items ">Areas</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/sub-area" title="My Areas">My Areas</a></li>
+              <li><a href="/sub-area/settings" title="Floorplan Settings">Floorplan Settings</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-account">
+            <a href="#" title="My Account" class="item_nav ico-account sub-items ">My Account</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/settings/account" title="My Profile">My Profile</a></li>
+              <li><a href="/settings/applications" title="Registration Key">Registration Key</a></li>
+              <li><a href="/settings/password" title="Change Password">Change Password</a></li>
+              <li><a href="/settings/social_networks" title="Social Networks">Social Networks</a></li>
+              <li><a href="/settings/terms_conditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="My Agents" class="sub-items item_nav ico-my-agents ">My Agents</a>
+            <ul class="sub_item_nav">
+              <li><a href="/agents" title="Agents">Agents</a></li>
+              <li><a href="/agents/group" title="Group Agents">Group Agents</a></li>
+              <li><a href="/office" title="Offices">Offices</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-email idx-tutorial-step-settings">
+            <a href="#" title="Settings" class="item_nav ico-setting sub-items ">Settings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/settings/cities" title="Cities">Cities</a></li>
+              <li><a href="/settings/preferences" title="Display Preferences">Display Preferences</a></li>
+              <li><a href="/settings/registration" title="Registration Settings">Registration Settings</a></li>
+              <li><a href="/settings/analytics" title="Analytics Integration">Analytics Integration</a></li>
+              <li><a href="/settings/crm_integrator" title="CRM Integration">CRM Integration</a></li>
+              <li><a href="/settings/email/signature" class="" title="Smtp Signature">Email Signature</a></li>
+              <li><a href="/settings/smtp" class="" title="Smtp Settings">Email Sender</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-access"><a class="item_nav ico-tutorial " href="/getting_started" title="Tutorials">Tutorials</a></li>
+        </ul>
+      </aside>
+      
+      <section class="rs-content-wrapper">
+        <div class="social-connectors-container">
+          <form name="social_connector" method="post">
+            <h2 class="title_section">Social Networks</h2>
+            <div class="ms-msg-info" style="max-width:100%">Enter full social media <strong>URL</strong> from browser</div>
+            <div class="social-connectors-group">
+              <div class="social-connectors-item ms-fb">
+                <div><label for="social_connector_facebookSocialUrl">Facebook Social URL</label><input type="text" id="social_connector_facebookSocialUrl" name="social_connector[facebookSocialUrl]" value="https://www.facebook.com/RelatedISGRealty"></div>
+              </div>
+              <div class="social-connectors-item ms-tw">
+                <div><label for="social_connector_twitterSocialUrl">Twitter Social URL</label><input type="text" id="social_connector_twitterSocialUrl" name="social_connector[twitterSocialUrl]" value="https://www.twitter.com/relatedisg"></div>
+              </div>
+              <div class="social-connectors-item ms-gg">
+                <div><label for="social_connector_gplusSocialUrl">Google+ Social URL</label><input type="text" id="social_connector_gplusSocialUrl" name="social_connector[gplusSocialUrl]"></div>
+              </div>
+              <div class="social-connectors-item ms-yt">
+                <div><label for="social_connector_youtubeSocialUrl">Youtube Social URL</label><input type="text" id="social_connector_youtubeSocialUrl" name="social_connector[youtubeSocialUrl]" value="https://www.youtube.com/channel/UC6mA2zzOAOpf0gItASWHeog?view_as=subscriber"></div>
+              </div>
+              <div class="social-connectors-item ms-in">
+                <div><label for="social_connector_instagramSocialUrl">Instagram Social URL</label><input type="text" id="social_connector_instagramSocialUrl" name="social_connector[instagramSocialUrl]" value="https://www.instagram.com/relatedisgrealty"></div>
+              </div>
+              <div class="social-connectors-item ms-ln">
+                <div><label for="social_connector_linkedinSocialUrl">LinkedIn Social URL</label><input type="text" id="social_connector_linkedinSocialUrl" name="social_connector[linkedinSocialUrl]" value="https://www.linkedin.com/company/relatedisg-international-realty"></div>
+              </div>
+              <div class="social-connectors-item ms-pt">
+                <div><label for="social_connector_pinterestSocialUrl">Pinterest Social URL</label><input type="text" id="social_connector_pinterestSocialUrl" name="social_connector[pinterestSocialUrl]"></div>
+              </div>
+            </div>
+            <h2 class="title_section">Google Maps JavaScript API Key</h2>
+            <div class="social-connectors-group">
+              <div class="social-connectors-item">
+                <div><label for="social_connector_googleMapsApiKey">Google Maps JavaScript API Key</label><input type="text" id="social_connector_googleMapsApiKey" name="social_connector[googleMapsApiKey]" value="AIzaSyBdlczEuxYRH-xlD_EZH4jv0naeVT1JaA4"></div>
+              </div>
+            </div>
+            <div class="form-item actions">
+              <button type="reset" class="btn btn-dgt-grs">Cancel</button>
+              <button type="submit" class="btn btn-dgt-def"><span>Save</span></button>
+            </div>
+            <input type="hidden" id="social_connector__token" name="social_connector[_token]" value="J-4sALD9iqCRqoz_BIFKCnGtlikmQaRVOw7B-G93k2I">
+          </form>
+        </div>
+      </section>
+    </div>
+    <div id="rs-screen-overlay"></div>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+  </body>
+</html>
