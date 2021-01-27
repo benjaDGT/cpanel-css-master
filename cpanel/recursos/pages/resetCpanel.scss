@@ -6636,8 +6636,8 @@ table{
           font-size: 12px;
           justify-content: center;
           align-items: center;
-          max-width: 150px !important;
-          min-width: 130px;
+          max-width: 200px !important;
+          min-width: 200px;
           width: 100% !important;
           padding: 0 5px;
           order: 3;
@@ -6651,6 +6651,8 @@ table{
 
         .ms-activity-actions.ms-lastvisit.mm-modified{
           padding: 0 20px;
+          width: 456px !important;
+          max-width: 456px !important;
           .msLastActivityItem{
             align-items: flex-start;
             .ms-ellipsis-text{
@@ -6658,12 +6660,21 @@ table{
             }
           } 
         }
+
+        .ms-wrap.ms-username{
+          width: 450px !important;
+          max-width: 450px !important;
+          .ms-user-info {
+            width: 440px !important;
+            max-width: 344px !important;
+          }
+        }
       }
 
-      @media screen and (min-width: 1440px){
+      @media screen and (min-width: 1780px){
         .ms-activity-actions.ms-lastvisit.mm-modified{
           max-width: 100% !important;
-          width: calc(100% - 1080px) !important;
+          width: calc(100% - 1180px) !important;
           min-width: 190px !important;
         }
 
@@ -6683,7 +6694,27 @@ table{
         }
       }
 
+      @media screen and (min-width: 2000px){
+        .ms-wrap.ms-username {
+          min-width: 450px;
+        }
+      }
+
       @media (max-width: 767px){
+
+        .ms-lastvisit-btn {
+          max-width: 50%;
+          display: inline-block;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .content_dropdown {
+          bottom: -52px;
+        }
+
         .ms-activity-actions{
           span{
             display: inline !important;
@@ -6956,4 +6987,9 @@ table{
       flex-shrink: 0;
     }
   }
+}
+
+.tooltip {
+  font-family: open sans,sans-serif;
+  font-size: 11px
 }
