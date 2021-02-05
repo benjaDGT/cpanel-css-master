@@ -1,0 +1,81 @@
+@media screen and (min-width: 768px) {
+  .resetRules {
+    background-color: transparent; }
+    .resetRules .ms-basic-table thead tr {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .resetRules .ms-basic-table thead tr th {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1; }
+        .resetRules .ms-basic-table thead tr th.item1 {
+          width: 44%; }
+        .resetRules .ms-basic-table thead tr th.item2 {
+          width: 25%; }
+        .resetRules .ms-basic-table thead tr th.item3, .resetRules .ms-basic-table thead tr th.item4 {
+          width: 15%; }
+        .resetRules .ms-basic-table thead tr th.item5 {
+          width: 6%;
+          text-align: center; }
+    .resetRules .ms-basic-table tbody tr {
+      border: 0;
+      -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #d6d5da;
+      background-color: #FFF;
+      min-height: 80px; }
+      .resetRules .ms-basic-table tbody tr td {
+        border-right: 1px solid #d6d5da;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 10px;
+        max-width: 100% !important; }
+        .resetRules .ms-basic-table tbody tr td.item1 {
+          width: 44%; }
+        .resetRules .ms-basic-table tbody tr td:last-child {
+          border-right: 0; }
+        .resetRules .ms-basic-table tbody tr td.item2 {
+          width: 25%; }
+        .resetRules .ms-basic-table tbody tr td.item3, .resetRules .ms-basic-table tbody tr td.item4 {
+          width: 15%; }
+        .resetRules .ms-basic-table tbody tr td.item5 {
+          width: 6%; }
+    .resetRules .ms-icon-bucket {
+      padding-left: 40px;
+      position: relative; }
+      .resetRules .ms-icon-bucket:before {
+        position: absolute;
+        top: 0;
+        left: 0; } }
+
+@media screen and (min-width: 768px) {
+  .resetRules .ms-wrap-srcoll {
+    overflow: auto;
+    max-height: calc(100vh - 240px);
+    max-width: 900px; }
+    .resetRules .ms-wrap-srcoll table {
+      width: 150%; } }
+
+@media screen and (min-width: 1024px) {
+  .resetRules .ms-wrap-srcoll table {
+    width: 100%; } }
+
+.resetRules .ms-wrap-btn {
+  margin-top: 15px; }
