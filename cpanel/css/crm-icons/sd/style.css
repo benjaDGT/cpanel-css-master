@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crm-icons';
-  src:  url('fonts/crm-icons.eot?irptdb');
-  src:  url('fonts/crm-icons.eot?irptdb#iefix') format('embedded-opentype'),
-    url('fonts/crm-icons.ttf?irptdb') format('truetype'),
-    url('fonts/crm-icons.woff?irptdb') format('woff'),
-    url('fonts/crm-icons.svg?irptdb#crm-icons') format('svg');
+  src:  url('fonts/crm-icons.eot?7odoou');
+  src:  url('fonts/crm-icons.eot?7odoou#iefix') format('embedded-opentype'),
+    url('fonts/crm-icons.ttf?7odoou') format('truetype'),
+    url('fonts/crm-icons.woff?7odoou') format('woff'),
+    url('fonts/crm-icons.svg?7odoou#crm-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,9 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.crm-ico-cog:before {
-  content: "\e953";
-}
 .crm-ico-crop:before {
   content: "\e952";
 }

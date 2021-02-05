@@ -6993,3 +6993,23 @@ table{
   font-family: open sans,sans-serif;
   font-size: 11px
 }
+
+.ms-tmpc{
+  display: none !important;
+  padding: 0 !important;
+  @media screen and (min-width: 768px){
+    display: flex !important;
+  }
+}
+
+.ms-tmpx{
+  &.crm-ico-cog{
+    padding: 0;
+    font-size: 20px;
+    display: flex !important;
+    color: #333333;
+    @media screen and (min-width: 768px){
+      display: none !important;
+    }
+  }
+}
