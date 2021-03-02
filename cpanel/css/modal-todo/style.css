@@ -87,12 +87,12 @@
   border-bottom: 1px solid #e8e8e8; }
 
 .modal-todo .opt-custom-date input:checked + label {
-  background: -webkit-gradient(linear, left top, right top, from(#fa6630), to(#be155e));
-  background: -webkit-linear-gradient(left, #fa6630, #be155e);
-  background: -o-linear-gradient(left, #fa6630, #be155e);
-  background: linear-gradient(to right, #fa6630, #be155e);
+  background: -webkit-gradient(linear, left top, right top, from(#ef3d4e), to(#ae2865));
+  background: -webkit-linear-gradient(left, #ef3d4e, #ae2865);
+  background: -o-linear-gradient(left, #ef3d4e, #ae2865);
+  background: linear-gradient(to right, #ef3d4e, #ae2865);
   color: #fff;
-  border-color: #be155e; }
+  border-color: #ae2865; }
 
 .modal-todo .opt-custom-date-content {
   -webkit-box-align: center;

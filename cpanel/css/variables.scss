@@ -347,7 +347,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #fa6630, #be155e);
+    @extend .gradient;
     z-index: 1;
     transition: all .3s;
   }
@@ -755,19 +755,7 @@ input[type='number']{
    padding-right: 0;
 }
 
-#account_settings_cities_1c,
-#account_settings_cities_2c,
-#account_settings_cities_3c,
-#account_settings_cities_4c,
-#account_settings_cities_5c,
-#account_settings_cities_6c,
-#account_settings_cities_7c,
-#account_settings_cities_8c,
-#account_settings_cities_9c,
-#account_settings_cities_10c{
-  max-width: 900px;
-}
-
+.ms-list-chk-ct,
 #account_settings_cities_1c,
 #account_settings_cities_2c,
 #account_settings_cities_3c,
@@ -778,6 +766,22 @@ input[type='number']{
 #account_settings_cities_8c,
 #account_settings_cities_9c,
 #account_settings_cities_10c,
+#account_settings_cities_11c{
+  max-width: 900px;
+}
+
+.ms-list-chk-ct,
+#account_settings_cities_1c,
+#account_settings_cities_2c,
+#account_settings_cities_3c,
+#account_settings_cities_4c,
+#account_settings_cities_5c,
+#account_settings_cities_6c,
+#account_settings_cities_7c,
+#account_settings_cities_8c,
+#account_settings_cities_9c,
+#account_settings_cities_10c,
+#account_settings_cities_11c,
 #account_settings_cities,
 #account_settings_propertyType,
 #account_settings_amenities,
@@ -1082,6 +1086,7 @@ table#myFilters{
 }
 
 @media (min-width: 480px){
+    .ms-list-chk-ct,
     #account_settings_cities_1c,
     #account_settings_cities_2c,
     #account_settings_cities_3c,
@@ -1092,6 +1097,7 @@ table#myFilters{
     #account_settings_cities_8c,
     #account_settings_cities_9c,
     #account_settings_cities_10c,
+    #account_settings_cities_11c,
     #account_settings_cities,
     #filter_cities{
         label{
@@ -1101,6 +1107,7 @@ table#myFilters{
     }
 }
 @media (min-width: 768px){
+    .ms-list-chk-ct,
     #account_settings_cities_1c,
     #account_settings_cities_2c,
     #account_settings_cities_3c,
@@ -1111,6 +1118,7 @@ table#myFilters{
     #account_settings_cities_8c,
     #account_settings_cities_9c,
     #account_settings_cities_10c,
+    #account_settings_cities_11c,
     #account_settings_cities,
     #filter_cities{
         label{
@@ -1231,6 +1239,7 @@ table#myFilters{
 
 
 @media (max-width: 991px){
+    .ms-list-chk-ct,
     #account_settings_cities_1c label,
     #account_settings_cities_2c label, 
     #account_settings_cities_3c label, 
@@ -1241,6 +1250,7 @@ table#myFilters{
     #account_settings_cities_8c label,
     #account_settings_cities_9c label,
     #account_settings_cities_10c label,
+    #account_settings_cities_11c label,
     #account_settings_cities label, 
     #filter_cities label {
         width: 50%;
@@ -1248,6 +1258,7 @@ table#myFilters{
 }
 
 @media (max-width: 640px){
+    .ms-list-chk-ct,
     #account_settings_cities_1c label,
     #account_settings_cities_2c label, 
     #account_settings_cities_3c label, 
@@ -1257,7 +1268,8 @@ table#myFilters{
     #account_settings_cities_7c label,
     #account_settings_cities_8c label,
     #account_settings_cities_9c label,
-    #account_settings_cities_10c label, 
+    #account_settings_cities_10c label,
+    #account_settings_cities_11c label, 
     #account_settings_cities label, 
     #filter_cities label {
         width: 100%;
@@ -1306,7 +1318,7 @@ table#myFilters{
     width: 160px;
     height: auto;
     padding: 10px 7px;
-    background: linear-gradient(to right, #fa6630, #be155e);
+    @extend .gradient;
     border-radius: 2px;
     color: #fff;
     bottom: 33px;
@@ -1323,7 +1335,7 @@ table#myFilters{
       position: absolute;
       border-style: solid;
       border-width: 10px 10px 0;
-      border-color: #be155e transparent;
+      border-color: $color-b transparent;
       display: block;
       width: 0;
       z-index: 1;

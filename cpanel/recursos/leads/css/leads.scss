@@ -1616,7 +1616,7 @@
 
 .progress-bar {
   border-radius: 4px;
-  background: linear-gradient(to right, #fa6630, #be155e);
+  @extend .gradient;
 }
 
 @media (max-width: 400px) {
@@ -1844,7 +1844,7 @@
           z-index: 2;
           color: #FFF;
           transition: all .3s;
-          background: linear-gradient(to right, #fa6630, #be155e);
+          background: $gradient;
           display: block;
           &:hover{
             background: #333;
@@ -1933,7 +1933,7 @@
                     font-size: 22px;
                     font-weight: 600;
                     color: #FFF;
-                    background: linear-gradient(to right, #fa6630, #be155e);
+                    background: $gradient;
                   }
                 }
                 .ms-info-user{

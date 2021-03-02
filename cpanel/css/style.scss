@@ -94,6 +94,13 @@ button, input, select{
 	appearance: none;
 }
 
+//background: linear-gradient(to right, #fa6630, #be155e);
+$color-a: #ef3d4e; $color-b: #ae2865;
+$gradient: linear-gradient(to right, $color-a, $color-b);
+.gradient{
+	background: $gradient;
+}
+
 @import 'bootstrap.min.css';
 @import 'select2.css';
 @import 'datepickerv2.css';

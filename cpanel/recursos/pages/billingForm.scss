@@ -208,7 +208,7 @@
           left: 0;
           position: absolute;
           z-index: -1;
-          background: linear-gradient(to right,#ef3d4e,#ae2865);
+          @extend .gradient;
         }
       }
 

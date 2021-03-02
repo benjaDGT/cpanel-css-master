@@ -9,7 +9,6 @@
 
 .modal-todo .nav-tabs > li > a::after {
   content: "";
-  background: linear-gradient(to right,#fa6630,#be155e);
   bottom: 2px;
   height: 2px;
   left: 50%;
@@ -17,6 +16,7 @@
   transform: scale(0) translateX(-50%);
   transition: all .3s ease;
   width: 0;
+  @extend .gradient;
 }
 
 .modal-todo .nav-tabs > li.active > a::after {
@@ -76,9 +76,9 @@
 }
 
 .modal-todo .opt-custom-date input:checked + label {
-  background: linear-gradient(to right, #fa6630, #be155e);
+  @extend .gradient;
   color: #fff;
-  border-color: #be155e;
+  border-color: $color-b;
 }
 
 .modal-todo .opt-custom-date-content {
@@ -151,7 +151,7 @@
 
 .modal-todo .opt-custom-date-content .custom-time-select [aria-selected=true],
 .modal-todo .opt-custom-date-content .custom-time-select li:hover {
-  background: linear-gradient(to right,#fa6630,#be155e);
+  @extend .gradient;
   color: #fff;
 }
 
@@ -253,7 +253,7 @@
 
 .ms-ct-header-todo .ms-tabs .ms-tabs-item::after {
   content: "";
-  background: linear-gradient(to right,#fa6630,#be155e);
+  @extend .gradient;
   bottom: 2px;
   height: 2px;
   left: 50%;

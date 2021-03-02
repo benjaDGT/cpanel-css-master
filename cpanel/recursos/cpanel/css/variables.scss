@@ -346,9 +346,9 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #fa6630, #be155e);
     z-index: 1;
     transition: all .3s;
+    @extend .gradient;
   }
   &:after{
     content: "";
@@ -1305,7 +1305,6 @@ table#myFilters{
     width: 160px;
     height: auto;
     padding: 10px 7px;
-    background: linear-gradient(to right, #fa6630, #be155e);
     border-radius: 2px;
     color: #fff;
     bottom: 33px;
@@ -1317,12 +1316,13 @@ table#myFilters{
     z-index: -1;
     word-break: break-all;
     text-align: center;
+    @extend .gradient;
     &:after  {
       content: '';
       position: absolute;
       border-style: solid;
       border-width: 10px 10px 0;
-      border-color: #be155e transparent;
+      border-color: $color-b transparent;
       display: block;
       width: 0;
       z-index: 1;

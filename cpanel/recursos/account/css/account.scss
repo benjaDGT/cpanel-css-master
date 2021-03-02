@@ -713,7 +713,6 @@ form{
     &:after{
 			content: "";
 			align-items: center;
-			background: linear-gradient(to right, #fa6630, #be155e);
 			border-radius: 4px;
 			display: flex;
 			height: 12px;
@@ -726,6 +725,7 @@ form{
 			transform: scale(0);
 			transition: all linear .2s;
 			width: 12px;
+			@extend .gradient;
     }
   }
 
@@ -1286,8 +1286,8 @@ form[name="account_social_networks"]{
 
 .alert{
 	&.idx-boost-alert{
-	  background: linear-gradient(to right, #fa6630, #be155e);
-	  border-color: #be155e;
+	  @extend .gradient;
+	  border-color: $color-b;
 	  color: #FFF;
 	}
 }
@@ -1509,26 +1509,27 @@ form[name="account_social_networks"]{
 	}
 
 	.idxboost-uploader-actions .remodal-confirm {
-	  background: linear-gradient(to right, #fa6630, #be155e) !important;
+	  background: $gradient !important;
 	  color: #FFF;
 	  border: none;
 	}
 }
 
 .iboost-account-has-expired{
-	>.rs-wrapper{
-		margin-top: 70px;
-		@media screen and (min-width: 768px){
-			margin-top: 137px;
-			.rs-navbar{
-				top: 50px;
-			}
+	padding-top: 60px;
+	@media screen and (min-width: 768px){
+		padding-top: 138px;
+		.rs-navbar{
+			top: 50px;
 		}
+	}
+	>.rs-wrapper{
+		margin-top: 0;
 	}
 }
 
 .iboost-account-expiration-banner{
-  background: linear-gradient(to right, #fa6630, #be155e)!important;
+  background: $gradient !important;
   height: auto;
   padding: 10px;
   width: 100%;
@@ -1538,6 +1539,10 @@ form[name="account_social_networks"]{
   top: 0;
   z-index: 1000;
   color: #FFF;
+	min-height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
   a{
   	color: #FFF;
   	text-decoration: underline;
@@ -1545,8 +1550,7 @@ form[name="account_social_networks"]{
   }
   @media screen and (min-width: 768px){
   	padding: 0;
-		height: 50px;
-		line-height: 50px;
+		min-height: 50px;
   }
 }
 
@@ -1894,20 +1898,19 @@ form[name="account_social_networks"]{
 	width: 100%;
 }
 
-
 #ib-wrap-header{
 	.delete_thumb{
 		position: absolute;
 		top: 0;
 		left: 0;
 		padding: 5px;
-		background: #f46035;
+		background: $color-a;
 		font-size: 10px;
 		color: #FFF;
 		transition: all .3s;
 		cursor: pointer;
 		&:hover{
-			background-color: #be155e;
+			background-color: $color-b;
 		}
 	}
 }
@@ -1986,9 +1989,9 @@ form[name="account_social_networks"]{
 			width: 100%;
 			height: 100%;
 			z-index: -1;
-			background: linear-gradient(to right, #fa6630, #be155e);
 			transition: opacity .4s;
 			opacity: 0;
+			@extend .gradient;
 		}
 	}
 
@@ -2096,7 +2099,7 @@ form[name="account_social_networks"]{
 	label{
 		font-weight: 600;
 		&:after{
-			background: linear-gradient(to right, #fa6630, #be155e);
+			@extend .gradient;
 		}
 	}
 

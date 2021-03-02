@@ -735,7 +735,6 @@
 
 .btn_add_amenities {
   width: 19%;
-  /*background: linear-gradient(to right, #fa6630, #be155e);*/
   background-color: #333;
   border: 0;
   padding: 11px 30px;
@@ -745,7 +744,6 @@
   text-align: center;
   display: inline-block;
   border-radius: 4px;
-  float: right;
   transition: all .3s;
   &:hover{
   	background-color: #333;
@@ -987,7 +985,6 @@ span.sub_title {
 .add_street_address {
 	width: 150px;
 	border-radius: 4px;
-	/*background: linear-gradient(to right, #fa6630, #be155e);*/
 	background: #333;
 	text-align: center;
 	padding: 10px;
@@ -1153,7 +1150,7 @@ span.sub_title {
 #search_filter_saleType label:after,
 #search_filter_propertyType label:after,
 .ms-chk-items label:after{
-  background: linear-gradient(to right, #fa6630, #be155e);
+	@extend .gradient;
 }
 
 #search_filter_amenities label:after,
@@ -1169,7 +1166,7 @@ span.sub_title {
 #filter_cities label:after,
 #filter_propertyType label:after,
 #filter_waterfrontOptions label:after{
-  color: #be155e;
+  color: $color-b;
 }
 
 .flex-idx-content{
@@ -1403,9 +1400,8 @@ span.sub_title {
 }
 
 .opt_content span:before {
-	background: linear-gradient(to right, #fa6630, #be155e);
+	@extend .gradient;
 }
-
 
 /*******************************************/
 #idxboost_propertys_views{
@@ -1450,7 +1446,7 @@ span.sub_title {
 }
 .ui-autocomplete {
 	li{
-		background: linear-gradient(to right, #fa6630, #be155e);
+		@extend .gradient;
 		border-bottom: 1px solid #cfcfcf;
 		cursor: pointer;
 		&:last-child{

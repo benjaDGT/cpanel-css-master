@@ -80,7 +80,7 @@
 
 .btn-action.default span:before {
   content: "";
-  background: linear-gradient(to right, #fa6630, #be155e);
+  @extend .gradient;
   height: 100%;
   left: 0;
   opacity: 1;

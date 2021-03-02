@@ -762,7 +762,7 @@ table#myFilters .btn-filter-copy {
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background: linear-gradient(to right, #fa6630, #be155e);
+	@extend .gradient;
 }
 
 .content_tab .content .select2-container--default .select2-selection--single .select2-selection__rendered {

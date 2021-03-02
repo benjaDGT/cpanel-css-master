@@ -1147,9 +1147,9 @@ a.ms-button{
 	}
 
 	&.ms-bg-boost{
-		background-color: #be155e;
+		background-color: $color-b;
 		border: 0;
-		background: linear-gradient(to right, #fa6630, #be155e);
+		@extend .gradient;
 		color: #FFF;
 		&:before{
 			border-top: 16px solid #fa6630;
@@ -2399,7 +2399,6 @@ form{
     top: -10px;
     width: max-content;
     font-size: 11px;
-    background: linear-gradient(to right, #fa6630, #be155e);
     border-radius: 4px;
     padding: 3px 10px;
     margin-bottom: 10px;
@@ -2408,6 +2407,7 @@ form{
     opacity: 0;
     transition: all .3s;
     transform: translateX(-50%);
+		@extend .gradient;
 	}
 	
 	&:not(.active){
@@ -2464,7 +2464,7 @@ form{
 		color: #333;
 		&:hover{
 			text-decoration: none !important;
-			color: #be155e;
+			color: $color-b;
 		}
 	}
 }
@@ -2649,8 +2649,8 @@ form{
 				border: 1px solid transparent !important;
 				>a,
 				>span{
-					background: linear-gradient(to right, #fa6630, #be155e);
 					color: #FFF !important;
+					@extend .gradient;
 				}
 			}
 		}
@@ -2961,7 +2961,7 @@ form{
 			}
 
 			&.active{
-				background: linear-gradient(to right, #fa6630, #be155e);
+				@extend .gradient;
 			}
 		}
 
@@ -4748,7 +4748,7 @@ form{
 			}
 
 			&.active{
-				background: linear-gradient(to right, #fa6630, #be155e);
+				@extend .gradient;
 				a{
 					background-color: transparent;
 					color: #FFF;
@@ -4819,11 +4819,11 @@ form{
 				&.active{
 					background: #FFF;
 					&:after{
-						background: linear-gradient(to right, #fa6630, #be155e);
+						@extend .gradient;
 					}
 
 					a{
-						color: #be155e;
+						color: $color-b;
 					}
 				}
 			}
@@ -5739,10 +5739,10 @@ form{
 		font-weight: 700;
 		text-transform: uppercase;
 		color: #FFF;
-		background: linear-gradient(to right, #fa6630, #be155e);
 		margin-top: 0;
 		margin-left: -63px;
 		margin-right: 15px;
+		@extend .gradient;
 	}
 
 	.ms-small{
@@ -7465,7 +7465,6 @@ form{
 		input:checked+label{
 			border: 0;
 			background: #7bc500;
-			//background: linear-gradient(to right, #fa6630, #be155e);
 			&:before{
 				left: 25px;
 				background-color: #FFF;
@@ -7526,7 +7525,6 @@ form{
 							}
 							
 							input:checked+label{
-								//background: linear-gradient(to right, #fa6630, #be155e);
 								background: #7bc500;
 								&:before{
 									left: 19px;
@@ -8270,9 +8268,9 @@ form{
 					width: 9px;
 					height: 9px;
 					border-radius: 100%;
-					background: linear-gradient(to right, #fa6630, #be155e);
 					transition: opacity .4s;
 					opacity: 0;
+					@extend .gradient;
 				}
 			}
 
@@ -9470,7 +9468,6 @@ form{
 					align-items: center;
 					justify-content: center;
 					color: #FFF;
-					background: linear-gradient(to right, #fa6630, #be155e);
 					width: 100%;
 					max-width: 250px;
 					margin-right: auto;
@@ -9481,6 +9478,7 @@ form{
 					position: relative;
 					font-size: 13px;
 					font-weight: 600;
+					@extend .gradient;
 					cursor: pointer;
 					&:before{
 						content: "";
@@ -9644,7 +9642,6 @@ form{
 					align-items: center;
 					justify-content: center;
 					color: #FFF;
-					background: linear-gradient(to right, #fa6630, #be155e);
 					width: 100%;
 					max-width: 250px;
 					margin-right: auto;
@@ -9655,6 +9652,7 @@ form{
 					position: relative;
 					font-size: 13px;
 					font-weight: 600;
+					@extend .gradient;
 					cursor: pointer;
 					&:before{
 						content: "";
@@ -9770,16 +9768,16 @@ form{
 			right: -10px;
 			color: #fff;
 			margin: 0;
-			background: linear-gradient(to right, #fa6630, #be155e);
 			opacity: 0;
 			transition: all .4s;
 			display: none;
+			@extend .gradient;
 			&:after{
 				content: "";
 				display: block;
 				width: 0;
 				height: 0;
-				border-top: 10px solid #c0175c;
+				border-top: 10px solid $color-b;
 				border-left: 10px solid transparent;
 				position: absolute;
 				bottom: -10px;
@@ -9835,13 +9833,13 @@ form{
 			width: 100%;
 			height: 45px;
 			border-radius: 4px;
-			background: linear-gradient(to right, #fa6630, #be155e);
 			color: #FFF;
 			display: flex !important;
 			transition: all .3s;
 			overflow: hidden;
 			position: relative;
 			margin-top: 15px;
+			@extend .gradient;
 			&:before{
 				content: "";
 				display: block;
@@ -10367,7 +10365,7 @@ $ms-danger-color: #d83a4c;
 }
 
 .tooltip-inner {
-	background: linear-gradient(to right, #fa6630, #be155e);
+	@extend .gradient;
 }
 
 .ms-tool-item{
@@ -10375,7 +10373,6 @@ $ms-danger-color: #d83a4c;
 	&:before{
 		content: attr(data-tool);
 		padding: 3px 5px;
-		background: linear-gradient(to right, #fa6630, #be155e);
 		position: absolute;
 		top: 0;
 		left: 50%;
@@ -10391,6 +10388,7 @@ $ms-danger-color: #d83a4c;
 		margin-top: -27px;
 		opacity: 0;
 		transition: opacity .3s;
+		@extend .gradient;
 	}
 
 	&:after{
@@ -10566,8 +10564,8 @@ $ms-danger-color: #d83a4c;
 	font-size: 15px;
 	border-radius: 4px;
 	background-color: #e8e8e8;
-	background: linear-gradient(to right, #fa6630, #be155e);
 	color: #FFF;
+	@extend .gradient;
 }
 
 
@@ -11114,8 +11112,6 @@ $ms-danger-color: #d83a4c;
 	bottom: 0;
 	display: block;
 	text-align: center;
-	background: linear-gradient(to right, #fa6630, #be155e);
-	//background-color: #fde386;
 	padding: 15px;
 	width: 100%;
 	border-bottom: 1px solid #ddd;
@@ -11125,7 +11121,9 @@ $ms-danger-color: #d83a4c;
 	display: flex;
 	align-items: center;
 	text-align: left;
-		
+	order: 10;
+	@extend .gradient;
+
 	a{
 		color: #FFF;
 		text-decoration: underline;
@@ -11316,7 +11314,7 @@ $ms-danger-color: #d83a4c;
 				#sold_listings_soldListingRentalType label{
 					&:after{
 						border-radius: 100%;
-						background: #be155e;
+						background: $color-b;
 						width: 10px;
 						border-radius: 100%;
 						height: 10px;
