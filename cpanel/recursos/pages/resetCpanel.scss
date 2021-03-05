@@ -6300,10 +6300,12 @@ table{
   }
 }
 
+#form-my-account-ed,
 #formAcount{
   .form-item{
     &.ms-btn-group{
       width: 100%;
+      flex-wrap: wrap;
       input{
         display: block;
         width: 100%;
@@ -6683,23 +6685,24 @@ table{
             max-width: 344px !important;
           }
         }
+
+        .ms-activity-actions.ms-registered{
+          max-width: 200px !important;
+          min-width: 200px;
+        }
       }
 
       @media screen and (min-width: 1780px){
         .ms-activity-actions.ms-lastvisit.mm-modified{
           max-width: 100% !important;
-          width: calc(100% - 1180px) !important;
+          width: calc(100% - 1230px) !important;
           min-width: 190px !important;
         }
 
         .ms-activity-actions.ms-registered{
-          max-width: 150px !important;
-          min-width: 130px;
-          width: 100% !important;
           padding: 0 5px;
         }
 
-      
         .ms-wrap.ms-activity{
           width: 100% !important;
           min-width: 280px !important;
