@@ -237,7 +237,7 @@ body{
 						}
 					}
 				}
-				ul{
+				ul:not(.dropdown-menu){
 					border-top: 1px solid #e1e8ed;
 					max-height: 0;
 					overflow: hidden;
@@ -1597,7 +1597,7 @@ textarea,
 							&:focus,
 							&:hover,
 							&.active{
-								color: #bf165e !important;
+								color: #157edc !important;
 							}
 						}
 					}
@@ -1610,7 +1610,7 @@ textarea,
 						&:focus,
 						&:hover,
 						&.active{
-							color: #bf165e !important;
+							color: #157edc !important;
 						}
 					}
 				}

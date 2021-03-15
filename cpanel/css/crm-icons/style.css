@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crm-icons';
-  src:  url('fonts/crm-icons.eot?irptdb');
-  src:  url('fonts/crm-icons.eot?irptdb#iefix') format('embedded-opentype'),
-    url('fonts/crm-icons.ttf?irptdb') format('truetype'),
-    url('fonts/crm-icons.woff?irptdb') format('woff'),
-    url('fonts/crm-icons.svg?irptdb#crm-icons') format('svg');
+  src:  url('fonts/crm-icons.eot?bpzilc');
+  src:  url('fonts/crm-icons.eot?bpzilc#iefix') format('embedded-opentype'),
+    url('fonts/crm-icons.ttf?bpzilc') format('truetype'),
+    url('fonts/crm-icons.woff?bpzilc') format('woff'),
+    url('fonts/crm-icons.svg?bpzilc#crm-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.crm-ico-envelope:before {
+  content: "\e950";
+}
+.crm-ico-phone-calling:before {
+  content: "\e951";
+}
+.crm-ico-groups:before {
+  content: "\e94c";
+}
+.crm-ico-offices:before {
+  content: "\e94d";
+}
 .crm-ico-cog:before {
   content: "\e953";
 }
@@ -271,18 +283,6 @@
 .crm-ico-arrow-right:before {
   content: "\ea34";
 }
-.crm-ico-envelope:before {
-  content: "\e950";
-}
-.crm-ico-phone-calling:before {
-  content: "\e951";
-}
-.crm-ico-groups:before {
-  content: "\e94c";
-}
-.crm-ico-offices:before {
-  content: "\e94d";
-}
 .crm-ico-drag_indicator:before {
   content: "\e946";
 }
@@ -306,4 +306,7 @@
 }
 .crm-ico-spinner:before {
   content: "\e982";
+}
+.crm-ico-spinner2:before {
+  content: "\e97b";
 }

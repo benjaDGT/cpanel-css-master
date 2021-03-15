@@ -92,7 +92,7 @@ $crm-icons :'crm-icons';
 	.ms-text-name{
 		margin-left: 15px;
 		.ms-title {
-			font-size: 16px;
+			font-size: 14px;
 			font-weight: 700;
 		}
 		a{
@@ -348,7 +348,7 @@ a.ms-button{
 	}
 
 	.ms-title{
-		font-size: 15px;
+		font-size: 14px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -364,9 +364,6 @@ a.ms-button{
 
 	.ms-sub-item{
 		width: calc(100% - 54px);
-		//width: calc(100% - 50px);
-		//padding-top: 5px;
-		//position: relative;
 		@media screen and (min-width: 768px){
 			position: relative;
 			width: calc(100% - 45px);
@@ -1253,6 +1250,68 @@ a.ms-button{
     margin-left: auto;
     margin-top: 0;
 	}
+
+	&.ms-new-lead{
+		box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.15);
+		border: 0;
+		&:before{
+			content: "";
+			display: block;
+			width: 100px;
+			height: 150px;
+			@extend .gradient;
+			border: 0;
+			top: -60px;
+			left: -38px;
+			transform: rotate(45deg);
+		}
+
+		&:after{
+			display: none;
+		}
+
+		.ms-property-item{
+			padding: 0 !important;
+			.ms-title{
+				display: block;
+				overflow: visible;
+				white-space: normal;
+				font-size: 15px;
+				line-height: normal;
+				color: #e52752;
+				font-weight: 700;
+				span{
+					color:#2a263b;
+				}
+			}
+
+			.ms-mls,
+			.ms-price{
+				font-weight: normal;
+				margin-bottom: 2px;
+				strong{
+					font-weight: 700;
+				}
+			}
+
+			.ms-wrap-img{
+				border: 2px solid #FFF;
+				@media screen and (min-width: 480px){
+					max-width: 150px;
+					margin-right: 15px;
+				}
+				a{
+					display: block;
+					line-height: 0;
+				}
+			}
+		}
+
+		.ms-drop-list {
+			padding-top: 15px;
+			border-top: 1px dashed #CCC;
+		}
+	}
 }
 
 .ms-property-item{
@@ -1299,7 +1358,7 @@ a.ms-button{
 		margin-top: 10px;
 		width: 100%;
 		.ms-title{
-			font-size: 16px;
+			font-size: 14px;
 			margin-bottom: 0;
 			font-weight: 600;
 
@@ -1354,7 +1413,7 @@ a.ms-button{
 			width: calc(100% - 130px);
 			line-height: 1.4;
 			.ms-title{
-				font-size: 17px;
+				//font-size: 17px;
 				margin-bottom: 0;
 				font-weight: 600;
 			}
@@ -1530,10 +1589,10 @@ a.ms-button{
 		width: 100%;
 		overflow: auto;
 		p{
-			font-size: 13px;
+			font-size: 14px;
 			word-break: break-word;
 			&.ms-small{
-				font-size: 11px;
+				font-size: 12px;
 			}
 		}
 	}
@@ -3227,7 +3286,7 @@ form{
 				max-width: 275px;
 				.ms-title{
 					margin-top: 0;
-					font-size: 16px;
+					//font-size: 16px;
 					.ms-name{
 						max-width: 210px;
 					}
@@ -4045,25 +4104,69 @@ form{
 		position: absolute;
 		top: 100%;
 		left: 0;
-		padding: 15px 0;
+		//padding: 15px 0;
+		padding: 0;
 		border: 1px solid #cacaca;
 		z-index: 2;
 		background-color: #FFF;
-    min-width: 160px;
-    font-size: 13px;
+    //min-width: 160px;
+    //font-size: 13px;
+		min-width: 200px;
+		font-size: 14px;
     text-align: left;
     border-radius: 4px;
+		margin-top: 10px;
+
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -8px;
+			left: 30px;
+			background-image: url("../images/arrow_min.png");
+			width: 11px;
+			height: 8px;
+		}
+
 		li{
 			a{
-				padding: 5px 15px;
+				//padding: 5px 15px;
+				padding: 10px 15px;
 				color: #333;
 				display: block;
 				cursor: pointer;
+				border-bottom: 1px solid $border-color;
 				&:hover,
 				&.active{
 					color: #157edc;
 				}
-			}		
+			}
+
+			&.ms-wrap-chk{
+				label{
+					padding-top: 10px;
+					padding-bottom: 10px;
+					margin-bottom: 0;
+					border-bottom: 1px solid $border-color;
+					&:after{
+						top: 10px;
+					}
+
+					&:before{
+						background-color: #FFF;
+					}
+
+					&:hover{
+						background-color: #f5f5f5;
+					}
+				}
+			}
+
+			&:last-child{
+				a, label{
+					border-bottom: 0;
+				}
+			}
 		}
 	}
 
@@ -4091,7 +4194,7 @@ form{
 			display: block;
 			width: 20px;
 			height: 20px;
-			margin-right: 5px;
+			margin-right: 10px;
 			border-radius: 3px;
 			border: 2px solid #cccccc;
 		}
@@ -4658,6 +4761,35 @@ form{
 			top: 50%;
 			margin-top: -15px;
 			padding: 0;
+		}
+	}
+
+	.dropdown-menu{
+		padding: 0;
+		margin-top: 10px;
+		min-width: 200px;
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -8px;
+			left: 30px;
+			background-image: url("../images/arrow_min.png");
+			width: 11px;
+			height: 8px;
+		}
+		>li{
+			font-size: 14px;
+			>a{
+				padding: 10px 15px !important;
+				border-bottom: 1px solid $border-color;
+				font-size: 14px;
+			}
+			&:last-child{
+				>a{
+					border-bottom: 0;
+				}
+			}
 		}
 	}
 
@@ -5463,7 +5595,7 @@ form{
 	.ms-text-name{
 		margin-left: 15px;
 		.ms-title{
-			font-size: 16px;
+			font-size: 14px;
 			font-weight: 700;
 			a{
 				color: #157edc;
@@ -8350,7 +8482,7 @@ form{
 			margin-bottom: 15px;
 			.ms-title{
 				font-weight: 600;
-				font-size: 16px;
+				font-size: 14px;
 			}
 		}
 
@@ -9250,9 +9382,15 @@ form{
 			font-size: 22px;
 		}
 	}
-}
-//}
 
+	&.ms-registered{
+		padding-left: 30px !important;
+	}
+}
+
+.ms-lead-body .ms-lead-item .ms-lastvisit .ms-icon-td.ms-registered{
+	padding-left: 30px !important;
+}
 
 /*-----------------------------------------------------------------------------------------------------*/
 /* RESETEANDO ICONOS
@@ -10432,6 +10570,7 @@ $ms-danger-color: #d83a4c;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	text-align: center;
+	font-size: 14px;
 }
 
 .ms-smt-text{
@@ -10462,6 +10601,7 @@ $ms-danger-color: #d83a4c;
 				&.ms-registered:before{
 					top: -2px;
 					font-size: 25px;
+					left: 0;
 				}
 
 				&.ms-drip{
@@ -11115,7 +11255,7 @@ $ms-danger-color: #d83a4c;
 	padding: 15px;
 	width: 100%;
 	border-bottom: 1px solid #ddd;
-	z-index: 10;
+	z-index: 2;
 	font-size: 14px;
 	color: #FFF;
 	display: flex;

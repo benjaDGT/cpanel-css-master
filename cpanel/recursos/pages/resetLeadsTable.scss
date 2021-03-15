@@ -1,0 +1,475 @@
+.ms-wrapper-table{
+  padding-top: 20px;
+  width: 100%;
+  /*overflow: auto;
+  padding-right: 1px;*/
+}
+
+.ms-nw-list-table{
+  display: block;
+  min-width: 100%;
+  width: auto;
+  tbody{
+    display: block;
+  }
+
+  tr{
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      background-color: #FFF;
+      box-shadow: 0px 2px 4px rgba(31,30,47,0.03);
+      top: 0;
+      left: 0;
+      height: 75px;
+      border: 1px solid $border-color;
+      position: absolute;
+      z-index: 0;
+    }
+    td, th {
+      padding-bottom: 10px;
+      flex-grow: 1;
+      width: auto;
+      margin-right: -1px;
+      position: relative;
+      .ms-list-item{
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      &:first-child{
+        .ms-list-item{
+          border-left: 0;
+        }
+      }
+
+      &:last-child{
+        .ms-list-item{
+          border-right: 0;
+        }
+      }
+    }
+
+    td{
+      &.ms-td-item{
+        &.-name{
+          min-width: 318px;
+          max-width: 450px;
+          .ms-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .ms-user-info{
+              align-items: center; 
+            }
+          }
+        }
+
+        &.-inquiere{
+          max-width: 75px;
+          min-width: 75px;
+          
+          .ms-list-item{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #aaaaaa;
+            color: #FFF;
+            &.active{
+              background: $gradient;
+            }
+            .total{
+              font-weight: 600;
+              font-size: 15px;
+            }
+            .text{
+              font-size: 13px;
+            }
+          }
+        }
+
+        &.-engagement{
+          min-width: 260px;
+          max-width: 450px;
+          .ms-item{
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 20%;
+            color: #909090;
+            transition: all .3s;
+            font-size: 13px;
+
+            a:first-child{
+              font-weight: 700;
+              font-size: 15px;
+            }
+
+            &:not(.color-gray){
+              a:first-child{
+                color: $azul;
+              }
+            }
+
+            a:hover{
+              color: $azul;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &.-created,
+        &.-lasta-ctivity{
+          min-width: 175px;
+          max-width: 450px;
+        }
+
+        &.-actions{
+          min-width: 190px;
+          max-width: 450px;
+          .ms-list-item{
+            justify-content: center;
+            //padding: 0 5px;
+          }
+        }
+
+        &.-buckets,
+        &.-drips{
+          min-width: 70px;
+          max-width: 70px;
+          .ms-assign,
+          .ms-bg-text{
+            display: none;
+          }
+
+          .ms-list-item{
+            align-items: center;
+            justify-content: center;
+          }
+
+          .ms-icon-buckets:before,
+          .ms-icon-rocket:before{
+            font-size: 28px;
+          }
+        }
+
+        &.-comunication,
+        &.-todo,
+        &.-agent{
+          min-width: 100px;
+          max-width: 100px;
+
+          .ms-list-item{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5px;
+
+            .total{
+              font-weight: 700;
+              font-size: 13px;
+            }
+
+            .text{
+              color: #909090;
+              font-size: 13px;
+            }
+
+            a.text{
+              color: $azul;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        &.-created{
+          .ms-list-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .date{
+              font-weight: 700;
+              font-size: 13px;
+            }
+            .text{
+              color: #909090;
+              font-size: 13px;
+            }
+          }
+        }
+
+        &.-lasta-ctivity{
+          .ms-list-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 5px;
+            .ms-icon-td{
+              font-weight: 700;
+              font-size: 13px;
+              &.ms-view:before {
+                top: -2px;
+                font-size: 16px;
+              }
+              &.ms-favorite:before {
+                top: 3px;
+              }
+              &.ms-registered:before{
+                top: -2px;
+                font-size: 25px;
+                left: 0;
+              }
+            }
+            span:last-child{
+              color: #909090;
+              font-size: 13px;
+            }
+            .ms-ellipsis-text{
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tooltip{
+    width: max-content;
+    .tooltip-inner {
+      max-width: max-content;
+    }
+  }
+
+  .ms-btn {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+    min-width: 50px;
+    height: 43px;
+    flex-shrink: 0;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #909090;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    margin: 0 5px;
+    .icon{
+      &:before{
+        color: #d6d6d6;
+        font-weight: 100 !important;
+        font-size: 16px;
+        margin-right: 5px;
+      }
+
+      &.crm-ico-ms-open-email{
+        &:before{
+          font-size: 17px;
+        }
+      }
+
+      &.crm-ico-ms-phone-msg{
+        &:before{
+          font-size: 19px;
+        }
+      }
+    }
+
+    .total{
+      font-size: 13px;
+      max-width: 26px;
+      width: auto;
+    }
+  }
+}
+
+.ms-td-item{
+  &.-name{
+    .ms-item{
+      &.ms-chk{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 100%;
+        label{
+          display: block;
+          overflow: hidden;
+          text-indent: -999999999px;
+          width: 16px;
+          height: 16px;
+          margin: 0;
+          &:before{
+            content: "";
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            border: 2px solid #cccccc;
+            background-color: #FFF;
+            text-indent: 0;
+            display: block;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    .ms-info{
+      padding-left: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-grow: 1;
+      width: calc(100% - 30px);
+      height: 100%;
+      .ms-detail{
+        padding: 0 10px;
+        flex-grow: 1;
+        width: calc(100% - 35px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        .ms-name-lead{
+          width: 100%;
+          padding-right: 25px;
+          position: relative;
+          margin-bottom: -5px;
+          .ms-status{
+            top: 4px;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+          }
+
+          .ms-name{
+            font-size: 14px;
+            color: $azul;
+            width: 100%;
+            display: inline-block;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 600;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .ms-icon-phone,
+        .ms-icon-email {
+          font-size: 13px;
+          max-width: 90%;
+          width: auto;
+          display: inline-block;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          &:before{
+            font-size: 13px;
+          }
+
+          &:hover{
+            color: $azul;
+          }
+        }
+
+        .content_dropdown{
+          position: absolute;
+          margin: 0;
+          right: 9px;
+          bottom: 25px;
+          .dropdown{
+            width: 82px;
+            .btn {
+              font-size: 10px;
+              padding: 1px 10px;
+              &:after {
+                font-size: 7px;
+                top: 4px;
+                right: 5px;
+              }
+            }
+          }
+
+          .dropdown-menu {
+            left: auto;
+            right: 0;
+            min-width: 200px;
+            position: absolute;
+            top: 100%;
+            margin-top: 6px;
+            border: 1px solid $border-color;
+            padding: 0;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+            >li{
+              border-bottom: 1px solid $border-color;
+              &:last-child{
+                border-bottom: 0;
+              }
+              >a{
+                font-size: 14px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 15px;
+                padding-left: 30px;
+                &:before{
+                  top: 15px;
+                  left: 9px;
+                }
+                &:hover{
+                  color: $azul;
+                }
+              }
+            }
+
+            &:before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: -8px;
+              right: 30px;
+              background-image: url("../images/arrow_min.png");
+              width: 11px;
+              height: 8px;
+            }
+          }
+        }
+      }
+
+      .ms-user-avatar{
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+      }
+    }
+  }
+}
