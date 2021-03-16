@@ -49,7 +49,7 @@ body{
   display: none;
 }*/
 
-@media (max-width: 420px){
+/*@media (max-width: 420px){
   .ms-lead-body{
     .ms-lead-item{
       .ms-lastvisit-btn {
@@ -57,7 +57,7 @@ body{
       }
     }
   }
-}
+}*/
 
 /*MODAL FILTER BTN*/
 #modal-type-save-searched{
@@ -135,7 +135,7 @@ body{
   .ms-filter-actions{
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
   }
 
   .ms-wrap-table-crm{
@@ -6748,16 +6748,12 @@ table{
       @media (max-width: 767px){
 
         .ms-lastvisit-btn {
-          max-width: 50%;
+          width: calc(100% - 110px);
           display: inline-block;
           overflow: hidden;
           -o-text-overflow: ellipsis;
           text-overflow: ellipsis;
           white-space: nowrap;
-        }
-
-        .content_dropdown {
-          bottom: -52px;
         }
 
         .ms-activity-actions{
@@ -7944,6 +7940,93 @@ table{
       width: 100%;
       height: 100%;
       z-index: 2;
+    }
+  }
+}
+
+.ms-lead-body{
+  .ms-lead-item{
+    .content_dropdown{
+      .dropdown{
+        .dropdown-menu{
+          margin-top: 10px;
+          left: auto;
+          right: 0;
+          min-width: 200px;
+          padding: 0;
+          box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+          z-index: 2;
+          &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: -8px;
+            right: 30px;
+            background-image: url("../images/arrow_min.png");
+            width: 11px;
+            height: 8px;
+          }
+
+          >li{
+            border-bottom: 1px solid $border-color;
+            >a{
+              position: relative;
+              padding: 6px 15px 6px 30px;
+              font-size: 13px !important;
+              &:hover{
+                color: $azul;
+              }
+              &:before{
+                top: 10px;
+                left: 9px;
+              }
+            }
+
+            &:last-child{
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ms-wrap-profile{
+  .ms-wrap-info{
+    .ms-cl-a{
+      .content_dropdown{
+        .dropdown{
+          .dropdown-menu{
+            min-width: 200px;
+            z-index: 2;
+            >li{
+              >a{
+                padding: 6px 15px 6px 30px !important;
+                border-bottom: 1px solid #e1e8ed;
+                font-size: 13px !important;
+                &:before{
+                  top: 10px;
+                  left: 9px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ms-mho{
+  .ms-form-active{
+    text-transform: uppercase;
+    height: 40px;
+    min-width: 120px;
+    margin: -5px 0;
+    display: none;
+    @media screen and (min-width: 768px){
+      display: inline-block;
     }
   }
 }

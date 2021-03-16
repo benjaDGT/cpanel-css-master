@@ -6,7 +6,7 @@
 }
 
 .ms-nw-list-table{
-  display: block;
+  //display: block;
   min-width: 100%;
   width: auto;
   tbody{
@@ -63,7 +63,7 @@
     td{
       &.ms-td-item{
         &.-name{
-          min-width: 318px;
+          min-width: 300px;
           max-width: 450px;
           .ms-wrap{
             display: flex;
@@ -132,15 +132,19 @@
           }
         }
 
-        &.-created,
+        &.-created{
+          min-width: 160px;
+          max-width: 240px;
+        }
+
         &.-lasta-ctivity{
           min-width: 175px;
-          max-width: 450px;
+          max-width: 240px;
         }
 
         &.-actions{
           min-width: 190px;
-          max-width: 450px;
+          max-width: 240px;
           .ms-list-item{
             justify-content: center;
             //padding: 0 5px;
@@ -170,8 +174,8 @@
         &.-comunication,
         &.-todo,
         &.-agent{
-          min-width: 100px;
-          max-width: 100px;
+          min-width: 96px;
+          max-width: 96px;
 
           .ms-list-item{
             flex-direction: column;
@@ -198,6 +202,7 @@
           }
         }
 
+        &.-lastvisit,
         &.-created{
           .ms-list-item{
             display: flex;
@@ -213,6 +218,10 @@
               font-size: 13px;
             }
           }
+        }
+
+        &.-lastvisit{
+          display: none;
         }
 
         &.-lasta-ctivity{
