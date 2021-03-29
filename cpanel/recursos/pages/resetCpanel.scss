@@ -8163,3 +8163,17 @@ table{
     }
   }
 }
+
+// Resets for Team Detail Page
+
+@media (max-width: 767.98px) {
+
+  #profileTeamPage .ms-crm-form > .ms-wrap-btn {
+    display: none;
+  }
+
+  #profileTeamHeader .ms-wrap-btn {
+    z-index: 3;
+  }
+
+}
