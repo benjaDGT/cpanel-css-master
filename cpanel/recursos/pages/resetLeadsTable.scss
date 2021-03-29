@@ -416,6 +416,7 @@
           margin: 0;
           right: 9px;
           bottom: 25px;
+          z-index: auto;
           .dropdown{
             width: 82px;
             .btn {
@@ -445,13 +446,13 @@
                 border-bottom: 0;
               }
               >a{
-                font-size: 14px;
-                padding-top: 10px;
-                padding-bottom: 10px;
+                font-size: 13px !important;
+                padding-top: 7px;
+                padding-bottom: 7px;
                 padding-right: 15px;
                 padding-left: 30px;
                 &:before{
-                  top: 15px;
+                  top: 11px;
                   left: 9px;
                 }
                 &:hover{

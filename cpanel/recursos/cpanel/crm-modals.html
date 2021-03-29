@@ -241,8 +241,13 @@
               <span>Modal Launch website</span>
             </button>
           </li>
-        </ul>
 
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#synchronizeModal">
+              <span>Synchronize my Wordpress</span>
+            </button>
+          </li>
+        </ul>
 
         <!-- MODAL LAUNCH WEBSITE -->
         <div class="modal fade in" id="modal-launch-website" tabindex="-1" role="dialog">
@@ -2571,6 +2576,35 @@
               <a href="#" class="btn ms-link" data-dismiss="modal">Cancel</a>
               <button class="btn btn-dgt-def" aria-label="Continue">
                 <span>Continue</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="synchronizeModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title"><span>Synchronize my Wordpress</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body ms-crm-form ms-message-content">
+            <span class="crm-ico-ms-update color-boost"></span>
+            <div class="ms-wrapper-detail">
+              <p><strong>Important!</strong> Some edits from the Control Panel need to synchronized with your Wordpress dashboard to reflect in your website:</p>
+              <ul class="ms-dtl">
+                <li>All edits of personal information from My Account (Phone, email, etc...)</li>
+                <li>New Filter Pages & Building Pages (Only the first time your create them, edits do not require synchronization.</li>
+              </ul>
+            </div>
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal">
+                <span>Cancel</span>
+              </a>
+              <button class="btn btn-dgt-def">
+                <span>Sync</span>
               </button>
             </div>
           </div>

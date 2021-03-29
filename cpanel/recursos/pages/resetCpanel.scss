@@ -7624,7 +7624,7 @@ table{
       }
     }
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 769px){
       position: relative !important;
       margin: 0 !important;
       right: 0;
@@ -8027,6 +8027,76 @@ table{
     display: none;
     @media screen and (min-width: 768px){
       display: inline-block;
+    }
+  }
+}
+
+#skey .widget{
+  @media (max-width:769px){
+    max-width: 100% !important;
+  }
+}
+
+.ms-wrap-tab-ex{
+  max-width: 100%;
+  @media screen and (min-width: 769px){
+    max-width: 700px;
+  }
+}
+
+#idxboost_idx_settings_cities{
+ .widget {
+    width: 100%;
+    max-width: 100%;
+    @media screen and (min-width: 769px){
+      width: calc(100% - 30px);
+      max-width: 900px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px){
+  html{
+    body.singlepropertypage {
+      padding-top: 87px !important;
+    }
+  }
+}
+
+.group-cpanel-btn .group-btn.ico-sync span:before {
+  font-size: 30px;
+  content: "\e90f";
+  font-family: crm-icons !important;
+}
+
+#synchronizeModal{
+  .ms-wrapper-detail{
+    padding-bottom: 15px;
+    margin-top: 20px;
+    p{
+      color: #333 !important;
+    }
+  }
+}
+
+.ms-dtl{
+  margin-top: 15px;
+  li{
+    padding-left: 20px;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: left;
+    color: #333 !important;
+    &:before{
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 6px;
+      left: 0;
     }
   }
 }
