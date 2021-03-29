@@ -8100,3 +8100,73 @@ table{
     }
   }
 }
+
+// Resets for Team Page
+
+.ms-team-wrapper {
+
+  &.ms-filter-actions .ms-wrap-filter {
+    .ms-ft-item.ms-create-new,
+    .ms-ft-item-team-settings,
+    .ms-ft-item-team-collection {
+      min-width: 50px;
+    }
+
+    .ms-ft-item-team-settings {
+      order: 9;
+    }
+  
+    .ms-ft-item-team-collection {
+      order: 10;
+      padding: 0 5px;
+    }
+
+    .ms-ft-item-team-collection .ms-tmpx.crm-ico-ms-view {
+      font-size: 19px;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 639.98px) {
+
+    &.ms-filter-actions .ms-wrap-filter {
+      .ms-wrap-input.ms-inp-search {
+        width: calc(100% - 60px);
+      }
+
+      .ms-ft-item.ms-create-new {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+  }
+
+  @media (max-width: 1199.98px) {
+
+    &.ms-filter-actions .ms-wrap-filter {
+      .ms-ft-item-team-settings .ms-tmpc,
+      .ms-ft-item-team-collection .ms-tmpc {
+        display: none !important
+      }
+
+      .ms-ft-item-team-settings .ms-tmpx,
+      .ms-ft-item-team-collection .ms-tmpx {
+        display: flex !important;
+      }
+    }
+
+  }
+
+  @media (min-width: 1200px) {
+
+    &.ms-filter-actions .ms-wrap-filter {
+      .ms-ft-item-team-collection .ms-tmpx {
+        display: none !important
+      }
+    }
+    
+  }
+
+}
