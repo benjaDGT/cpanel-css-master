@@ -8104,7 +8104,6 @@ table{
 // Resets for Team Page
 
 .ms-team-wrapper {
-
   &.ms-filter-actions .ms-wrap-filter {
     .ms-ft-item.ms-create-new,
     .ms-ft-item-team-settings,
@@ -8128,19 +8127,16 @@ table{
   }
 
   @media (max-width: 639.98px) {
-
     &.ms-filter-actions .ms-wrap-filter {
       .ms-wrap-input.ms-inp-search {
         width: calc(100% - 60px);
       }
-
       .ms-ft-item.ms-create-new {
         position: absolute;
         right: 0;
         top: 0;
       }
     }
-
   }
 
   @media (max-width: 1199.98px) {
@@ -8156,7 +8152,6 @@ table{
         display: flex !important;
       }
     }
-
   }
 
   @media (min-width: 1200px) {
@@ -8166,7 +8161,5 @@ table{
         display: none !important
       }
     }
-    
   }
-
 }
