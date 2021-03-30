@@ -8177,3 +8177,21 @@ table{
   }
 
 }
+
+.modal{
+  #ib-generate-building{
+    .content{
+      &.type-building-gallery{
+        padding: 20px 20px 0 20px;
+      }
+    }
+  }
+}
+
+#modal-new-building{
+  #imageTab{
+    .content_galery_img.ui-sortable {
+      padding-bottom: 15px;
+    }
+  }
+}
