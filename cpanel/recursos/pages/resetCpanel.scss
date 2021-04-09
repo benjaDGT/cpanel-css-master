@@ -8183,6 +8183,7 @@ table{
     .content{
       &.type-building-gallery{
         padding: 20px 20px 0 20px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -8192,6 +8193,39 @@ table{
   #imageTab{
     .content_galery_img.ui-sortable {
       padding-bottom: 15px;
+    }
+  }
+}
+
+#synchronizeModal{
+  .modal-body{
+    &.ms-crm-form{
+      &.ms-message-content{
+        padding: 20px !important;
+      }
+    }
+  }
+}
+
+.ms-general-header{
+  .ms-wrap-header{
+    .ms-ct-header{
+      .ms-wrap-gh{
+        .ms-gh-item{
+          &.ms-filter-name{
+            .ms-search{
+              position: absolute;
+              z-index: 2;
+              width: 40px;
+              height: 100%;
+              overflow: hidden;
+              text-indent: -999999px;
+              background-color: transparent;
+              right: 0;
+            }
+          }
+        }
+      }
     }
   }
 }

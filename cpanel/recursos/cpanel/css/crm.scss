@@ -5876,16 +5876,21 @@ form{
 		display: block;
 		width: 2px;
 		background-color: #f0f1f1;
-		height: 100%;
 		position: absolute;
 		left: 25px;
-		top: 0;
+    height: calc(100% - 80px);
+    bottom: 0;
+		display: none;
+	}
+
+	.js-rules-step-line{
+		justify-content: flex-end;
 	}
 	
 	>li{
 		position: relative;
-		margin-bottom: 20px;
-		padding-left: 15px;
+		margin-bottom: 15px;
+		//padding-left: 15px;
 	}
 
 	a{
@@ -6163,8 +6168,9 @@ form{
 		position: relative;
 		background-color: #FFF;
 		padding: 17px;
-		border: 1px dashed #babbbc;
+		border: 1px solid #e1e8ed;
 		border-radius: 6px;
+		box-shadow: 0px 2px 4px rgba(31,30,47,0.03);
 		.ms-wrap-btn{
 			justify-content: flex-start;
 			.ms-button{
@@ -6220,6 +6226,7 @@ form{
 		position: absolute;
 		top: 0;
 		left: -42px;
+		display: none;
 	}
 
 	.ms-subject-footer{
@@ -6236,13 +6243,14 @@ form{
 		padding-left: 0;
 		margin-bottom: 0;
 		.ms-flex{
-			padding-left: 65px;
+			//padding-left: 65px;
 			//display: block;
-			min-height: 50px;
+			//min-height: 50px;
 			flex-wrap: wrap;
 			.ms-bubble-idxb{
 				margin-top: 0;
 				position: absolute;
+				display: none;
 			}
 		}
 
@@ -8600,7 +8608,7 @@ form{
 		margin-right: -15px;
 		margin-top: 15px;
 		padding-top: 20px;
-		border-top: 1px dashed #babbbc;
+		border-top: 1px solid #e1e8ed;
 		.ms-wrap-item{
 			margin-bottom: 15px;
 		}
@@ -8632,10 +8640,28 @@ form{
 	}
 
 	.ms-link{
-		color: #157edc;
+		//color: #157edc;
 		padding: 0;
 		cursor: pointer;
-		background-color: transparent;
+		//background-color: transparent;
+
+    background-color: #fff;
+    border: 1px solid #dedede;
+    background-image: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
+    width: auto;
+    height: 40px;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #333;
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		&:hover{
+			text-decoration: none;
+		}
 	}
 }
 
