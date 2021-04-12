@@ -1277,11 +1277,11 @@ a.ms-button{
 				display: block;
 				overflow: visible;
 				white-space: normal;
-				font-size: 15px;
+				font-size: 14px !important;
 				line-height: normal;
 				color: #e52752;
-				font-weight: 700;
-				padding-right: 0;
+				font-weight: 700 !important;
+				padding-right: 0 !important;
 				span{
 					color:#2a263b;
 				}
