@@ -1272,6 +1272,7 @@ a.ms-button{
 
 		.ms-property-item{
 			padding: 0 !important;
+			.ms-msg-title,
 			.ms-title{
 				display: block;
 				overflow: visible;
@@ -1280,6 +1281,7 @@ a.ms-button{
 				line-height: normal;
 				color: #e52752;
 				font-weight: 700;
+				padding-right: 0;
 				span{
 					color:#2a263b;
 				}
