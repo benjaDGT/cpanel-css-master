@@ -247,6 +247,12 @@
               <span>Synchronize my Wordpress</span>
             </button>
           </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-account-act">
+              <span>Account Activation Modal</span>
+            </button>
+          </li>
         </ul>
 
         <!-- MODAL LAUNCH WEBSITE -->
@@ -2607,6 +2613,80 @@
                 <span>Sync</span>
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL ACCOUNT ACTIVATION -->
+    <div class="modal fade" id="modal-account-act" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title"><span>Connect Your CRM With Your Email Account</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body ms-crm-form">
+            <div class="ms-widget">
+              <div class="wrapper smtp-settings">
+                <div class="cp-form-control">
+                  <label class="title_content_tab">SMTP Host</label>
+                  <input type="text" id="cpanelbundle_imap_host" name="cpanelbundle_smtp[smtp]" required="required" placeholder="SMTP Host" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">SMTP Transport</label>
+                  <select name="cpanelbundle_smtp[transport]">
+                    <option value="">none</option>
+                    <option value="ssl">SSL</option>
+                    <option value="tls">TLS</option>
+                  </select>
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">SMTP Port</label>
+                  <input type="text" value="587" id="cpanelbundle_imap_port" name="cpanelbundle_smtp[port]" required="required" placeholder="Port" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">SMTP Email</label>
+                  <input type="text" id="cpanelbundle_imap_email" name="cpanelbundle_smtp[email]" required="required" placeholder="Email" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control mb-3">
+                  <label class="title_content_tab">SMTP Password</label>
+                  <input type="password" id="cpanelbundle_imap_passwd" name="cpanelbundle_smtp[passwd]" required="required" placeholder="Password" class="classmlsPasswd">
+                  <span class="ms-shop-password"></span>
+                </div>
+              </div>
+              <div>
+                <h2 class="title_section">IMAP Account Settings</h2>
+              </div>
+              <div class="wrapper smtp-settings">
+                <div class="cp-form-control">
+                  <label class="title_content_tab">IMAP Host</label>
+                  <input type="text" id="cpanelbundle_imap_host" name="cpanelbundle_imap[host]" required="required" placeholder="IMAP Host" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">IMAP Port</label>
+                  <input type="text" value="143" id="cpanelbundle_imap_port" name="cpanelbundle_imap[post]" required="required" placeholder="Port" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">IMAP Email</label>
+                  <input type="text" id="cpanelbundle_imap_email" name="cpanelbundle_imap[email]" required="required" placeholder="Email" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control mb-3">
+                  <label class="title_content_tab">IMAP Password</label>
+                  <input type="password" id="cpanelbundle_imap_passwd" name="cpanelbundle_imap[passwd]" required="required" placeholder="Password" class="classmlsPasswd">
+                  <span class="ms-shop-password"></span>
+                </div>
+              </div>
+              <div class="ms-wrap-btn">
+                <a href="#" class="btn btn-dgt-grs" data-dismiss="modal">
+                  <span>Cancel</span>
+                </a>
+                <button class="btn btn-dgt-def" id="cpanelbundle_smtp_save" name="cpanelbundle_smtp[save]">
+                  <span>Sync</span>
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
