@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crm-icons';
-  src:  url('fonts/crm-icons.eot?g8g7ko');
-  src:  url('fonts/crm-icons.eot?g8g7ko#iefix') format('embedded-opentype'),
-    url('fonts/crm-icons.ttf?g8g7ko') format('truetype'),
-    url('fonts/crm-icons.woff?g8g7ko') format('woff'),
-    url('fonts/crm-icons.svg?g8g7ko#crm-icons') format('svg');
+  src:  url('fonts/crm-icons.eot?yyoaut');
+  src:  url('fonts/crm-icons.eot?yyoaut#iefix') format('embedded-opentype'),
+    url('fonts/crm-icons.ttf?yyoaut') format('truetype'),
+    url('fonts/crm-icons.woff?yyoaut') format('woff'),
+    url('fonts/crm-icons.svg?yyoaut#crm-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,53 +25,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.crm-ico-envelope:before {
-  content: "\e950";
-}
-.crm-ico-phone-calling:before {
-  content: "\e951";
-}
-.crm-ico-groups:before {
-  content: "\e94c";
-}
-.crm-ico-offices:before {
-  content: "\e94d";
-}
-.crm-ico-cog:before {
-  content: "\e953";
-}
-.crm-ico-crop:before {
-  content: "\e952";
-}
-.crm-ico-team_tw:before {
-  content: "\e94f";
-}
-.crm-ico-pages:before {
-  content: "\e94e";
-}
-.crm-ico-my-buildings:before {
-  content: "\e947";
-}
-.crm-ico-display-filters:before {
-  content: "\e948";
-}
-.crm-ico-my-building:before {
-  content: "\e949";
-}
-.crm-ico-my-master-plan:before {
-  content: "\e94a";
-}
-.crm-ico-map-search-filter:before {
-  content: "\e94b";
-}
-.crm-ico-hourglass:before {
-  content: "\e945";
-}
 .crm-ico-spicon:before {
-  content: "\e944";
-}
-.crm-ico-warning:before {
-  content: "\e942";
+  content: "\e941";
 }
 .crm-ico-reply-all:before {
   content: "\e940";
@@ -283,39 +238,15 @@
 .crm-ico-arrow-right:before {
   content: "\ea34";
 }
-.crm-ico-drag_indicator:before {
-  content: "\e946";
-}
-.crm-ico-alert-triangle:before {
-  content: "\e941";
-}
 .crm-ico-ms-filter:before {
   content: "\e903";
 }
 .crm-ico-ms-open-email:before {
   content: "\e909";
 }
-.crm-ico-access_time:before {
-  content: "\e954";
-}
-.crm-ico-query_builder:before {
-  content: "\e954";
-}
-.crm-ico-schedule:before {
-  content: "\e954";
-}
 .crm-ico-ms-hidden:before {
   content: "\e904";
 }
 .crm-ico-ms-close-2:before {
   content: "\e91c";
-}
-.crm-ico-copy:before {
-  content: "\e943";
-}
-.crm-ico-spinner:before {
-  content: "\e982";
-}
-.crm-ico-spinner2:before {
-  content: "\e97b";
 }

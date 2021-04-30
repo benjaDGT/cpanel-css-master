@@ -173,6 +173,11 @@
             </div>
           </div>
           <div class="ms-wrap-profile">
+
+            <div class="ms-timer">
+              <button class="ms-active-timer" data-toggle="modal" data-target="#modal-edit-timer">Claim Lead <span>26:21</span></button>
+            </div>
+
             <div class="ms-block-a">
               <div class="ms-wrap-info">
                 <div class="ms-cl-a">
@@ -3756,6 +3761,43 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade ms-edit-alert" id="modal-edit-timer" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title"><span>Claim Lead</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body ms-crm-form">
+            <p>You have claim the following lead:</p>
+            <div class="form-item">
+              <label>Name:</label>
+              <span>Lorem Ipsum</span>
+            </div>
+            <div class="form-item">
+              <label>Last Name:</label>
+              <span>Lorem Ipsum</span>
+            </div>
+            <div class="form-item">
+              <label>Phone:</label>
+              <span>(999) 999-999</span>
+            </div>
+            <div class="form-item">
+              <label>Email:</label>
+              <span>info@lorem.com</span>
+            </div>
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Confirm</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="rs-screen-overlay"></div>
 
     <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>

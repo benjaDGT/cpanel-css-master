@@ -1525,7 +1525,7 @@
     </div>
 
     <!-- MODAL ADD GROUP -->
-    <div class="modal fade ms-contacts-list" id="modal-add-group" tabindex="-1" role="dialog">
+    <div class="modal fade ms-contacts-list ms-xl" id="modal-add-group" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header ms-modal-header ms-header-list">
@@ -1569,7 +1569,7 @@
             <div class="ms-wrap-items">
               
               <div class="ms-item">
-                <input type="radio" name="ms-item" value="1" id="ms-item-1">
+                <input type="radio" name="ms-item" value="1" id="ms-item-1" class="js-active-claim" checked>
                 <label class="ms-item-wrap" for="ms-item-1">
                   <span class="ms-sub-title">Round Robin</span>
                   <span>Evenly distributes leads to agents in sequential order</span>
@@ -1577,11 +1577,49 @@
               </div>
               
               <div class="ms-item">
-                <input type="radio" name="ms-item" value="2" id="ms-item-2">
+                <input type="radio" name="ms-item" value="2" id="ms-item-2" class="js-active-claim">
                 <label class="ms-item-wrap" for="ms-item-2">
                   <span class="ms-sub-title">First to Claim</span>
                   <span>Multiple agents contacted, first to claim lead wins</span>
                 </label>
+              </div>
+            </div>
+
+            <div class="ms-wrap-filtes ms-hidden">
+              <span>If not claimed after</span>
+              <input type="text" class="ms-count-mt">
+              <span>minute(s), assign to</span>
+              <div class="ms-dropdown">
+                <a href="#" class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">
+                  <span class="ms-ellipsis">Select fallback</span>
+                </a>
+                <span class="ms-info-sp" data-toggle="tooltip" data-placement="top" title="When the time specified expires for a lead to be claimed this selected fallback behavior will trigger">i</span>
+                <div class="ms-dropdown-list dropdown-menu">
+                  <div class="ms-header-filter"><input type="text" class="ms-item-filter"></div>
+                  <ul class="ms-list-result">
+                    <li>
+                      <span class="ms-title-section">Lorem Ipsum</span>
+                      <ul>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span class="ms-title-section">Lorem Ipsum</span>
+                      <ul>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB</div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB</div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB</div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -1591,6 +1629,7 @@
                 <span>Save</span>
               </button>
             </div>
+
           </div>
         </div>
       </div>
@@ -2703,6 +2742,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
     <script type="text/javascript">
 
+      jQuery('[data-toggle="tooltip"]').tooltip();
+
       /*FILTRO GRIDS*/
       jQuery(document).on('click', '#filter-mls', function () {
         ajaxLoadProperty();
@@ -2780,7 +2821,7 @@
         }
       });
 
-      jQuery("#datepicker").datepicker().datepicker("setDate", new Date());
+      //jQuery("#datepicker").datepicker().datepicker("setDate", new Date());
 
       jQuery(document).on('change', '#select-when', function () {
         if(jQuery(this).val() == "ms-custom"){
@@ -2811,6 +2852,23 @@
           jQuery(this).parents('tr').addClass('active');
           jQuery(this).parents('tr').find('.ms-title').after("<p>Assigned to Bucket</p>");
         }
+      });
+
+
+      /** FUNCIONALIDADES PARA EL MODAL CON LA OPCION DE CLAIM **/
+      jQuery(document).on('change', '.js-active-claim', function () {
+        var valueItem = jQuery(this).val();
+        if(valueItem == 1){
+          jQuery(this).parents(".modal").find(".ms-wrap-filtes").addClass("ms-hidden");
+        }else{
+          jQuery(this).parents(".modal").find(".ms-wrap-filtes").removeClass("ms-hidden");
+        }
+      });
+
+      jQuery(document).on('click', '.js-filter-name-selected', function (event) {
+        event.preventDefault();
+        var valueItem = jQuery(this).attr("data-text");
+        jQuery(this).parents(".ms-dropdown").find(".ms-button span").html(valueItem);
       });
 
     </script>
