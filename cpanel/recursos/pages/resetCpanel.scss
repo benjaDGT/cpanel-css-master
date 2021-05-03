@@ -8448,6 +8448,8 @@ table{
   transition: all .3s;
   color: #e33952;
   font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
 
   span{
     position: relative;
@@ -8472,9 +8474,28 @@ table{
   }
 }
 
-.ms-wrap.ms-actions{
+.ms-activity-actions{
   .ms-timer{
     padding-bottom: 0;
+    font-weight: 600;
+    font-size: 13px;
+    .ms-active-timer{
+      flex-direction: row;
+      display: flex;
+      justify-content: center;
+      span{
+        color: #e33952 !important;
+      }
+
+      @media screen and (min-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        span{
+          margin: 0;
+        }
+      }
+    }
   }
 }
 
@@ -8504,6 +8525,82 @@ table{
   @media (min-width: 768px){
     .modal-dialog {
       max-width: 376px;
+    }
+  }
+}
+
+/*RESETEANDO LEAD EN MOBILE INCLUYENDO EL CLAIM*/
+.ms-wrap-table-crm{
+  .ms-lead-body{
+    &:not(.ms-no-crm){
+      @media (max-width: 640px){
+        .ms-lead-item{
+          .ms-wrap{
+            &.ms-actions {
+              width: 100%;
+              padding: 10px;
+              border-top: 1px solid $border-color;
+              .ms-btn{
+                width: 32%;
+              }
+            }
+          }
+
+          .ms-activity-actions{
+            &.ms-assigned{
+              top: 128px !important;
+              right: 0 !important;
+              @media screen and (min-width: 480px){
+                top: 145px !important;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 767px){
+        .ms-lead-item{
+          .ms-activity-actions{
+            &.ms-assigned{
+              padding: 0;
+              position: absolute;
+              right: 220px;
+              border: 0;
+              height: 56px;
+              padding-right: 10px;
+              align-items: flex-end;
+              display: flex !important;
+              top: 145px;
+              width: auto !important;
+              .ms-icon-user{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.rs-sidebar{
+  .ms-menu-list{
+    &.ms-disable-menu{
+      background: #3f3b3c;
+      li{
+        opacity: 0.6;
+      }
+      &:before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        position: absolute;
+      }
     }
   }
 }

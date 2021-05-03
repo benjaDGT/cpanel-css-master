@@ -2869,6 +2869,7 @@ form{
 			&.ms-chk{
 				@media (max-width: 767px){
 					width: 10.78%;
+					max-width: 40px;
 				}
 				label{
 					text-indent: -999999px;
@@ -2927,7 +2928,7 @@ form{
 				height: 46px;
 				width: 50%;
 				padding: 6px;*/
-				bottom: -50px;
+				bottom: -40px;
 				right: 3px;
 				height: 35px;
 				width: 100px;
@@ -2935,7 +2936,7 @@ form{
 			}
 
 			@media (max-width: 481px){
-				bottom: -45px;
+				bottom: -40px;
 			}
 			
 			.dropdown{
@@ -2992,6 +2993,7 @@ form{
 			padding-right: 8px;
 			@media (max-width: 767px){
 				width: 69.01%;
+				flex-grow: 1;
 			}
 			.ms-title{
 		    .ms-name{
@@ -3634,14 +3636,17 @@ form{
 					//padding: 6px 15px;
 					padding: 6px 15px 6px 10px;
 					text-align: left;
-					display: flex;
 					padding-right: 52%;
 					font-size: 12px;
 					height: 45px;
-					justify-content: center;
-					align-items: flex-start;
 					border-bottom: 1px solid #dfe0e0;
 					border-color: $border-color;
+
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					flex-direction: row;
+
 					span{
 						display: inline;
 						margin-right: 5px;
