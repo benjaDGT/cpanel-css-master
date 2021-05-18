@@ -8479,12 +8479,18 @@ table{
     padding-bottom: 0;
     font-weight: 600;
     font-size: 13px;
+    justify-content: center;
     .ms-active-timer{
       flex-direction: row;
       display: flex;
       justify-content: center;
       span{
         color: #e33952 !important;
+        font-size: 12px;
+        padding-left: 18px;
+        &:before{
+          font-size: 15px;
+        }
       }
 
       @media screen and (min-width: 768px){
@@ -8497,6 +8503,10 @@ table{
       }
     }
   }
+}
+
+.ms-lead-body .ms-lead-item .ms-activity-actions span {
+  font-size: 13px;
 }
 
 #modal-edit-timer{
@@ -8600,6 +8610,29 @@ table{
         top: 0;
         left: 0;
         position: absolute;
+      }
+    }
+  }
+}
+
+.ms-contacts-list{
+  .ms-contacts{
+    .ms-add-agent{
+      padding-right: 60px;  
+      .ms-item-count{
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        width: 20px;
+        height: 20px;
+        background-color: #75be27;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -10px;
+        color: #FFF;
+        font-size: 11px;  
       }
     }
   }
