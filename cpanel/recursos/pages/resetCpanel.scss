@@ -8637,3 +8637,14 @@ table{
     }
   }
 }
+
+.ms-lead-item{
+  .tooltip-inner {
+    margin-top: 10px;
+  }
+
+  .tooltip.left .tooltip-arrow {
+    margin-top: -1px;
+    border-left-color: #b22964;
+  }  
+}
