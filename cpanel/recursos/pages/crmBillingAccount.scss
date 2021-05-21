@@ -1,0 +1,139 @@
+.ms-wrapper-billing{
+  .ms-wrapper-card-item{
+    border: 1px solid $border-color;
+    box-shadow: 0 2px 4px rgba(31,30,47,.03);
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    .ms-header-card{
+      border-bottom: 1px solid $border-color;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .ms-header-title{
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .ms-link{
+        font-weight: normal;
+        font-size: 13px;
+        padding: 0;
+      }
+    }
+
+    .ms-body-card{
+      padding: 15px;
+      .ms-list-account{
+        li{
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          border-bottom: 1px dashed $border-color;
+          margin-bottom: 10px;
+          span, strong{
+            display: inline-block;
+            background-color: #FFF;
+            padding-bottom: 1px;
+            margin-bottom: -4px;
+          }
+        }
+      }
+    }
+  }
+
+  .ms-wrapper-tab-item{
+    border: 1px solid $border-color;
+    box-shadow: 0 2px 4px rgba(31,30,47,.03);
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    .ms-header-tab{
+      border-bottom: 1px solid $border-color;
+      display: flex;
+      flex-wrap: wrap;
+      .ms-item{
+        padding: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        &.-number-card{
+          width: 50%;
+        }
+
+        &.-date-card{
+          width: 50%;
+          text-align: right;
+        }
+
+        &.-name-card{
+          display: none;
+        }
+
+        &.-btn-action{
+          width: 100%;
+          padding: 0 15px 15px;
+          .ms-link{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 30px;
+            height: 45px;
+            border: 1px solid $border-color;
+            font-size: 13px;
+            font-weight: bold;
+            background-image: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+
+    .ms-body-tab{
+      padding: 15px;
+      .ms-wrapper-form{
+        .ms-form-item{
+          margin-bottom: 15px;
+          label{
+            font-size: 13px;
+            font-weight: 600;
+          }
+
+          .ms-wrapper-card{
+            display: flex;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            input{
+              border: 0 !important;
+              flex-grow: 1;
+              &#billingDateCard{
+                width: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*
+<div class="ms-header-tab">
+  <div class="ms-item -number-card">
+    <div class="ms-card-label">**** **** **** 5957</div>
+  </div>
+  <div class="ms-item -date-card">
+    <div class="ms-tab-label">Expires: 04/2021</div>
+  </div>
+  <div class="ms-item -name-card">
+    <div class="ms-tab-label">Name on card: Francisco Aguire</div>
+  </div>
+  <div class="ms-item -btn-action">
+    <a href="#" class="ms-link">Update Payment info</a>
+  </div>
+</div>
+<div class="ms-body-tab">
+
+*/
