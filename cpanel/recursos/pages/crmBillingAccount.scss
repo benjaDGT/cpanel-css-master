@@ -1,4 +1,7 @@
 .ms-wrapper-billing{
+  width: 100%;
+  max-width: 1000px;
+  margin-right: auto;
   .ms-wrapper-card-item{
     border: 1px solid $border-color;
     box-shadow: 0 2px 4px rgba(31,30,47,.03);
@@ -26,7 +29,7 @@
     .ms-body-card{
       padding: 15px;
       .ms-list-account{
-        li{
+        >li{
           display: flex;
           justify-content: space-between;
           font-size: 14px;
@@ -66,6 +69,8 @@
           text-align: right;
         }
 
+        &.-company-contact,
+        &.-email-contact,
         &.-name-card{
           display: none;
         }
@@ -92,12 +97,22 @@
 
     .ms-body-tab{
       padding: 15px;
+      display: none;
       .ms-wrapper-form{
         .ms-form-item{
           margin-bottom: 15px;
+          position: relative;
           label{
             font-size: 13px;
             font-weight: 600;
+          }
+
+          .ms-small-text{
+            font-size: 11px;
+            color: #9e9e9e;
+            line-height: 1.1;
+            display: block;
+            margin-top: 5px;
           }
 
           .ms-wrapper-card{
@@ -107,6 +122,7 @@
             input{
               border: 0 !important;
               flex-grow: 1;
+
               &#billingDateCard{
                 width: 100px;
               }
@@ -114,26 +130,350 @@
           }
         }
       }
+
+      .ms-wrapper-btn{
+        display: flex;
+        justify-content: space-between;
+        .ms-cancel,
+        .ms-update{
+          width: 49%;
+          height: 45px;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          transition: all .3s;
+        }
+
+        .ms-cancel{
+          background-color: #dadada;
+          color: #333;
+          &:hover{
+            background-color: #848484;
+            color: #FFF;
+          }
+        }
+
+        .ms-update{
+          background-color: transparent;
+          position: relative;
+          color: #FFF;
+          overflow: hidden;
+          span{
+            z-index: 2;
+            position: relative;
+          }
+
+          &:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            transition: all .3s;
+            background: linear-gradient(to right,#ef3d4e,#ae2865);
+          }
+
+          &:before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #3f3c3b;
+            z-index: 1;
+            transition: all .3s;
+            opacity: 0;
+          }
+
+          &:hover{
+            &:before{
+              opacity: 1;
+            }
+            &:after{
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.active{
+      .ms-body-tab{
+        display: block;
+      }
+    }
+  }
+
+  .ms-wrapper-tb-item{
+    .ms-header-tb{
+      margin-top: 30px;
+      .ms-header-title{
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+
+    .ms-body-tb{
+      .ms-billing-history{
+        .ms-bh-tr{
+          border: 1px solid $border-color;
+          box-shadow: 0 2px 4px rgba(31,30,47,.03);
+          background-color: #fff;
+          margin-bottom: 15px;
+          border-radius: 6px;
+          .ms-bh-td{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            >span{
+              display: flex;
+              align-items: center;
+              min-height: 45px;
+              padding: 0 15px;
+              font-size: 14px;
+            }
+
+            .ms-bh-invoice{
+              justify-content: flex-end;
+            }
+
+            .ms-bh-date{
+              width: 100px;
+            }
+
+            .ms-bh-invoice{
+              width: calc(100% - 100px);
+            }
+
+            .ms-bh-money{
+              width: calc(100% - 40px);
+              justify-content: center;
+              padding-left: 40px;
+              border-top: 1px solid $border-color;
+              font-weight: 600;
+            }
+
+            .ms-bh-btn{
+              width: 40px;
+              height: 45px;
+              display: block;
+              overflow: hidden;
+              text-indent: -999999px;
+              position: relative;
+              border-top: 1px solid $border-color;
+              background-color: transparent;
+
+              &:before{
+                content: "\e901";
+                font-family: icomoon!important;
+                font-size: 13px;
+                position: absolute;
+                transform: rotate(90deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                text-indent: 0;
+                top: 0;
+                left: 0;
+              }
+            }
+
+            .ms-bh-invoice-detail{
+              border-top: 1px solid $border-color;
+              padding: 15px;
+              width: 100%;
+              >li{
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                border-bottom: 1px dashed $border-color;
+                margin-bottom: 10px;
+                span, strong{
+                  display: inline-block;
+                  background-color: #FFF;
+                  padding-bottom: 1px;
+                  margin-bottom: -4px;
+                }
+              }
+            }
+
+            .ms-wrapper-btn{
+              width: 100%;
+              padding: 0 15px 15px;
+              .ms-link{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 30px;
+                height: 45px;
+                border: 1px solid $border-color;
+                font-size: 13px;
+                font-weight: bold;
+                background-image: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
+                border-radius: 4px;
+              }
+            }
+
+            &.-hidden{
+              display: none;
+            }
+          }
+
+          &.active{
+            .ms-bh-td{
+              .ms-bh-btn:before{
+                transform: rotate(-90deg);
+              }
+
+              &.-hidden{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 640px){
+
+    .ms-wrapper-tab-item{
+      .ms-header-tab{
+        flex-wrap: nowrap;
+        align-items: center;
+        .ms-item{
+          &.-btn-action {
+            width: auto;
+            padding: 15px;
+            margin-left: auto;
+            .ms-link{
+              width: auto;
+              min-width: 190px;
+              padding: 0 15px;
+              height: 40px;
+            }
+          }
+
+          &.-date-card{
+            text-align: left;
+          }
+        }
+      }
+
+      .ms-body-tab{
+        .ms-wrapper-form{
+          margin: 0 -15px;
+          display: flex;
+          flex-wrap: wrap;
+          .ms-form-item{
+            padding: 0 15px;
+            width: 50%;
+          }
+
+          .ms-aditional-information{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            >li{
+              width: 50%;
+              .ms-form-item{
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .ms-wrapper-btn{
+          max-width: 350px;
+          margin-right: 0;
+          margin-left: auto;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .ms-wrapper-tb-item{
+      .ms-body-tb{
+        .ms-billing-history{
+          .ms-bh-tr{
+            .ms-bh-td{
+              align-items: center;
+              min-height: 70px;
+              .ms-bh-invoice,
+              .ms-bh-money{
+                width: auto;
+                border: 0;
+                padding: 0 15px;
+              }
+              .ms-bh-invoice{
+                margin-right: auto;
+              }
+              .ms-bh-btn{
+                border: 0;
+              }
+              .ms-wrapper-btn{
+                .ms-link{
+                  width: auto;
+                  margin-left: auto;
+                  min-width: 190px;
+                  padding: 0 15px;
+                  height: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .ms-wrapper-tab-item{
+      .ms-header-tab{
+        .ms-item{
+          &.-number-card,
+          &.-date-card,
+          &.-email-contact,
+          &.-name-contact{
+            width: 50%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px){
+    .ms-wrapper-tab-item{
+      .ms-header-tab{
+        .ms-item{
+          &.-name-card,
+          &.-number-card,
+          &.-name-contact,
+          &.-date-card,
+          &.-email-contact,
+          &.-name-contact,
+          &.-company-contact{
+            text-align: left;
+            display: block;
+            width: 33.33%;
+          }
+        }
+      }
     }
   }
 }
-
-
-/*
-<div class="ms-header-tab">
-  <div class="ms-item -number-card">
-    <div class="ms-card-label">**** **** **** 5957</div>
-  </div>
-  <div class="ms-item -date-card">
-    <div class="ms-tab-label">Expires: 04/2021</div>
-  </div>
-  <div class="ms-item -name-card">
-    <div class="ms-tab-label">Name on card: Francisco Aguire</div>
-  </div>
-  <div class="ms-item -btn-action">
-    <a href="#" class="ms-link">Update Payment info</a>
-  </div>
-</div>
-<div class="ms-body-tab">
-
-*/

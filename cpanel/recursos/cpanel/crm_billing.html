@@ -174,7 +174,7 @@
                     <div class="ms-tab-label">Name on card: Francisco Aguire</div>
                   </div>
                   <div class="ms-item -btn-action">
-                    <a href="#" class="ms-link">Update Payment info</a>
+                    <a href="#" class="ms-link js-shw-tb">Update Payment info</a>
                   </div>
                 </div>
                 <div class="ms-body-tab">
@@ -197,47 +197,49 @@
                     <div class="ms-form-item">
                       <label for="billingAddress2">Billing Address</label>
                       <input type="text" value="Francisco Aguirre" id="billingAddress2" class="ms-input">
-                      <ul class="ms-aditional-information">
-                        <li>
-                          <div class="ms-form-item">
-                            <label for="billingCity">City</label>
-                            <input type="text" value="Coral way" id="billingAddress" class="ms-input">
-                          </div>
-                        </li>
-                        <li>
-                          <div class="ms-form-item">
-                            <label for="billingStateRegion">State/Region</label>
-                            <div class="ms-wrapper-select">
-                              <select name="billingStateRegion" id="billingStateRegion">
-                                <option value="0">Florida</option>
-                                <option value="1">Florida-1</option>
-                                <option value="2">Florida-2</option>
-                                <option value="3">Florida-3</option>
-                              </select>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="ms-form-item">
-                            <label for="billingZipCode">Zip / Postal Code</label>
-                            <input type="text" value="33145" id="billingZipCode" class="ms-input">
-                          </div>
-                        </li>
-                        <li>
-                          <div class="ms-form-item">
-                            <label for="billingCountry">Country</label>
-                            <div class="ms-wrapper-select">
-                              <select name="billingCountry" id="billingCountry">
-                                <option value="0">United State</option>
-                                <option value="1">United State-1</option>
-                                <option value="2">United State-2</option>
-                                <option value="3">United State-3</option>
-                              </select>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
                     </div>
+
+                    <ul class="ms-aditional-information">
+                      <li>
+                        <div class="ms-form-item">
+                          <label for="billingCity">City</label>
+                          <input type="text" value="Coral way" id="billingAddress" class="ms-input">
+                        </div>
+                      </li>
+                      <li>
+                        <div class="ms-form-item">
+                          <label for="billingStateRegion">State/Region</label>
+                          <div class="ms-wrapper-select">
+                            <select name="billingStateRegion" id="billingStateRegion">
+                              <option value="0">Florida</option>
+                              <option value="1">Florida-1</option>
+                              <option value="2">Florida-2</option>
+                              <option value="3">Florida-3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="ms-form-item">
+                          <label for="billingZipCode">Zip / Postal Code</label>
+                          <input type="text" value="33145" id="billingZipCode" class="ms-input">
+                        </div>
+                      </li>
+                      <li>
+                        <div class="ms-form-item">
+                          <label for="billingCountry">Country</label>
+                          <div class="ms-wrapper-select">
+                            <select name="billingCountry" id="billingCountry">
+                              <option value="0">United State</option>
+                              <option value="1">United State-1</option>
+                              <option value="2">United State-2</option>
+                              <option value="3">United State-3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+
                   </div>
                   <div class="ms-wrapper-btn">
                     <a href="#" class="ms-cancel">Cancel</a>
@@ -248,17 +250,17 @@
 
               <div class="ms-wrapper-tab-item">
                 <div class="ms-header-tab">
-                  <div class="ms-item">
+                  <div class="ms-item -name-contact">
                     <div class="ms-name-label">Francisco Aguirre</div>
                   </div>
-                  <div class="ms-item">
+                  <div class="ms-item -email-contact">
                     <div class="ms-tab-label">Email: tino@dgtalliance.com</div>
                   </div>
-                  <div class="ms-item">
+                  <div class="ms-item -company-contact">
                     <div class="ms-tab-label">Company: Lorem Ipsum</div>
                   </div>
-                  <div class="ms-item">
-                    <a href="#" class="ms-link">Update Contact info</a>
+                  <div class="ms-item -btn-action">
+                    <a href="#" class="ms-link js-shw-tb">Update Contact info</a>
                   </div>
                 </div>
                 <div class="ms-body-tab">
@@ -278,7 +280,7 @@
                     </div>
                     <div class="ms-form-item">
                       <label for="contactCompany">Company</label>
-                      <input type="text" id="contactCompany" class="ms-input">
+                      <input type="text" id="contactCompany" class="ms-input" value="Lorem Ipsum">
                     </div>
                   </div>
                   <div class="ms-wrapper-btn">
@@ -288,18 +290,18 @@
                 </div>
               </div>
 
-              <div class="ms-wrapper-card-item">
-                <div class="ms-header-card">
+              <div class="ms-wrapper-tb-item">
+                <div class="ms-header-tb">
                   <h3 class="ms-header-title">Billing History</h3>
                 </div>
-                <div class="ms-body-card">
+                <div class="ms-body-tb">
                   <ul class="ms-billing-history">
                     <li class="ms-bh-tr">
                       <div class="ms-bh-td">
                         <span class="ms-bh-date">10/22/20</span>
                         <span class="ms-bh-invoice">Invoice INVO3073004</span>
                         <span class="ms-bh-money">Closed: $600.00</span>
-                        <button class="ms-bh-btn">Show Invoice</button>
+                        <button class="ms-bh-btn js-shw-bh">Show Invoice</button>
                       </div>
                       <div class="ms-bh-td -hidden">
                         <ul class="ms-bh-invoice-detail">
@@ -334,7 +336,7 @@
                         <span class="ms-bh-date">10/22/20</span>
                         <span class="ms-bh-invoice">Invoice INVO3073003</span>
                         <span class="ms-bh-money">Closed: $600.00</span>
-                        <button class="ms-bh-btn">Show Invoice</button>
+                        <button class="ms-bh-btn js-shw-bh">Show Invoice</button>
                       </div>
                       <div class="ms-bh-td -hidden">
                         <ul class="ms-bh-invoice-detail">
@@ -369,7 +371,7 @@
                         <span class="ms-bh-date">10/22/20</span>
                         <span class="ms-bh-invoice">Invoice INVO3073002</span>
                         <span class="ms-bh-money">Closed: $600.00</span>
-                        <button class="ms-bh-btn">Show Invoice</button>
+                        <button class="ms-bh-btn js-shw-bh">Show Invoice</button>
                       </div>
                       <div class="ms-bh-td -hidden">
                         <ul class="ms-bh-invoice-detail">
@@ -416,6 +418,16 @@
     <script type="text/javascript" src="../../js/select2.min.js"></script>
     <script type="text/javascript" src="../../js/main.js"></script>
     <script type="text/javascript">
+
+      jQuery(document).on('click', '.js-shw-tb', function(e) {
+        e.preventDefault();
+        $(this).parents(".ms-wrapper-tab-item").toggleClass("active");
+      });
+
+      jQuery(document).on('click', '.js-shw-bh', function(e) {
+        e.preventDefault();
+        $(this).parents(".ms-bh-tr").toggleClass("active");
+      });
     </script>
   </body>
 </html>
