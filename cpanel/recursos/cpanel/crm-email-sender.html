@@ -138,6 +138,11 @@
                       <a href="https://sf4.services.idxboost.dev/outlook?project_id=317&amp;uid=201" class="cp-btn btn-option office365"><span>Add Office365/Outlook Account</span></a>
                       <a href="/settings/smtp/custom/add" class="cp-btn btn-option smtp-custom"><span>Add SMTP Account</span></a>
                     </div>
+
+                    <div class="ms-wrapper-btn">
+                      <button data-toggle="modal" data-target="#disclaimer" class="ms-link">Privacy Policy</button>
+                    </div>
+
                     <div class="idx-overlay-modal" id="smtpModal" style="z-index: 999;">
                       <div class="idx-modal-content idx-two-style">
                         <div class="idx-modal-content-info">
@@ -162,6 +167,26 @@
           </div>
         </div>
       </section>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="disclaimer" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title"><span>Email Sender Setup / Privacy Policy</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body ms-crm-form ms-message-content">
+            <div class="ms-wrapper-detail">
+              <strong>Email providers for your CRM</strong> 
+              <p>Your c-panel has certain functionalities like : property alerts, email drips, etc that needs your email provider for sending us those items. It also has the ability to read your email to extract the email from your lead to you. For this to happen we need to consume and communicate with Google API, Microsoft etc accordingly to your provider.</p>
+              <p>After the user is authenticated we use a refreshed token that is talking with your Google API everytime that we are composing an email or reading the user inbox.</p>
+              <strong>Our data policy for the Google App</strong>
+              <p>App does not collect any data from the email’s client, and we will not share any of this data for advertising purposes. We will not disclose any client’s confidential information. IDX Boost takes all measures reasonably necessary to protect against the unauthorized access, use, alteration or destruction of potentially personally-identifying and personally-identifying information</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="rs-screen-overlay"></div>

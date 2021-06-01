@@ -8863,7 +8863,7 @@ form{
 @media (max-width: 768px){
 	.rs-navbar{
 		nav{
-			.header-nav{
+			/*.header-nav{
 				border-bottom: 0;
 				.user_nav{
 					>a {
@@ -8889,7 +8889,7 @@ form{
 						}
 					}
 				}
-			}
+			}*/
 
 			.sub_menu{
 				opacity: 0;
@@ -9469,9 +9469,9 @@ form{
         >a{
           &.ico-leads {
             &:before{
-              content: "\e935";
+              content: "\e957";
               font-family: "crm-icons" !important;
-              font-size: 28px;
+              font-size: 22px;
               font-weight: 100 !important;
             }
           }
@@ -9481,7 +9481,7 @@ form{
               font-family: "crm-icons"!important;
               font-size: 24px;
               font-weight: 100!important;
-              content: "\e934";
+              content: "\e956";
               display: flex;
               align-items: center;
               justify-content: center;
@@ -9509,18 +9509,12 @@ form{
 
           &.ico-areas {
             &:before{
-              content: "\e932";
+              content: "\e95f";
               font-family: "crm-icons" !important;
               font-size: 24px;
               font-weight: 100 !important;
             }
           }
-
-          &.ico-setting {
-            &:before{
-              font-size: 23px;
-            }
-		      }
 		  
           &.ico-buildings{
             &:before{
@@ -9548,23 +9542,24 @@ form{
 
           &.ico-inquires{
             &:before{
-              content: "\e938";
+              content: "\e958";
               font-family: "crm-icons" !important;
-              font-size: 28px;
+              font-size: 22px;
               font-weight: 100 !important;
             }
 					}
 
 					&.ico-pages:before{
-						content:"\e94e";
+						content:"\e959";
 						font-family: "crm-icons" !important;
-						font-size: 28px;
+						font-size: 25px;
             font-weight: 100 !important;
+						left: 15px;
 					}
 					&.ico-team:before{
-						content:"\e94f";
+						content:"\e95a";
 						font-family: "crm-icons" !important;
-						font-size: 30px;
+						font-size: 24px;
             font-weight: 100 !important;
 					}
         }
@@ -11314,72 +11309,15 @@ $ms-danger-color: #d83a4c;
 	}
 }
 
-.ms-warning-message{
-	position: relative;
-	bottom: 0;
-	display: block;
-	text-align: center;
-	padding: 15px;
-	width: 100%;
-	border-bottom: 1px solid #ddd;
-	z-index: 2;
-	font-size: 14px;
-	color: #FFF;
-	display: flex;
-	align-items: center;
-	text-align: left;
-	order: 10;
-	@extend .gradient;
-
-	a{
-		color: #FFF;
-		text-decoration: underline;
-	}
-	.crm-ico-warning,
-	.crm-ico-alert-triangle{
-    width: 40px;
-    height: 40px;
-    background-color: #FFF;
-    flex-shrink: 0;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #cf2c50;
-    font-size: 24px;
-		margin: 0;
-		margin-right: 10px;
-	}
-
-	@media screen and (min-width: 769px){
-		//bottom: calc(-100% + 32px);
-		position: relative;
-		order: 2;
-		border: 0;
-		border-radius: 4px;
-		margin-right: 20px;
-		width: auto;
-		margin-left: auto;
-		padding: 10px 20px;
-		width: auto;
-		bottom: auto;
-		max-width: 70%;
-	}
-
-	@media screen and (min-width: 991px){
-		width: auto;
-	}
-}
-
 @media (max-width: 768px){
 	.rs-navbar{
 		nav{
 			position: relative;
-			.header-nav{
+			/*.header-nav{
 				.search_nav{
 					display: none;
 				}
-			}
+			}*/
 			.sub_menu{
 				display: none;
 			}
@@ -11391,17 +11329,14 @@ $ms-danger-color: #d83a4c;
 	}
 }
 
-@media screen and (min-width: 769px){
+/*@media screen and (min-width: 769px){
 	.rs-navbar nav .header-nav{
 		align-items: center;
 	}
 	.rs-navbar nav .header-nav{
 		width: auto;
-		#list_nav{
-			display: none;
-		}
 	}
-}
+}*/
 
 .ms-lead-item{
 	.tooltip-inner{
@@ -12649,3 +12584,129 @@ $ms-danger-color: #d83a4c;
 		}
 	}
 }
+
+/*ANTIGUO*/
+.ms-warning-message {
+	position: relative;
+	bottom: 0;
+	display: block;
+	text-align: center;
+	padding: 15px;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	z-index: 2;
+	font-size: 14px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	order: 10;
+	@extend .gradient;
+	.crm-ico-alert-triangle, 
+	.crm-ico-warning {
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		flex-shrink: 0;
+		border-radius: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #cf2c50;
+		font-size: 24px;
+		margin: 0;
+		margin-right: 10px;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	@media screen and (min-width: 769px){
+		position: relative;
+		order: 2;
+		border: 0;
+		border-radius: 4px;
+		margin-right: 20px;
+		width: auto;
+		margin-left: auto;
+		padding: 10px 20px;
+		width: auto;
+		bottom: auto;
+		max-width: 70%;
+	}
+
+	@media screen and (min-width: 991px){
+		width: auto;
+	}
+}
+
+/*NUEVO
+.ms-warning-message{
+	position: relative;
+	bottom: 0;
+	display: block;
+	text-align: center;
+	padding: 5px 10px;
+	width: 100%;
+	z-index: 2;
+	font-size: 13px;
+	color: #2b3547;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	order: 10;
+	background-color: #e9ebee;
+	min-height: 45px;
+
+	span{
+		padding-left: 25px;
+	}
+
+	a{
+		color: #2b3547;
+		font-weight: 600;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.crm-ico-warning,
+	.crm-ico-alert-triangle{
+		font-family: "Open Sans", sans-serif !important;
+		font-weight: bold !important;
+		@extend .gradient;
+		color: #FFF;
+		position: relative;
+		padding: 11px 15px 10px 35px;
+		&:before{
+			font-family: 'crm-icons' !important;
+			font-weight: 100 !important;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 17px;
+		}
+
+		&:after{
+			content: "";
+			width: 0;
+			height: 0;
+			border-top: 17px solid transparent;
+			border-left: 17px solid #b12964;
+			border-bottom: 17px solid transparent;
+			position: absolute;
+			right: -17px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	@media screen and (min-width: 769px){
+		position: fixed;
+    width: calc(100% - 250px);
+    right: 0;
+	}
+}*/

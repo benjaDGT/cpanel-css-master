@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crm-icons';
-  src:  url('fonts/crm-icons.eot?g8g7ko');
-  src:  url('fonts/crm-icons.eot?g8g7ko#iefix') format('embedded-opentype'),
-    url('fonts/crm-icons.ttf?g8g7ko') format('truetype'),
-    url('fonts/crm-icons.woff?g8g7ko') format('woff'),
-    url('fonts/crm-icons.svg?g8g7ko#crm-icons') format('svg');
+  src:  url('fonts/crm-icons.eot?693j8q');
+  src:  url('fonts/crm-icons.eot?693j8q#iefix') format('embedded-opentype'),
+    url('fonts/crm-icons.ttf?693j8q') format('truetype'),
+    url('fonts/crm-icons.woff?693j8q') format('woff'),
+    url('fonts/crm-icons.svg?693j8q#crm-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,17 +25,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.crm-ico-envelope:before {
-  content: "\e950";
+.crm-ico-idx-integration:before {
+  content: "\e95f";
 }
-.crm-ico-phone-calling:before {
-  content: "\e951";
+.crm-ico-property-sites:before {
+  content: "\e95e";
 }
-.crm-ico-groups:before {
-  content: "\e94c";
+.crm-ico-update-loading:before {
+  content: "\e955";
 }
-.crm-ico-offices:before {
-  content: "\e94d";
+.crm-ico-crm-integration:before {
+  content: "\e956";
+}
+.crm-ico-my-leads:before {
+  content: "\e957";
+}
+.crm-ico-hot-sheet:before {
+  content: "\e958";
+}
+.crm-ico-my-websites:before {
+  content: "\e959";
+}
+.crm-ico-lead-generation:before {
+  content: "\e95a";
+}
+.crm-ico-my-account:before {
+  content: "\e95b";
+}
+.crm-ico-my-settings:before {
+  content: "\e95c";
 }
 .crm-ico-cog:before {
   content: "\e953";
@@ -282,6 +300,18 @@
 }
 .crm-ico-arrow-right:before {
   content: "\ea34";
+}
+.crm-ico-envelope:before {
+  content: "\e950";
+}
+.crm-ico-phone-calling:before {
+  content: "\e951";
+}
+.crm-ico-groups:before {
+  content: "\e94c";
+}
+.crm-ico-offices:before {
+  content: "\e94d";
 }
 .crm-ico-drag_indicator:before {
   content: "\e946";

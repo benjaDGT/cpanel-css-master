@@ -123,7 +123,7 @@ body{
 			flex-wrap: wrap;
 			border-top: 1px solid #e1e8ed;
 			border-bottom: 1px solid #e1e8ed;
-			#list_nav{
+			/*#list_nav{
 				order: 2;
 				overflow: hidden;
 				opacity: 0;
@@ -176,7 +176,7 @@ body{
 					max-height: 600px;
 					border-bottom: 1px solid #e1e8ed;
 				}
-			}
+			}*/
 			.user_nav{
 				order: 3;
 				position: relative;
@@ -246,15 +246,15 @@ body{
 					@include transition($t: .4s);
 					li{
 						a {
-						    width: 100%;
-						    display: block;
-						    padding: 10px 15px;
-						    color: #7d8082;
-						    position: relative;
-						    &:hover,
+							width: 100%;
+							display: block;
+							padding: 10px 15px;
+							color: #7d8082;
+							position: relative;
+							/*&:hover,
 							&:focus{
 								color: $color_azul;
-							}
+							}*/
 						}
 					}
 					&.active{
@@ -303,8 +303,9 @@ body{
 
   .rs-sidebar{
 		width: 250px;
-		background: #3f3f3f;
-		background: linear-gradient(#3f3c3b , #3e3a3c);
+		/*background: #3f3f3f;
+		background: linear-gradient(#3f3c3b , #3e3a3c);*/
+		background-color: #2b3547;
 		height: auto;
 		float: left;
 		color: #FFF;
@@ -319,9 +320,7 @@ body{
 		-webkit-overflow-scrolling: touch;
 		overflow-scrolling: touch;
 		//transition: left .3s ease-in-out;
-
 		transition: width 0.3s ease;
-
 
     .title-rs-sidebar{
     	font-size: 12px;
@@ -363,22 +362,20 @@ body{
 
 			>li{
 				/*border-bottom: 1px solid #656565;*/
-				
 				>a{
 					padding: 0 15px 0 60px;
-					height: 50px;
-					line-height: 50px;
+					height: 60px;
+					line-height: 60px;
 					display: block;
 					color: #FFF;
 					position: relative;
 					//transition: background .3s;
-          background: linear-gradient(#3f3c3b, #3e3a3c);
+          //background: linear-gradient(#3f3c3b, #3e3a3c);
+					background-color: #2b3547;
 					border-bottom: 1px solid rgba(255,255,255,0.2);
-					
+					//border-bottom: 1px solid #495976;
 					//transition: left 0.3s ease, width 0.3s ease;
-
 					overflow: hidden;
-
 					&:before{
 						display: inline-block;
 						position: absolute;
@@ -413,13 +410,16 @@ body{
 
 					&.ico-account{
 						&:before{
-							content: "\e91a";
+							content: "\e95b";
+							font-family: "crm-icons"!important;
 						}
 					}
 
 					&.ico-setting{
 						&:before{
-							content: "\e906";
+							content: "\e95c";
+							font-family: "crm-icons"!important;
+							font-size: 22px;
 						}
 					}
 
@@ -475,7 +475,7 @@ body{
 						position: absolute;
 						right: 17px;
 						border-radius: 30px;
-						background: #333;
+						background: #555d6c;
 						height: 40px;
 						width: auto !important;
 						min-width: 40px !important;
@@ -913,17 +913,18 @@ body{
 	    		border: none;
 	    		width: 70%;
 	    		justify-content: flex-end;
+					align-items: center;
 				.user_nav>a h2, 
 				.user_nav>a span{
 					display: none;
 				}
-	    		#list_nav{
-    			    opacity: 0;
-    			    max-height: 0;
-					transition: none;
-    			    order: 1;
-    			    display: flex;
-    			    justify-content: space-between;
+	    		/*#list_nav{
+							opacity: 0;
+							max-height: 0;
+							transition: none;
+							order: 1;
+							display: flex;
+							justify-content: space-between;
     			    li{
     			    	a{
     			    		padding-left: 35px;
@@ -932,7 +933,7 @@ body{
     			    		}
     			    	}
     			    }
-	    		}
+	    		}*/
 	    		.user_nav{
 	    			width: 95px;
 	    			height: 87px;
@@ -995,9 +996,11 @@ body{
 	.rs-wrapper{
 		//background-color: #FFF;
 		.rs-sidebar {
-		    left: 0 !important;
-		    position: static;
-		    z-index: 1 !important;
+				left: 0 !important;
+				z-index: 1 !important;
+				height: calc(100vh - 88px);
+				position: fixed;
+				top: 88px !important;
 		    &:after {
 			    position: absolute;
 			    width: 250px;
@@ -1059,7 +1062,7 @@ body{
 				width: 75%;
 				flex-wrap: nowrap;
 				justify-content: space-between;
-				#list_nav{
+				/*#list_nav{
 					opacity: 1;
 					max-height: 600px;
 					width: auto;
@@ -1078,8 +1081,7 @@ body{
 							}
 						}
 					}
-				}
-
+				}*/
 			}
 		}
 	}
@@ -1105,9 +1107,8 @@ body{
 				width: 80%;
 				/*flex-wrap: nowrap;
 				justify-content: space-between;*/
-				#list_nav{
+				/*#list_nav{
 					li{
-						//width: 140px;
 						a{
 							&:before {
 							    vertical-align: middle;
@@ -1116,8 +1117,7 @@ body{
 							}
 						}
 					}
-				}
-
+				}*/
 			}
 		}
 	}
@@ -1183,7 +1183,7 @@ body{
 						}
 					}
 				}
-				#list_nav{
+				/*#list_nav{
 					li{
 						width: 140px;
 						a{
@@ -1198,7 +1198,7 @@ body{
 							}
 						}
 					}
-				}
+				}*/
 			}
 		}
 	}
@@ -1377,6 +1377,29 @@ body{
 						align-items: center;
 						border-radius: 50px;
 						@extend .gradient;
+					}
+				}
+			}
+
+			#list_nav{
+				display: none;
+				@media screen and (min-width: 991px){
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					margin-left: auto;
+					margin-right: 0;
+					>li{
+						a{
+							color: #2b3547;
+							font-size: 14px;
+							padding: 0 20px;
+							transition: all .3s;
+							&.active,
+							&:hover{
+								color: #b12964;
+							}
+						}
 					}
 				}
 			}
@@ -1587,7 +1610,7 @@ textarea,
 	}
 }
 
-.rs-navbar{
+/*.rs-navbar{
 	nav{
 		.header-nav{
 			.user_nav{
@@ -1603,21 +1626,9 @@ textarea,
 					}
 				}
 			}
-
-			#list_nav{
-				li{
-					a{
-						&:focus,
-						&:hover,
-						&.active{
-							color: #157edc !important;
-						}
-					}
-				}
-			}
 		}
 	}
-}
+}*/
 
 span.txt_defi_user,
 .select2-results .select2-highlighted{
@@ -1838,11 +1849,11 @@ span.txt_defi_user,
 	.group-btn{
 		width: 33%;
 		flex-grow: 1;
-		border-right: 1px solid #656162;
+		border-right: 1px solid #495976;
 		position: relative;
 		background: $gradient !important;
 		padding: 0 !important;
-		border-bottom: 1px solid #656263 !important;
+		border-bottom: 1px solid #495976 !important;
 		overflow: hidden;
 		text-indent: -999999px;
 		&:last-child{
@@ -1886,7 +1897,7 @@ span.txt_defi_user,
 				width: 100%;
 				top: 0;
 				left:0;
-				background-color: #3e3b3b;
+				background-color: #2b3547;
 				transition: all .3s;
 			}
 		}
@@ -1894,7 +1905,7 @@ span.txt_defi_user,
 			span{
 				&:before{
 					content: "\e917";
-					font-size: 30px;
+					font-size: 28px;
 				}
 			}
 		}

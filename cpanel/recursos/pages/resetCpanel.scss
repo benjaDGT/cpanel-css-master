@@ -249,19 +249,6 @@ body{
       max-height: calc(100vh - 48px);
       overflow-y: auto;
 
-      /*&::-webkit-scrollbar {
-        width: 10px;
-      }
-  
-      &::-webkit-scrollbar-thumb {
-        background-color: #999;
-      }
-  
-      &::-webkit-scrollbar-track {
-        border: 0px solid #dfe0e0;
-        background-color: #777;
-      }*/
-
       &::-webkit-scrollbar {
         width: 12px;
         height: 8px;
@@ -280,7 +267,7 @@ body{
 
       >li{
         &:last-child{
-          border-bottom: solid #3e3b3b 80px;
+          border-bottom: solid #2b3547 80px;
         }
       }
     }
@@ -4492,7 +4479,7 @@ body{
       >li{
         >a{
           &.ico-spicon:before {
-            content: "\e944";
+            content: "\e95e";
             font-family: "crm-icons"!important;
             font-size: 26px;
             font-weight: normal !important;
@@ -7559,6 +7546,8 @@ table{
     right: 11px;
     z-index: 15;
     max-width: 300px !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
     .ms-button{
       &.userAvatar{
         border: 0 !important;
@@ -7573,8 +7562,8 @@ table{
         align-items: center;
         justify-content: flex-start;
         .user_avatar{
-          width: 35px;
-          height: 35px;
+          width: 40px;
+          height: 40px;
           background-color: #686868;
           border-radius: 100%;
           font-size: 15px;
@@ -7585,6 +7574,7 @@ table{
           justify-content: center;
           flex-shrink: 0;
           overflow: hidden;
+          border: 4px solid #d3d3d3;
           img{
             width: 100%;
             height: 100%;
@@ -7602,7 +7592,7 @@ table{
           text-overflow: ellipsis;
           white-space: nowrap;
           padding-right: 10px;
-          font-weight: 600;
+          font-weight: normal;
           width: 100%;
           max-width: 200px;
         }
@@ -7616,17 +7606,28 @@ table{
         left: auto;
         right: 10px;
       }
-      >li>a{
-        position: relative;
-        &:hover{
-          color: #157edc !important;
+      >li{
+        >a{
+          position: relative;
+          &:hover{
+            color: #b12964 !important;
+          }
+        }
+        @media screen and (min-width: 991px){
+          &.ms-item-hidden{
+            display: none;
+          }
         }
       }
     }
 
+    @media screen and (min-width: 991px){
+      margin-left: 0 !important;
+    }
+
     @media screen and (min-width: 769px){
       position: relative !important;
-      margin: 0 !important;
+      //margin: 0 !important;
       right: 0;
       top: 0;
       height: 86px;
@@ -7638,8 +7639,8 @@ table{
         #userAvatar{
           padding: 0 20px 0 0 !important;
           .user_avatar{
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             font-size: 18px;
           }
 
@@ -8064,8 +8065,8 @@ table{
 }
 
 .group-cpanel-btn .group-btn.ico-sync span:before {
-  font-size: 30px;
-  content: "\e90f";
+  font-size: 26px;
+  content: "\e955";
   font-family: crm-icons !important;
 }
 
@@ -8646,4 +8647,177 @@ table{
     margin-top: -1px;
     border-left-color: #b22964;
   }  
+}
+
+#disclaimer{
+  .ms-wrapper-detail{
+    text-align: left;
+    p{
+      margin: 10px 0 20px 0;
+    }
+  }
+}
+
+#wrapEmailSettings{
+  .ms-wrapper-btn{
+    text-align: right;
+    margin-top: 10px;
+    .ms-link{
+      background-color: transparent;
+      color: $azul;
+      padding: 0;
+      margin-right: auto;
+      margin-left: 0;
+      display: inline-block;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#board-page{
+  max-width: 620px;
+  .ms-wrap-btn{
+    padding: 0;
+  }
+}
+
+.ms-board-form{
+  .ms-form-body{
+    .ms-item-form{
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .ms-bd-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .ms-item-form{
+      width: 100%;
+      @media screen and (min-width: 640px){
+        width: 49%;
+        &.-full{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.ms-wrap-btn{
+  &.-text-right{
+    text-align: right;
+  }
+}
+
+#modal-board{
+  .ms-board-body{
+    text-align: center;
+    .ms-title {
+      color: #2a273c;
+      font-weight: 600;
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 14px;
+      color: #979797;
+    }
+  }
+
+  label{
+    margin: 10px 0;
+  }
+
+  .ms-wrap-btn{
+    margin-top: 15px;
+    text-align: center;
+    .btn.btn-dgt-grs{
+      background-color: transparent;
+      min-width: auto;
+      color: #3e3a3b !important;
+      &:hover{
+        text-decoration: underline;
+        background-color: transparent !important;
+        span{
+          color: #3e3a3b !important;
+        }
+      }
+    }
+  }
+
+  .ico-ms-ok{
+    display: block;
+    width: 110px;
+    height: 110px;
+    margin: 15px auto 15px auto;
+    position: relative;
+    color: #379922;
+    &:before{
+      content: "\e920";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "crm-icons"!important;
+      font-size: 110px;
+    }
+  }
+}
+
+.ms-info-label{
+  padding: 15px 30px 15px 60px;
+  border-radius: 10px;
+  background-color: #f5fafd;
+  color: #658ca3;
+  position: relative;
+  display: inline-block;
+
+  &:before{
+    content: "i";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    background-color: #548bac;
+    border-radius: 100%;
+    color: #FFF;
+    font-family: auto;
+    font-weight: 600;
+    position: absolute;
+    top: 11px;
+    left: 20px;
+  }
+
+  &:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #548bac;
+    border-right: 11px solid transparent;
+    position: absolute;
+    top: 33px;
+    left: 22px;
+    transform: rotate(19deg);
+  }
+}
+
+.modal{
+  &.ms-small-modal{
+    .modal-dialog {
+      max-width: 500px;
+    }
+  }
 }

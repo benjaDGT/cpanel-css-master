@@ -23,12 +23,21 @@
             <button class="ms-hidden-menu-btn">Hidden Menu <span></span></button>
           </div>
           <div class="header-nav">
-            <ul id="list_nav" style="visibility: hidden !important;">
-              <li><a href="#" title="Leads" class="ico-leads">Leads</a></li>
-              <li><a href="#" title="Filters" class="ico-filters">Filters</a></li>
-              <li><a href="#" title="Listings" class="ico-listings">Listings</a></li>
-              <li><a href="#" title="Account" class="ico-account">Account</a></li>
+
+            <ul id="list_nav">
+              <li><a href="#" title="Home">Home</a></li>
+              <li><a href="#" title="My Membership">My Membership</a></li>
+              <li><a href="#" title="Inbox">Inbox</a></li>
+              <li><a href="#" title="My Tasks">My Tasks</a></li>
+              <li><a href="#" title="IDXBoost Store">IDXBoost Store</a></li>
+              <li><a href="#" title="Help">Help</a></li>
             </ul>
+
+            <div class="ms-warning-message">
+              <i class="crm-ico-alert-triangle">Warning</i>
+              <span>You must set up your <strong>email sender</strong> to set up your account <a href="#">Click here to resolve</a></span>
+            </div>
+
             <div class="user_nav">
               <div class="ms-dropdown dropdown">
                 <button class="ms-button btn userAvatar" type="button" data-toggle="dropdown" aria-expanded="false">
@@ -40,9 +49,11 @@
                   </div>
                 </button>
                 <ul class="ms-dropdown-list dropdown-menu">
-                  <li><a href="#" title="My Account">My Account</a></li>
-                  <li><a href="#" title="Hot Sheet">Hot Sheet</a></li>
-                  <li><a href="#" title="My Leads">My Leads <span class="gb gblets">36</span></a></li>
+                  <li class="ms-item-hidden"><a href="#" title="Home">Home</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="My Membership">My Membership</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="Inbox">Inbox</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="My Tasks">My Tasks</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="IDXBoost Store">IDXBoost Store</a></li>
                   <li><a href="#" target="_blank">Support</a></li>
                   <li><a href="#" title="Log out">Log out</a></li>
                 </ul>
@@ -56,8 +67,10 @@
         <div class="title-rs-sidebar">Main menu</div>
         <button id="closeMenu">Close</button>
         <ul class="ms-menu-list ">
-          <li class="idx-tutorial-step-leads"><a href="#" title="My Leads" class="item_nav ico-leads active">My Leads<span style="width:40px;height:40px;" class="gb">36</span></a></li>
-          <li><a href="/my/submissions/all" title="Hot Sheet" class="item_nav ico-inquires ">Hot Sheet<span style="width:40px;height:40px;" class="gb">21</span></a></li>
+          <li class="idx-tutorial-step-leads"><a href="/" title="My Leads" class="item_nav ico-leads active">My Leads<span style="width:40px;height:40px;" class="gb">36</span></a>
+          </li>
+          <li><a href="#" title="Hot Sheet" class="item_nav ico-inquires ">Hot Sheet<span style="width:40px;height:40px;" class="gb">21</span></a>
+          </li>
           <li class="idx-tutorial-step-account">
             <a href="#" title="My Account" class="item_nav ico-account sub-items">My Account</a>
             <ul class="sub_item_nav">
@@ -67,7 +80,18 @@
               <li><a href="#" title="Social Networks">Social Networks</a></li>
             </ul>
           </li>
-          <li><a href="#" title="Property Sities" class="item_nav ico-spicon ">Property Sites</a></li>
+          <li class="idx-tutorial-step-account">
+            <a href="#" title="My Website" class="item_nav ico-pages sub-items">My Website</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="Homepage">Homepage</a></li>
+              <li><a href="#" title="About">About</a></li>
+              <li><a href="#" class="" title="Team">Team</a></li>
+              <li><a href="#" title="Contact">Contact</a></li>
+              <li><a href="#" title="Navigation Menu">Navigation Menu</a></li>
+            </ul>
+          </li>
+          <li><a href="#" title="Property Sities" class="item_nav ico-spicon">Property Sites</a>
+          </li>
           <li class="idx-tutorial-step-account">
             <a href="#" title="Properties" class="item_nav ico-areas sub-items">IDX Integration</a>
             <ul class="sub_item_nav">
@@ -76,51 +100,46 @@
               <li class="ico-my-buildings"><a href="#" title="My Buildings">My Buildings</a></li>
               <li class="ico-map-search-filter"><a href="#" title="My Master Plans">My Master Plans</a></li>
               <li><a href="#" title="Off Market Inventory">Off Market Inventory</a></li>
-              <li><a href="#" title="Map Search Filters">IDX Settings</a></li>
+              <li><a href="#" title="Map Search Filters">IDX Settings</a>
+              </li>
             </ul>
           </li>
           <li>
-            <a href="#" title="Marketing" class="item_nav ico-marketing sub-items">Marketing</a>
-            <ul class="sub_item_nav ">
+            <a href="#" title="CRM &amp; Automations" class="item_nav ico-marketing sub-items">CRM &amp; Automations</a>
+            <ul class="sub_item_nav">
               <li><a href="#" title="My Bucket">My Buckets</a></li>
               <li><a href="#" title="Drip Campaigns">Drip Campaigns</a></li>
+              <li><a href="#" title="Lead Rules">Lead Rules</a></li>
               <li><a href="#" title="Email Templates">Email Templates</a></li>
               <li><a href="#" title="SMS Templates">SMS Templates</a></li>
-              <li><a href="#" title="BoostBox">BoostBox</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" title="My Agents" class="sub-items item_nav ico-team ">Agents</a>
-            <ul class="sub_item_nav">
-              <li><a href="#" title="Agents">Agents</a></li>
-              <li><a href="#" title="Agents Groups">Agents Groups</a></li>
+              <li><a href="#" title="Agents">Users</a></li>
+              <li><a href="#" title="Users Groups">Users Groups</a></li>
               <li><a href="#" title="Offices">Offices</a></li>
             </ul>
           </li>
-          <li class="idx-tutorial-step-account">
-            <a href="#" title="Pages" class="item_nav ico-pages sub-items">Pages</a>
+          <li>
+            <a href="#" title="Lead Generation" class="sub-items item_nav ico-team ">Lead Generation</a>
             <ul class="sub_item_nav">
-              <li><a href="#" title="Homepage">Homepage</a></li>
-              <li><a href="#" title="About">About</a></li>
-              <li><a href="#" title="Team">Team</a></li>
-              <li><a href="#" title="Contact">Contact</a></li>
-              <li><a href="#" title="Navigation Menu">Navigation Menu</a></li>
+              <li><a href="#" title="BoostBox">BoostBox</a></li>
+              <li>
+                <a href="#" target="_blank" title="Stats">Stats</a>
+              </li>
             </ul>
           </li>
           <li class="idx-tutorial-step-email idx-tutorial-step-settings">
             <a href="#" title="Settings" class="item_nav ico-setting sub-items ">Settings</a>
             <ul class="sub_item_nav ">
               <li><a href="#" title="Registration Settings">Registration Settings</a></li>
-              <li><a href="#" title="Smtp Settings">Email Sender</a></li>
-              <li><a href="#" title="Email Header">Email Headers</a></li>
+              <li><a href="#" class="" title="Smtp Settings">Email Sender</a></li>
+              <li><a href="#" class="" title="Email Header">Email Headers</a></li>
               <li><a href="#" title="CRM Integration">CRM Integrations</a></li>
               <li><a href="#" title="Analytics Integration">Analytics Integration</a></li>
-              <li><a href="#" title="Terms & Conditions">Terms & Conditions</a></li>
+              <li><a href="#" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
             </ul>
           </li>
           <li class="group-cpanel-btn">
-            <a href="#" title="Go to my Website" class="group-btn ico-rocket">Go to my Website<span></span></a>
-            <a href="#" title="Go to my WP Dashboard" class="group-btn ico-wordpress">Go to my WP Dashboard<span></span></a>
+            <a target="_blank" href="#" title="Go to my Website" class="group-btn ico-rocket">Go to my Website<span></span></a>
+            <a target="_blank" href="#" title="Go to my WP Dashboard" class="group-btn ico-wordpress">Go to my WP Dashboard<span></span></a>
             <a href="#" title="Synchronize my Wordpress" class="group-btn ico-sync" data-toggle="modal" data-target="#synchronizeModal">Synchronize my Wordpress<span></span></a>
           </li>
         </ul>
