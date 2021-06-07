@@ -8821,3 +8821,137 @@ table{
     }
   }
 }
+
+.ms-wrapper-msg{
+  &.ms-nw-ft{
+    padding: 0 15px;
+
+    .sp-feature-text,
+    .sp-feature-title,
+    .sp-title,
+    .sp-text{
+      color: #FFF;
+      font-family: 'Montserrat', sans-serif;
+      br{
+        display: none;
+        @media screen and (min-width: 1024px){
+          display: block;
+        }
+      }
+    }
+
+    .sp-title{
+      letter-spacing: -1px !important;
+    }
+
+    .sp-feature-title{
+      font-weight: 500;
+    }
+
+    .sp-btn{
+      border: 1px solid transparent;
+      span{
+        font-weight: bold;
+      }
+      &:after{
+        background: #FFF;
+      }
+
+      &:hover{
+        span{
+          color: #ae2865;
+        }
+      }
+
+      &.sp-btn-alt{
+        background-color: #FFF;
+        position: relative;
+        border-color: #FFF;
+        transition: all .3s;
+        span{
+          color: #2d4571;
+          @media screen and (min-width: 640px){
+            padding-left: 70px;
+          }
+        }
+
+        &:before{
+          background: transparent;
+          border: 2px solid #2d4571;
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          top: 50%;
+          margin-top: -14px;
+          left: 20px;
+          border-radius: 100%;
+        }
+
+        &:after{
+          width: 0;
+          height: 0;
+          border-top: 5px solid transparent;
+          border-left: 10px solid #2d4571;
+          border-bottom: 5px solid transparent;
+          position: absolute;
+          background: transparent;
+          opacity: 1;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 30px;
+          transition: all .3s;
+        }
+
+        &:hover{
+          background-color: #2d4571;
+          border-color: #2d4571;
+          span{
+            color: #FFF;
+          }
+
+          &:before{
+            border-color: #FFF;
+          }
+  
+          &:after{
+            border-left: 10px solid #FFF;
+          }
+        }
+      }
+
+      @media screen and (min-width: 640px){
+        +.sp-btn {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1024px){
+      .sp-btn {
+        height: 58px;
+        span{
+          font-size: 14px;
+          padding: 0 50px;
+        }
+
+        &.sp-btn-alt{
+          height: 57px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1200px){
+      .sp-features li+li {
+        padding-left: 50px;
+      }
+    }
+
+    @media screen and (min-width: 1800px){
+      .sp-content, 
+      .sp-image {
+        margin-bottom: 100px;
+        margin-top: 60px;
+      }
+    }
+  }
+}

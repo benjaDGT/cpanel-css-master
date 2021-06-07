@@ -1,0 +1,137 @@
+.ms-wrapper-promos{
+  padding: 30px 15px;
+  max-width: 1290px;
+  .ms-card{
+    background-color: rgba(50,49,69, 0.4);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    position: relative;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .ms-price-st{
+      font-weight: bold;
+      color: #FFF;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 18px;
+      display: block;
+    }
+    .ms-wrap-img{
+      width: 100%;
+      position: relative;
+      margin-top: 15px;
+      &:after{
+        content: "";
+        display: block;
+        padding-bottom: 119px;
+      }
+
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+
+    p{
+      font-size: 16px;
+      color: #FFF;
+      margin: 20px auto;
+      max-width: 300px;
+    }
+
+    ul{
+      margin-bottom: 40px;
+      li{
+        margin-bottom: 5px;
+        position: relative;
+        padding-left: 30px;
+        font-size: 15px;
+        color: #FFF;
+        &:before{
+          content: "";
+          display: inline-block;
+          background: url("../images/chk.png");
+          background-repeat: no-repeat;
+          width: 14px;
+          height: 12px;
+          position: absolute;
+          top: 5px;
+          left: 0;
+        }
+      }
+    }
+
+    .btn-dgt-def{
+      width: 100% !important;
+      margin-left: auto;
+      margin-right: auto;
+      border: 0;
+      background-color: transparent;
+      font-size: 14px;
+      max-width: 100%;
+      height: 50px;
+      text-transform: uppercase;
+      border-radius: 6px;
+
+      &:after{
+        background: #FFF;
+      }
+
+      &:focus,
+      &:active,
+      &:hover {
+        color: #be155e !important;
+        span{
+          color: #be155e !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    .ms-card{
+      width: 49%;
+      padding: 30px 45px 130px 45px;
+      p{
+        font-size: 17px;
+      }
+      .btn-dgt-def {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        width: calc(100% - 90px) !important;
+        height: 60px;
+      }
+
+      .ms-price-st{
+        position: absolute;
+        bottom: 95px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1440px){
+    .ms-card{
+      width: 32%;
+      margin-bottom: 0;
+      ul{
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+}

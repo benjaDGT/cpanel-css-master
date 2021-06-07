@@ -1,0 +1,161 @@
+#modal-launch-website{
+  &.ms-wrapper-launch-website{
+    .widget{
+      .modal-body{
+        @media screen and (min-width: 991px){
+          padding: 20px 20px 30px 20px;
+        }
+      
+        .row{
+          &.ms-br{
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 1px dashed $border-color;
+          }
+
+          .ms-wrap-img{
+            border: 1px solid $border-color;
+          }
+
+          .ms-dt-title{
+            font-weight: bold;
+            font-size: 17px;
+            margin: 10px 0;
+          }
+
+          p{
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+          }
+
+          .input-group-addon{
+            border-color: $border-color;
+          }
+
+          .ms-sbtext{
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            span{
+              font-size: 14px;
+              margin-bottom: 15px;
+              a{
+                color: $azul;
+                &:hover{
+                  text-decoration: underline;
+                }
+              }
+            }
+
+            @media screen and (min-width: 991px){
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              span{
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ms-table{
+      tr{
+        th, td{
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+
+      thead th {
+        font-size: 11px;
+      }
+
+      .ms-link{
+        font-weight: normal;
+        padding: 0;
+        width: auto;
+        margin: 0;
+        display: inline-block;
+        color: $azul;
+        font-size: 13px;
+        font-weight: 600;
+        background-color: transparent;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#modal-launch-website-md-edit,
+#modal-launch-website-md{
+  .ms-wrap-checkbox{
+    label{
+      font-weight: normal;
+      font-size: 14px;
+    }
+  }
+
+  textarea{
+    height: 120px;
+  }
+}
+
+.alert{
+  &.ms-new-alert-info{
+    position: relative;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    width: 100%;
+    z-index: 2;
+    font-size: 13px;
+    color: #2b3547;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color: #e9ebee;
+    min-height: 45px;
+    margin: 10px 0;
+    span{
+      margin-right: 30px;
+      font-weight: bold !important;
+      @extend .gradient;
+      color: #FFF;
+      position: relative;
+      padding: 0 15px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: auto;
+      &:before{
+        font-family: 'crm-icons' !important;
+        font-weight: 100 !important;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 17px;
+      }
+
+      &:after{
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-left: 20px solid #b12964;
+        border-bottom: 20px solid transparent;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

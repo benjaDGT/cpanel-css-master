@@ -9542,9 +9542,9 @@ form{
 
           &.ico-inquires{
             &:before{
-              content: "\e958";
+              content: "\e938";
               font-family: "crm-icons" !important;
-              font-size: 22px;
+              font-size: 26px;
               font-weight: 100 !important;
             }
 					}
@@ -12585,7 +12585,7 @@ $ms-danger-color: #d83a4c;
 	}
 }
 
-/*ANTIGUO*/
+/*ANTIGUO
 .ms-warning-message {
 	position: relative;
 	bottom: 0;
@@ -12641,8 +12641,9 @@ $ms-danger-color: #d83a4c;
 		width: auto;
 	}
 }
+*/
 
-/*NUEVO
+/*NUEVO*/
 .ms-warning-message{
 	position: relative;
 	bottom: 0;
@@ -12705,8 +12706,24 @@ $ms-danger-color: #d83a4c;
 	}
 
 	@media screen and (min-width: 769px){
+		top: 0;
+		bottom: auto;
 		position: fixed;
-    width: calc(100% - 250px);
+    width: 100%;
     right: 0;
+		z-index: 2;
 	}
-}*/
+}
+
+@media screen and (min-width: 769px){
+	body.ms-alert-sender-active{
+		padding-top: 133px;
+		.rs-navbar {
+			top: 45px;
+		}
+		.rs-wrapper .rs-sidebar {
+			height: calc(100vh - 133px);
+			top: 133px!important;
+		}
+	}
+}
