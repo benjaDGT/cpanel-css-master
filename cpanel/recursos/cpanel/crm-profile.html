@@ -319,6 +319,60 @@
 
             </div>
             <div class="ms-block-c">
+              <div class="ms-widget" id="crm-lead-agents-assigned">
+                <div class="ms-header-widget">
+                  <h3 class="ms-title">Lead Assigned</h3>
+                  <a data-toggle="modal" data-target="#modal-agent-assignment" href="#" class="ms-link">+Add Note</a>
+                </div>
+                <div class="ms-body-widget">
+                  
+                  <div class="ms-item ms-user-info">
+                    <a href="#" class="ms-user-avatar">MA</a>
+                    <div class="ms-sub-item">
+                      <a href="#" class="ms-title">
+                        <span class="ms-name">Johanna Johanssen</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="ms-item ms-user-info">
+                    <a href="#" class="ms-user-avatar">MA <img src="images/email-header-1.png" alt="MA"></a>
+                    <div class="ms-sub-item">
+                      <a href="#" class="ms-title">
+                        <span class="ms-name">Johanna Johanssen</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="ms-item ms-user-info">
+                    <a href="#" class="ms-user-avatar">MA</a>
+                    <div class="ms-sub-item">
+                      <a href="#" class="ms-title">
+                        <span class="ms-name">Johanna Johanssen</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="ms-item ms-user-info">
+                    <a href="#" class="ms-user-avatar">MA</a>
+                    <div class="ms-sub-item">
+                      <a href="#" class="ms-title">
+                        <span class="ms-name">Johanna Johanssen</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="ms-item ms-user-info">
+                    <a href="#" class="ms-user-avatar">MA <img src="images/email-header-1.png" alt="MA"></a>
+                    <div class="ms-sub-item">
+                      <a href="#" class="ms-title">
+                        <span class="ms-name">Johanna Johanssen</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
               <div class="ms-widget" id="crm-lead-notes">
                 <div class="ms-header-widget">
                   <h3 class="ms-title">Notes</h3>
@@ -1290,6 +1344,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade ms-contacts-list" id="modal-agent-assignment" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1302,7 +1357,50 @@
                   <input type="search" class="ms-search js-search-agent-or-group" placeholder="Search for an agent or group">
                   <button class="ms-btn-search">Search</button>
                 </div>
-                <ul class="ms-contacts ib-content-list-search"></ul>
+                <ul class="ms-contacts ib-content-list-search">
+                  <li class="ms-disabled">
+                    <h3 class="ms-title">GROUPS</h3>
+                  </li>
+                  <li>
+                    <button class="ms-add-agent js-select-agent undefined" data-relation="group" data-name="test " data-user="4">
+                      <div class="ms-wrap-avatar">T</div>
+                      test 
+                    </button>
+                  </li>
+                  <li>
+                    <button class="ms-add-agent js-select-agent undefined" data-relation="group" data-name="test 2 " data-user="3">
+                      <div class="ms-wrap-avatar">T</div>
+                      test 2 
+                    </button>
+                  </li>
+                  <li>
+                    <button class="ms-add-agent js-select-agent undefined" data-relation="group" data-name="test round robin 1 " data-user="2">
+                      <div class="ms-wrap-avatar">T</div>
+                      test round robin 1 
+                    </button>
+                  </li>
+                  <li class="ms-disabled">
+                    <h3 class="ms-title">AGENTS</h3>
+                  </li>
+                  <li>
+                    <button class="ms-add-agent js-select-agent " data-relation="agent" data-name="Master IDXBoost" data-user="306">
+                      <div class="ms-wrap-avatar">MI<img src="https://idxboost.s3.amazonaws.com/user/account/_pwjxbr7pb/foto-agent.jpg"></div>
+                      Master IDXBoost
+                    </button>
+                  </li>
+                  <li>
+                    <button class="ms-add-agent js-select-agent " data-relation="agent" data-name="Jose Perez" data-user="520">
+                      <div class="ms-wrap-avatar">JP</div>
+                      Jose Perez
+                    </button>
+                  </li>
+                  <li>
+                    <button class="ms-add-agent js-select-agent " data-relation="agent" data-name="Juan Perez" data-user="519">
+                      <div class="ms-wrap-avatar">JP</div>
+                      Juan Perez
+                    </button>
+                  </li>
+                </ul>
                 <div class="ms-wrap-btn">
                   <a href="#" class="btn btn-dgt-grs js-btn-close-agent"><span>Cancel</span></a>
                   <button class="btn btn-dgt-def js-btn-agent-click">
@@ -1314,6 +1412,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade modal-todo" id="modal-todo" tab-index="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1479,6 +1578,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade" id="modal-sms" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1516,6 +1616,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade" id="modal-call" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1578,6 +1679,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade" id="modal-tag" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1604,6 +1706,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade" id="modal-qualifications" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1677,6 +1780,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade" id="modal-note" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1709,6 +1813,7 @@
             </div>
           </div>
         </div>
+
         <div class="idx-overlay-modal" style="z-index: 999;">
           <div class="idx-modal-content idx-two-style">
             <div class="idx-modal-content-info">
@@ -1726,6 +1831,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade ms-contacts-list" id="modal-template-confirm" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1747,6 +1853,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade ms-contacts-list" id="modal-info-success" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1767,6 +1874,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade ms-contacts-list" id="modal-info-warning" tabindex="-1" role="dialog" data-backdrop="static">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1787,6 +1895,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade ms-contacts-list" id="modal-confirmation-alert-del" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1810,6 +1919,7 @@
             <input type="hidden" value="" class="js-input-type-alert">
           </div>
         </div>
+
         <div class="modal fade" id="modal-save-pt" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1832,6 +1942,7 @@
             </div>
           </div>
         </div>
+
         <div class="modal fade" id="modal-edit-new-building" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1948,6 +2059,7 @@
         </div>
       </div>
     </div>
+
     <div class="modal fade" id="modal-building-filter" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -3797,6 +3909,8 @@
         </div>
       </div>
     </div>
+
+
 
     <div id="rs-screen-overlay"></div>
 

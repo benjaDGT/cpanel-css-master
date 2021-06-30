@@ -740,7 +740,7 @@
           </div>
         </div>
 
-        <!-- MODAL TO-DO -->
+        <!-- MODAL TO-DO 
         <div class="modal fade" id="modal-todo" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -841,7 +841,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
 
         <!-- MODAL EMAIL -->
         <div class="modal fade" id="modal-email" tabindex="-1" role="dialog">
@@ -2731,15 +2731,220 @@
       </div>
     </div>
 
+
+    <div class="modal fade modal-todo" id="modal-todo" tab-index="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title ms-icon-todo js-title-todo">
+              <span>To Do </span>
+            </h4>
+            <button class="close ms-close" type="button" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body">
+       
+            <div class="ms-contacts-list">
+              <div class="ms-input-search">
+                <input type="search" class="ms-search" placeholder="Search lead">
+                <button class="ms-btn-search">Search lead</button>
+              </div>
+              <ul class="ms-contacts">
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead01">
+                  <label class="ms-add-agent ms-bt-ed" for="lead01">
+                  <span class="ms-wrap-avatar">B <img src="https://idxboost.s3.amazonaws.com/525/profile/605/image/aislin_spaman_brg_international4.jpg" style="cursor: default;"></span> Lead 01</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead02">
+                  <label class="ms-add-agent ms-bt-ed" for="lead02">
+                  <span class="ms-wrap-avatar">B</span> Lead 02</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead03">
+                  <label class="ms-add-agent ms-bt-ed" for="lead03">
+                  <span class="ms-wrap-avatar">B</span> Lead 03</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead04">
+                  <label class="ms-add-agent ms-bt-ed" for="lead04">
+                  <span class="ms-wrap-avatar">B</span> Lead 04</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead05">
+                  <label class="ms-add-agent ms-bt-ed" for="lead05">
+                  <span class="ms-wrap-avatar">B</span> Lead 05</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead06">
+                  <label class="ms-add-agent ms-bt-ed" for="lead06">
+                  <span class="ms-wrap-avatar">B</span> Lead 06</label>
+                </li>
+              </ul>
+            </div>
+
+            <form name="form-new-todo" id="form-new-todo" class="ms-crm-form">
+              <ul class="nav nav-tabs js-tab-todo" role="tablist">
+                <li role="presentation" class="js-todo-sub-menu-tab active" tab_menu="quick_action">
+                  <a href="#quickTab" aria-controls="general" role="tab" data-toggle="tab" aria-expanded="true">Quick Action</a>
+                </li>
+                <li role="presentation" class="js-todo-sub-menu-tab" tab_menu="custom_action">
+                  <a href="#customTab" aria-controls="filter" role="tab" data-toggle="tab" aria-expanded="false">Custom Action</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="quickTab">
+                  <div class="ms-crm-form ms-wrap-form">
+                    <div class="form-item ms-full ms-flex">
+                      <label for="select-when">Follow Up</label>
+                      <select name="js-todo-follow-when" class="js-todo-follow-when">
+                        <option value="1">1 Day Follow Up</option>
+                        <option value="3">3 Day Follow Up</option>
+                        <option value="7">1 Week Follow Up</option>
+                        <option value="14">2 Week Follow Up</option>
+                        <option value="30">1 Month Follow Up</option>
+                        <option value="90">3 Month Follow Up</option>
+                        <option value="180">6 Month Follow Up</option>
+                        <option value="360">12 Month Follow Up</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="customTab">
+                  <div class="ms-crm-form ms-wrap-form">
+                    <div class="form-item ms-full ms-flex">
+                      <label for="">Action Name</label>
+                      <input type="text" class="js-todo-custom-message" placeholder="e.g. Call Jhon">
+                    </div>
+                    <div class="form-item ms-full">
+                      <label for="">When</label>
+                      <ul class="ms-flex">
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-td" checked value="0">
+                          <label for="custom-date-td">Today</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-tm" value="1">
+                          <label for="custom-date-tm">Tomorrow</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-2d" value="2">
+                          <label for="custom-date-2d">2 Days</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-3d" value="3">
+                          <label for="custom-date-3d">3 Days</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-1w" value="7">
+                          <label for="custom-date-1w">1 Week</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-2w" value="14">
+                          <label for="custom-date-2w">2 Weeks</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-3w" value="21">
+                          <label for="custom-date-3w">3 Weeks</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-1m" value="30">
+                          <label for="custom-date-1m">1 Month</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-cd" value="custom">
+                          <label class="js-custom-date" for="custom-date-cd">Custom Date</label>
+                        </li>
+                        <li class="opt-custom-date-content js-custom-date-content inactive">
+                          <div class="ms-date" id="dateParent">
+                            <input type="text" id="datepicker" class="ib-todo-custom-date" placeholder="Date" autocomplete="off">
+                          </div>
+                          <div class="ms-date ms-date-time">
+                            <input type="text" id="custom-time" class="ib-todo-custom-date" placeholder="Time" autocomplete="off">
+                            <span class="custom-time-select select2-results">
+                              <ul class="custom-time-select-wrap select2-results__options" role="tree" aria-expanded="true" aria-hidden="false">
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">Time</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">12:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">12:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">1:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">1:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">2:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">2:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">3:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">3:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">4:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">4:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">5:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">5:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">6:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">6:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">7:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">7:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">8:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">8:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">9:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">9:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">10:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">10:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">11:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">11:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">12:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">12:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">1:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">1:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">2:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">2:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">3:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">3:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">4:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">4:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">5:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">5:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">6:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">6:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">7:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">7:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">8:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">8:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">9:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">9:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">10:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">10:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">11:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">11:30 PM</li>
+                              </ul>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ms-wrap-btn">
+                <a class="btn btn-dgt-grs" data-dismiss="modal" aria-label="Close">
+                <span>Cancel</span>
+                </a>
+                <button class="btn btn-dgt-def">
+                <span>Save</span>
+                </button>
+              </div>
+              <input type="hidden" name="action" value="step_1">
+              <input type="hidden" name="lead_id" class="lead_id" value="">
+              <input type="hidden" name="cpanelbundle_crmleadtodo[customPeriod]" class="to-do-custom-period">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="rs-screen-overlay"></div>
     <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="../../jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cpanel.idxboost.dev/bundles/cpanel/js/jquery-ui.js"></script>
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/bootstrap-tagsinput.min.js"></script>
     <script type="text/javascript" src="../../js/select2.min.js"></script>
     <script type="text/javascript" src="../../js/main.js"></script>
     <script type="text/javascript" src="../../js/jquery.richtext.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
     <script type="text/javascript">
 
       jQuery('[data-toggle="tooltip"]').tooltip();
@@ -2869,6 +3074,64 @@
         event.preventDefault();
         var valueItem = jQuery(this).attr("data-text");
         jQuery(this).parents(".ms-dropdown").find(".ms-button span").html(valueItem);
+      });
+
+
+      /********************************************/
+      jQuery("#datepicker").datepicker({
+        beforeShow:function(textbox, instance){
+          jQuery("#dateParent").append(jQuery("#ui-datepicker-div"));
+        }
+      });
+
+      jQuery(document).on('change', '#select-when', function () {
+        if (jQuery(this).val() == "ms-custom") {
+          jQuery(this).parents('.modal').addClass('active');
+        } else {
+          jQuery(this).parents('.modal').removeClass('active');
+        }
+      });
+
+      jQuery(document).on('change', '#select-action', function () {
+        if (jQuery(this).val() == "ms-custom") {
+          jQuery('#custom-action').addClass('active');
+        } else {
+          jQuery('#custom-action').removeClass('active');
+        }
+      });
+
+      jQuery('.js-opt-custom-date label').on('click', function () {
+        if (jQuery(this).hasClass('js-custom-date')) {
+          jQuery('.js-custom-date-content').removeClass('inactive');
+        } else {
+          jQuery('.js-custom-date-content').addClass('inactive');
+        }
+      });
+
+      jQuery(document).mouseup(function (e) {
+        var container = jQuery(".ms-date-time");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          jQuery('.custom-time-select').removeClass('show');
+        }
+      });
+
+      jQuery(document).on('click', ".custom-time-select-item", function () {
+        jQuery('.custom-time-select-item').attr('aria-selected', 'false');
+        jQuery(this).attr('aria-selected', 'true');
+        jQuery('#custom-time').val(jQuery(this).text());
+        jQuery('.custom-time-select').removeClass('show');
+
+        var timeToDo = "";
+        $('.custom-time-select-wrap .custom-time-select-item').each(function () {
+          if ($(this).attr("aria-selected") == "true") {
+            timeToDo = $(this).text();
+          }
+        });
+        jQuery('.to-do-custom-period').val(jQuery("#datepicker").val() + ' ' + timeToDo);
+      });
+
+      jQuery(".ms-date-time").on('click', function () {
+        jQuery('.custom-time-select').addClass('show');
       });
 
     </script>

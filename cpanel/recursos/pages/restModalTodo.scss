@@ -9,7 +9,7 @@
 
 .modal-todo .nav-tabs > li > a::after {
   content: "";
-  background: linear-gradient(to right,#fa6630,#be155e);
+  background: $gradient;
   bottom: 2px;
   height: 2px;
   left: 50%;
@@ -76,9 +76,9 @@
 }
 
 .modal-todo .opt-custom-date input:checked + label {
-  background: linear-gradient(to right, #ef3d4e, #ae2865);
+  background: $gradient;
   color: #fff;
-  border-color: #ae2865;
+  border-color: $color-b;
 }
 
 .modal-todo .opt-custom-date-content {
@@ -151,7 +151,7 @@
 
 .modal-todo .opt-custom-date-content .custom-time-select [aria-selected=true],
 .modal-todo .opt-custom-date-content .custom-time-select li:hover {
-  background: linear-gradient(to right,#fa6630,#be155e);
+  background: $gradient;
   color: #fff;
 }
 
@@ -253,7 +253,7 @@
 
 .ms-ct-header-todo .ms-tabs .ms-tabs-item::after {
   content: "";
-  background: linear-gradient(to right,#fa6630,#be155e);
+  background: $gradient;
   bottom: 2px;
   height: 2px;
   left: 50%;
@@ -398,4 +398,88 @@
   top: 50%;
   width: 20px;
   z-index: 1;
+}
+
+#modal-todo{
+  .ms-contacts-list{
+    .ms-contacts{
+      max-height: 184px;
+      li{
+        padding: 10px 15px;
+        .ms-add-agent {
+          padding: 0px 15px 0 50px;
+          min-height: 40px;
+          margin: 0;
+          cursor: pointer;
+        }
+        .ms-wrap-avatar{
+          top: 0;
+        }
+        input:checked~.ms-bt-ed:after{
+          top: 12px;
+        }
+      }
+    }
+  }
+}
+
+#dateParent{
+  position: relative;
+  #ui-datepicker-div {
+    top: auto !important;
+    left: 0 !important;
+    position: absolute !important;
+    bottom: 100% !important;
+    span{
+      display: inline-block!important;
+      font-size: 13px!important;
+      margin: 0 !important;
+    }
+
+    table{
+      thead{
+        th{
+          span{
+            font-size: 6pt !important;
+          }
+        }
+      }
+    }
+  }
+
+  .ui-datepicker td a{
+    font-size: 12px !important;
+  }
+
+  .ui-state-focus, 
+  .ui-widget-content .ui-state-focus, 
+  .ui-widget-content .ui-state-hover, 
+  .ui-widget-header .ui-state-focus,
+  .ui-widget-header .ui-state-hover {
+    background: #e0eaf1 !important;
+    color: #333 !important;
+  }
+}
+
+.ms-btn-complete{
+  background-color: transparent;
+  .ms-icon-buckets{
+    &:before {
+      font-size: 30px;
+      color: #d6d6d6;
+      margin-bottom: 0;
+    }
+  }
+
+  &.active{
+    .ms-icon-buckets{
+      &:before {
+        color: #7bc500;
+      }
+    }
+  }
+}
+
+.ms-text-center{
+  text-align: center !important;
 }

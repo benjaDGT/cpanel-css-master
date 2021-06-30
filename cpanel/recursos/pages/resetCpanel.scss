@@ -8955,3 +8955,42 @@ table{
     }
   }
 }
+
+
+#crm-lead-agents-assigned{
+  .ms-body-widget{
+    height: auto;
+    overflow-y: auto;
+    max-height: 375px;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #a0a0a0;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border: 0px solid black;
+      background-color: rgba(0, 0, 0, 0.07);
+    }
+
+    .ms-item{
+      &.ms-user-info{
+        margin-bottom: 10px;
+        .ms-user-avatar{
+          font-size: 15px;
+          width: 35px;
+          height: 35px;
+          margin-right: 10px;
+        }
+
+        .ms-title{
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

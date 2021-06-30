@@ -167,7 +167,7 @@
               <p class="sp-text">Integrate your IDXBoost website with your local MLS Board. <br>Start creating unique pages with active listings for your</p>
               <div class="sp-wrap-btn">
                 <a href="#" class="sp-btn"><span>Activeate CRM USER</span></a>
-                <button class="sp-btn sp-btn-alt">
+                <button class="sp-btn sp-btn-alt js-show-video-promo" data-video="https://www.youtube.com/watch?v=9iha2Kq5clo">
                   <span>View video</span>
                 </button>
               </div>
@@ -188,8 +188,20 @@
             </ul>
           </div>
         </div>
-
       </section>
+    </div>
+
+    <div class="modal fade" id="modal-video-promo" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header">
+            <button type="button" class="close ms-close js-close-video-promo" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body ms-crm-form">
+            <div class="ms-wrapper-video"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
@@ -197,5 +209,45 @@
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/select2.min.js"></script>
     <script type="text/javascript" src="../../js/main.js"></script>
+
+    <script>
+      jQuery(document).on('click', '.js-show-video-promo', function(e) {
+        e.preventDefault();
+        var urlVideo = jQuery(this).attr('data-video');
+        var videoHtml = "";
+        if (urlVideo !== undefined) {
+          var urlVideo = urlVideo.toString();
+          if (urlVideo.indexOf('youtube') !== -1) {
+              var et = urlVideo.lastIndexOf('&')
+              if (et !== -1) {
+                  urlVideo = urlVideo.substring(0, et)
+              }
+              var embed = urlVideo.indexOf('embed');
+              if (embed !== -1) {
+                urlVideo = 'https://www.youtube.com/watch?v=' + urlVideo.substring(embed + 6, embed + 17);
+              }
+              var videoCode = urlVideo.substring(urlVideo.length - 11, urlVideo.length);
+              var srcVideo = 'https://www.youtube.com/embed/' + urlVideo.substring(urlVideo.length - 11, urlVideo.length) + '?autoplay=1&loop=1&mute=0&playlist='+videoCode;
+              videoHtml = '<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="360" mozallowfullscreen="" src="'+srcVideo+'" webkitallowfullscreen="" width="643"></iframe>';
+
+          } else if (urlVideo.indexOf('vimeo') !== -1) {
+            var srcVideo = 'https://player.vimeo.com/video/' + urlVideo.substring((urlVideo.indexOf('.com') + 5), urlVideo.length).replace('/', '');
+            videoHtml = '<iframe allow="autoplay; encrypted-media" title="'+titleVideo+'" src="' + srcVideo + '?autoplay=1&amp;muted=0&loop=0" frameborder="0" allowfullscreen></iframe>';
+          } else {
+            videoHtml = '<video src="'+urlVideo+'" title="'+titleVideo+'" preload="none" autoplay playsinline>';
+          }
+        }
+        jQuery("#modal-video-promo .ms-wrapper-video").empty().html(videoHtml);
+        jQuery("#modal-video-promo").modal("toggle");
+      });
+
+      jQuery(document).on('click', '.js-close-video-promo', function(e) {
+        e.preventDefault();
+        jQuery("#modal-video-promo").modal("hide");
+        setTimeout(function(){
+          jQuery("#modal-video-promo .ms-wrapper-video").html("");
+        }, 1200);
+      });
+    </script>
   </body>
 </html>
